@@ -1,10 +1,10 @@
-{ config, lib, pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
-	virtualisation.podman = {
-		enable = true;
-		dockerCompat = true;
-	};
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
 
-	services.flatpak.enable = true;
+  services.flatpak.enable = true;
 }

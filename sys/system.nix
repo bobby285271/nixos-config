@@ -1,19 +1,19 @@
 { config, pkgs, ... }:
 
 {
-    xdg.portal = {
-		enable = true;
-		extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-	};
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
 
-	services.tlp.enable = true;
+  services.tlp.enable = true;
 
-	programs.bash.enableCompletion = true;
-	sound.enable = true;
-	hardware.pulseaudio.enable = true;
+  programs.bash.enableCompletion = true;
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
 
-	system = {
-		autoUpgrade.enable = true;
-		stateVersion = "21.05";
-	};
+  system = {
+    autoUpgrade.enable = true;
+    stateVersion = "21.05";
+  };
 }

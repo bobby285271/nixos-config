@@ -5,44 +5,44 @@
 { config, pkgs, ... }:
 
 {
-	imports = [
-		./hardware-configuration.nix
-		./sys/boot.nix
-		./sys/desktop.nix
-		./sys/fonts.nix
-		./sys/i18n.nix
-		./sys/network.nix
-		./sys/system.nix
-		./sys/users.nix
-		./sys/virtualisation.nix
-	];
+  imports = [
+    ./hardware-configuration.nix
+    ./sys/boot.nix
+    ./sys/desktop.nix
+    ./sys/fonts.nix
+    ./sys/i18n.nix
+    ./sys/network.nix
+    ./sys/system.nix
+    ./sys/users.nix
+    ./sys/virtualisation.nix
+  ];
 
-	nix.binaryCaches = [ 
-		"https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-	];
+  nix.binaryCaches = [ 
+    "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+  ];
 
-	nixpkgs.config.allowUnfree = true;
-	environment.systemPackages = with pkgs; 
-	[
-		dos2unix
-		fcitx
-		fcitx-configtool
-		firefox
-		gcc
-		gdb
-		git
-		gnumake
-		gnupg
-		gptfdisk
-		libreoffice-fresh
-		neofetch
-		p7zip
-		pciutils 
-		python
-		qemu
-		rustup
-		transmission
-		vim
-		wget
-	];
+  nixpkgs.config.allowUnfree = true;
+  environment.systemPackages = with pkgs; 
+  [
+    dos2unix
+    fcitx
+    fcitx-configtool
+    firefox
+    gcc
+    gdb
+    git
+    gnumake
+    gnupg
+    gptfdisk
+    libreoffice-fresh
+    neofetch
+    p7zip
+    pciutils 
+    python
+    qemu
+    rustup
+    transmission
+    vim
+    wget
+  ];
 }
