@@ -11,11 +11,14 @@
     autosuggestions.enable = true;
     ohMyZsh = {
       enable = true;
-      theme = "peepcode";
-      plugins = [ "git" "python" "man" "fzf"];
+      theme = "ys";
+      plugins = [ "git" "python" "man" ];
     };
   };
   environment.shells = [ pkgs.bashInteractive pkgs.zsh ];
+
+  users.defaultUserShell = pkgs.zsh;
+
   programs.thefuck.enable = true;
 
   services.tlp.enable = true;
@@ -28,4 +31,5 @@
     autoUpgrade.enable = true;
     stateVersion = "21.05";
   };
+
 }
