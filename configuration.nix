@@ -25,12 +25,11 @@
   environment.systemPackages = with pkgs; 
   [
     dos2unix
-    fcitx
-    fcitx-configtool
     firefox
     gcc
     gdb
     git
+    gnome-latex
     gnumake
     gnupg
     gptfdisk
@@ -41,6 +40,7 @@
     python
     qemu
     rustup
+    texlive.combined.scheme-full
     transmission
     vim
     wget
