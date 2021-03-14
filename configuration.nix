@@ -41,7 +41,7 @@
     p7zip
     pciutils
     pinentry-curses 
-    python
+    python3Minimal
     qemu
     rustup
     texlive.combined.scheme-full
