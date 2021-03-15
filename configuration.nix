@@ -36,7 +36,6 @@
     gnumake
     gnupg
     gptfdisk
-    libreoffice-fresh
     neofetch
     p7zip
     pciutils
@@ -46,6 +45,7 @@
     rustup
     texlive.combined.scheme-full
     transmission
+    unzip
     vim
     wget
   ];
