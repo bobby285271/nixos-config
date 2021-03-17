@@ -16,14 +16,12 @@
     };
   };
   environment.shells = [ pkgs.bashInteractive pkgs.zsh ];
-
   users.defaultUserShell = pkgs.zsh;
-
   programs.thefuck.enable = true;
 
   services.tlp.enable = true;
-
   programs.bash.enableCompletion = true;
+  
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 

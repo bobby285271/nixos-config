@@ -17,12 +17,13 @@
     ./sys/virtualisation.nix
   ];
 
-  nix.binaryCaches = [ 
-    "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-    "https://nixos-homepage.cachix.org"
-  ];
-
-  nix.binaryCachePublicKeys = [ "nixos-homepage.cachix.org-1:NHKBt7NjLcWfgkX4OR72q7LVldKJe/JOsfIWFDAn/tE=" ];
+  nix = {
+    binaryCaches = [ 
+      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+      "https://nixos-homepage.cachix.org"
+    ];
+    binaryCachePublicKeys = [ "nixos-homepage.cachix.org-1:NHKBt7NjLcWfgkX4OR72q7LVldKJe/JOsfIWFDAn/tE=" ];
+  };
 
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; 
