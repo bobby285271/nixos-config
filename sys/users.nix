@@ -7,4 +7,16 @@
     description = "Bobby Rong";
     extraGroups = [ "wheel" "networkmanager" "docker" ];
   };
+
+  security.sudo.extraRules = [
+    {
+      users = [ "bobby285271" ];
+      commands = [
+        {
+          command = "ALL";
+          options = [ "NOPASSWD" ];
+        }
+      ];
+    }
+  ];
 }
