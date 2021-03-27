@@ -20,9 +20,7 @@
   nix = {
     binaryCaches = [ 
       "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-      "https://nixos-homepage.cachix.org"
     ];
-    binaryCachePublicKeys = [ "nixos-homepage.cachix.org-1:NHKBt7NjLcWfgkX4OR72q7LVldKJe/JOsfIWFDAn/tE=" ];
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -46,6 +44,7 @@
     rustup
     texlive.combined.scheme-full
     transmission
+    unrar
     unzip
     vim
     wget
