@@ -4,10 +4,14 @@
   networking = {
     hostName = "inspiron";
     networkmanager.enable = true;
+    nameservers = [
+      "119.29.29.29"
+      "223.5.5.5"
+    ];
   };
 
   services = {
-     mysql = {
+    mysql = {
       enable = true;
       package = pkgs.mariadb;
     };
