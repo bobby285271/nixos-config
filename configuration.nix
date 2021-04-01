@@ -36,6 +36,7 @@
     gnupg
     gptfdisk
     neofetch
+    ntfs3g
     p7zip
     pciutils
     pinentry-curses 
