@@ -17,11 +17,11 @@
     ./sys/virtualisation.nix
   ];
 
-  nix = {
-    binaryCaches = [ 
-      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-    ];
-  };
+#  nix = {
+#    binaryCaches = [ 
+#      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+#    ];
+#  };
 
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; 
