@@ -31,6 +31,7 @@
     gcc
     gdb
     git
+    gnome3.gnome-tweak-tool
     gnome-latex
     gnumake
     gnupg
@@ -39,7 +40,7 @@
     ntfs3g
     p7zip
     pciutils
-    pinentry-curses 
+    pinentry-curses
     python3Minimal
     qemu
     rustup
