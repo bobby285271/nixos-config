@@ -15,7 +15,14 @@
       plugins = [ "git" "python" "man" ];
     };
   };
-  environment.shells = [ pkgs.bashInteractive pkgs.zsh ];
+
+  environment = {
+    shells = [ pkgs.bashInteractive pkgs.zsh ];
+    shellInit = ''
+      export GPG_TTY="$(tty)"
+    '';
+  };
+  
   users.defaultUserShell = pkgs.zsh;
   programs.thefuck.enable = true;
 
