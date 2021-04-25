@@ -16,6 +16,7 @@
       hack-font
       liberation_ttf
       noto-fonts-emoji
+      roboto
       sarasa-gothic
       source-han-mono
       source-han-sans
