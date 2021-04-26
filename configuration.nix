@@ -46,6 +46,7 @@
     qemu
     rustup
     texlive.combined.scheme-full
+    texmaker
     transmission
     unrar
     unzip
