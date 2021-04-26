@@ -37,6 +37,7 @@
     gnupg
     gptfdisk
     neofetch
+    nodejs-12_x
     ntfs3g
     p7zip
     pciutils
@@ -49,6 +50,7 @@
     unrar
     unzip
     vim
+    vscode
     wget
   ];
 }
