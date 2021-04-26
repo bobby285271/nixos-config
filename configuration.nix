@@ -50,7 +50,6 @@
     unrar
     unzip
     vim
-    vscode
     wget
   ];
 }
