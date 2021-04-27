@@ -32,12 +32,11 @@
     gdb
     git
     gnome3.gnome-tweak-tool
-    gnome-latex
     gnumake
     gnupg
     gptfdisk
     neofetch
-    nodejs-12_x
+    nodejs
     ntfs3g
     p7zip
     pciutils
