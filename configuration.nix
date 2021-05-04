@@ -19,13 +19,14 @@
 
   nix = {
     binaryCaches = [ 
-      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+      "https://mirrors.bfsu.edu.cn/nix-channels/store"
     ];
   };
 
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; 
   [
+    arc-theme
     dos2unix
     firefox
     gcc
@@ -38,7 +39,9 @@
     neofetch
     nodejs
     ntfs3g
+    onlyoffice-bin
     p7zip
+    papirus-icon-theme
     pciutils
     pinentry-curses
     python3Minimal
@@ -50,6 +53,7 @@
     unrar
     unzip
     vim
+    vscode-fhs
     wget
   ];
 }
