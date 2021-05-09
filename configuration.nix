@@ -26,34 +26,40 @@
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; 
   [
-    arc-theme
+    ark
     dos2unix
     firefox
     gcc
     gdb
     git
-    gnome3.gnome-tweak-tool
     gnumake
     gnupg
     gptfdisk
+    gwenview
+    kate
+    kcalc
+    kdevelop
     neofetch
     nodejs
     ntfs3g
+    okular
     onlyoffice-bin
     p7zip
-    papirus-icon-theme
     pciutils
     pinentry-curses
     python3Minimal
     qemu
+    qtcreator
     rustup
     texlive.combined.scheme-full
-    texmaker
-    transmission
+    texstudio
+    typora
     unrar
     unzip
     vim
+    vlc
     vscode-fhs
     wget
   ];
+
 }
