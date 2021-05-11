@@ -27,6 +27,7 @@
   environment.systemPackages = with pkgs; 
   [
     ark
+    codeblocks
     dos2unix
     firefox
     gcc
@@ -36,9 +37,11 @@
     gnupg
     gptfdisk
     gwenview
+    jdk
     kate
     kcalc
     kdevelop
+    libreoffice-fresh
     neofetch
     nodejs
     ntfs3g
