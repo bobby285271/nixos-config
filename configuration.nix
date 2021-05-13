@@ -19,7 +19,7 @@
 
   nix = {
     binaryCaches = [ 
-      "https://mirrors.bfsu.edu.cn/nix-channels/store"
+      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
     ];
   };
 
@@ -41,7 +41,7 @@
     kate
     kcalc
     kdevelop
-    libreoffice-fresh
+    libreoffice-qt
     neofetch
     nodejs
     ntfs3g
