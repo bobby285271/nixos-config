@@ -41,6 +41,7 @@
     kate
     kcalc
     kdevelop
+    krita
     libreoffice-qt
     neofetch
     nodejs
