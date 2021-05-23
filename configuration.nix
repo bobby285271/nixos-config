@@ -53,6 +53,7 @@
     p7zip
     pciutils
     pinentry-curses
+    plasma-pa
     python3Minimal
     qemu
     qtcreator
