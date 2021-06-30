@@ -68,5 +68,4 @@
     vscode-fhs
     wget
   ];
-
 }
