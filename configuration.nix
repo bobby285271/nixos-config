@@ -28,8 +28,10 @@
   environment.systemPackages = with pkgs; 
   [
     ark
+    chromium
     codeblocks
     dos2unix
+    eclipses.eclipse-java
     firefox
     gcc
     gdb
@@ -39,6 +41,7 @@
     gptfdisk
     gwenview
     jdk
+    jetbrains.idea-community
     kate
     kcalc
     kdevelop
@@ -53,7 +56,6 @@
     p7zip
     pciutils
     pinentry-curses
-    plasma-pa
     python3Minimal
     qemu
     qtcreator

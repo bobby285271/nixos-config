@@ -6,14 +6,18 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
-  programs.zsh = {
-    enable = true;
-    autosuggestions.enable = true;
-    ohMyZsh = {
+  programs = {
+    zsh = {
       enable = true;
-      theme = "ys";
-      plugins = [ "git" "python" "man" ];
+      autosuggestions.enable = true;
+      ohMyZsh = {
+        enable = true;
+        theme = "ys";
+        plugins = [ "git" "python" "man" ];
+      };
     };
+    thefuck.enable = true;
+    bash.enableCompletion = true;
   };
 
   environment = {
@@ -24,25 +28,14 @@
   };
   
   users.defaultUserShell = pkgs.zsh;
-  programs.thefuck.enable = true;
 
-  programs.bash.enableCompletion = true;
-
-  services = {
-    pipewire = {
-      enable = true;
-      alsa = {
-        enable = true;
-        support32Bit = true;
-      };
-      pulse.enable = true;
-    };
-    tlp.enable = true;
-  };
+  services.tlp.enable = true;
 
   system = {
     autoUpgrade.enable = true;
     stateVersion = "21.11";
   };
 
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
 }
