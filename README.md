@@ -10,7 +10,7 @@
 
 要使用我的配置档的话，要确保你位于 `nixos-unstable` 频道（[这里](https://mirrors.tuna.tsinghua.edu.cn/help/nix/) 有文档说明哦），接下来就只需要将 `hardware-configuration.nix` 备份一下，然后将这个仓库的文件放置到**目标系统**的 `/etc/nixos` 目录下，然后将我的 `hardware-configuration.nix` 换成你的就行啦！
 
-注意有些地方你可能还需要再做点调整，直接照搬得到的系统不一定适合你的情况哦。
+注意有些地方你可能还需要再做点调整（例如 `sys/users.nix` 下的用户名和密码），直接照搬得到的系统不一定适合你的情况哦。
 
 如果你是首次安装 NixOS，使用 `nixos-install` 的时候希望使用国内的软件源，要加参数（这时目标系统的配置文件还没生效的哦）：
 
