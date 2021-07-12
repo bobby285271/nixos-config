@@ -35,6 +35,7 @@
     firefox
     gcc
     gdb
+    gh
     git
     gnumake
     gnupg
