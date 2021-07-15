@@ -49,7 +49,6 @@
     krita
     ktorrent
     libreoffice-qt
-    neofetch
     nodejs
     ntfs3g
     okular
@@ -61,6 +60,7 @@
     qemu
     qtcreator
     rustup
+    screenfetch
     texlive.combined.scheme-full
     texstudio
     typora
