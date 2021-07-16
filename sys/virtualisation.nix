@@ -1,12 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  virtualisation = {
-    podman = {
-      enable = true;
-      dockerCompat = true;
-    };
-    virtualbox.host.enable = true;
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
   };
 
   services.flatpak.enable = true;

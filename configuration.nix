@@ -27,7 +27,6 @@
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; 
   [
-    ark
     chromium
     codeblocks
     dos2unix
@@ -37,28 +36,22 @@
     gdb
     gh
     git
+    gnome.file-roller
+    gnome.gnome-boxes
     gnumake
     gnupg
     gptfdisk
-    gwenview
     jdk
     jetbrains.idea-community
-    kate
-    kcalc
-    kdevelop
-    krita
-    ktorrent
-    libreoffice-qt
+    libreoffice-fresh
     nodejs
     ntfs3g
-    okular
     onlyoffice-bin
     p7zip
     pciutils
     pinentry-curses
     python3Minimal
     qemu
-    qtcreator
     rustup
     screenfetch
     texlive.combined.scheme-full
@@ -67,7 +60,6 @@
     unrar
     unzip
     vim
-    vlc
     vscode-fhs
     wget
   ];
