@@ -27,7 +27,8 @@
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; 
   [
-    chromium
+    bat
+#    chromium
     codeblocks
     dos2unix
     eclipses.eclipse-java
@@ -43,7 +44,7 @@
     gptfdisk
     jdk
     jetbrains.idea-community
-    libreoffice-fresh
+#    libreoffice-fresh
     nodejs
     ntfs3g
     onlyoffice-bin
