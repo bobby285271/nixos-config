@@ -6,9 +6,9 @@
 
 {
   imports = [
-    ./cachix.nix
-    ./desktop.nix
-    ./inspiron.nix 
-    ./packages.nix
+    ./cachix/default.nix
+    ./desktop/default.nix
+    ./inspiron/default.nix
+    ./packages/default.nix
  ];
 }

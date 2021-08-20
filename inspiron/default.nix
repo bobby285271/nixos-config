@@ -2,6 +2,7 @@
 
 {
   imports = [
-    ./packages/nixpkgs.nix
+    ./boot.nix
+    ./hardware.nix
  ];
 }

@@ -13,7 +13,7 @@
   [
     bat
     cachix
-#    chromium
+    chromium
     codeblocks
     dos2unix
     eclipses.eclipse-java
@@ -33,7 +33,6 @@
     nixpkgs-review
     nodejs
     ntfs3g
-    onlyoffice-bin
     p7zip
     pciutils
     pinentry-curses
@@ -49,5 +48,6 @@
     vim
     vscode-fhs
     wget
+    x11docker
   ];
 }
