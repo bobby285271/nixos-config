@@ -24,6 +24,7 @@
       source-han-sans-simplified-chinese
       source-han-serif
       source-han-serif-simplified-chinese
+      symbola
       wqy_microhei
       wqy_zenhei
     ];
