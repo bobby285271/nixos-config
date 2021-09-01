@@ -30,6 +30,7 @@
     jdk
     jetbrains.idea-community
     libreoffice-fresh
+    nix-update
     nixpkgs-review
     nodejs
     ntfs3g
@@ -40,8 +41,8 @@
     qemu
     rustup
     screenfetch
-    texlive.combined.scheme-full
-    texstudio
+#    texlive.combined.scheme-full
+#    texstudio
     typora
     unrar
     unzip
