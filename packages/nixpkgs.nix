@@ -44,6 +44,7 @@
     screenfetch
 #    texlive.combined.scheme-full
 #    texstudio
+    tree
     typora
     unrar
     unzip
