@@ -13,6 +13,7 @@
 std::map<std::string, std::vector<std::string>> mp;
 const int LINE = 33;
 const int INDCNT = 6;
+const int EXTRAINDCNT = 2;
 
 std::string getprefix(int indcnt)
 {
@@ -24,6 +25,12 @@ std::string getprefix(int indcnt)
     return ret;
 }
 
+std::string wrapstring(std::string ori)
+{
+    std::string ret = "\"" + ori + "\"";
+    return ret;
+}
+
 int main()
 {
     for (int i = 0; i < LINE; i++)
@@ -32,19 +39,19 @@ int main()
         std::cin >> k >> v;
         mp[k].push_back(v);
     }
-    for (auto k : mp)
+    for (auto &k : mp)
     {
-        std::cout << getprefix(INDCNT) << "\"" << k.first << "\" = [";
+        std::cout << getprefix(INDCNT) << wrapstring(k.first) << " = [";
         if (k.second.size() == 1)
         {
-            std::cout << " \"" << k.second[0] << "\" ];" << std::endl;
+            std::cout << " " << wrapstring(k.second[0]) << " ];" << std::endl;
         }
         else
         {
             std::cout << std::endl;
-            for (auto v : k.second)
+            for (auto &v : k.second)
             {
-                std::cout << getprefix(INDCNT) << "  \"" << v << "\"" << std::endl;
+                std::cout << getprefix(INDCNT + EXTRAINDCNT) << wrapstring(v) << std::endl;
             }
             std::cout << getprefix(INDCNT) << "];" << std::endl;
         }
