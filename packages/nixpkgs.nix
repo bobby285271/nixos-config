@@ -14,7 +14,7 @@
   [
     bat
     cachix
-    chromium
+#    chromium
     codeblocks
     dos2unix
     eclipses.eclipse-java
@@ -36,6 +36,7 @@
     nodejs
     ntfs3g
     p7zip
+    pantheon.appcenter
     pciutils
     pinentry-curses
     python3Minimal
@@ -45,7 +46,6 @@
 #    texlive.combined.scheme-full
 #    texstudio
     tree
-    typora
     unrar
     unzip
     vim
