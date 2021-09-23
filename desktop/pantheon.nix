@@ -9,4 +9,5 @@
       debug = true;
     };
   };
+  programs.pantheon-tweaks.enable = true;
 }
