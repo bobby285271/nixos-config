@@ -7,5 +7,5 @@
 {
   imports = [
     ./profiles/inspiron.nix
- ];
+  ];
 }
