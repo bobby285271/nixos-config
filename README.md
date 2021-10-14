@@ -10,6 +10,7 @@
 
 - `system/users.nix` - 用于配置用户帐号密码及权限。
 - `inspiron/hardware.nix` - 用于配置分区情况，应使用 `nixos-generate-config` 生成。
+- `system/nixconfig.nix`, `flake.nix`, ... - 有写死的路径。
 
 如果你是首次安装 NixOS，使用 `nixos-install` 的时候希望使用国内的软件源，可以尝试指定 `substituters`：
 
