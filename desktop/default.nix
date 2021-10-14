@@ -2,13 +2,10 @@
 
 {
   imports = [
-    ./boot.nix
+    ./fcitx.nix
     ./fonts.nix
-    ./i18n.nix
-    ./network.nix
+    ./misc.nix
+    ./packages.nix
     ./pantheon.nix
-    ./system.nix
-    ./users.nix
-    ./virtualisation.nix
  ];
 }

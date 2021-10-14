@@ -1,11 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  };
-
   programs = {
     zsh = {
       enable = true;
@@ -28,14 +23,4 @@
   };
   
   users.defaultUserShell = pkgs.zsh;
-
-  services.tlp.enable = true;
-
-  system = {
-    autoUpgrade.enable = true;
-    stateVersion = "21.11";
-  };
-
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
 }

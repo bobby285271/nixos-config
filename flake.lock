@@ -1,0 +1,22 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "narHash": "sha256-WxB8i0R404J7ctyGk/3a7G/ab6CWrx0JDXC3PaVA0KQ=",
+        "path": "/home/bobby285271/nixpkgs",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/bobby285271/nixpkgs",
+        "type": "path"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

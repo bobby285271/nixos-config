@@ -2,7 +2,7 @@
 
 ## NixOS 配置
 
-是本人正在使用的配置文件！机子是 Dell Inspiron 7591，NixOS + Pantheon。本人对 NixOS / Nix 也不是特别了解，目前的需求也不是特别多，也还没有入坑 Flakes 或是 Home Manager，所以这个配置文件可能还不怎么完善，让大家见笑了～
+是本人正在使用的配置文件！机子是 Dell Inspiron 7591，NixOS + Pantheon。本人对 NixOS / Nix 也不是特别了解，目前的需求也不是特别多，所以这个配置文件可能还不怎么完善，让大家见笑了～
 
 ### 怎么使用
 
@@ -21,7 +21,6 @@
 
 其实我也不知道怎么分类，或许早日入坑 DevOS 才是正道...
 
-- `cachix/` 给 Pantheon 打包时存包用的，欢迎大家在 NixOS 上用 Pantheon！
 - `desktop/` 换机时不需要重新配的各类配置。
 - `inspiron/` 换机时需要重新配的各类配置，例如驱动和分区等。
 - `packages/` 需要用到的一些软件包，目前都是 Nixpkgs 里的还没有野包。
