@@ -12,6 +12,7 @@
     gnupg
     gptfdisk
     nix-update
+    nixpkgs-fmt
     nixpkgs-review
     ntfs3g
     p7zip
