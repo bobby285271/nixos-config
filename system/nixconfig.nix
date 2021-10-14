@@ -5,6 +5,7 @@
     package = pkgs.nixUnstable;
     extraOptions = ''
       experimental-features = nix-command flakes
+      auto-optimise-store = true
     '';
     binaryCaches = [ 
       "https://mirror.sjtu.edu.cn/nix-channels/store"
