@@ -11,7 +11,6 @@
 #include <string>
 
 std::map<std::string, std::vector<std::string>> mp;
-const int LINE = 33;
 const int INDCNT = 6;
 const int EXTRAINDCNT = 2;
 
@@ -33,10 +32,9 @@ std::string wrapstring(std::string ori)
 
 int main()
 {
-    for (int i = 0; i < LINE; i++)
+    std::string k, v;
+    while (std::cin >> k >> v)
     {
-        std::string k, v;
-        std::cin >> k >> v;
         mp[k].push_back(v);
     }
     for (auto &k : mp)
