@@ -2,7 +2,7 @@
   description = "nixos-bobby285271";
 
   inputs = {
-    nixpkgs.url = "path:/home/bobby285271/nixpkgs";
+    nixpkgs.url = "git+https://github.com.cnpmjs.org/NixOS/nixpkgs?ref=nixos-unstable-small";
   };
 
   outputs = { self, nixpkgs }: {
