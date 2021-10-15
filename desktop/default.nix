@@ -7,5 +7,5 @@
     ./misc.nix
     ./packages.nix
     ./pantheon.nix
- ];
+  ];
 }

@@ -8,7 +8,7 @@
       auto-optimise-store = true
       flake-registry = https://raw.fastgit.org/NixOS/flake-registry/master/flake-registry.json
     '';
-    binaryCaches = [ 
+    binaryCaches = [
       "https://mirror.sjtu.edu.cn/nix-channels/store"
       "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
       "https://mirrors.ustc.edu.cn/nix-channels/store"

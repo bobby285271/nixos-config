@@ -21,6 +21,6 @@
       export GPG_TTY="$(tty)"
     '';
   };
-  
+
   users.defaultUserShell = pkgs.zsh;
 }

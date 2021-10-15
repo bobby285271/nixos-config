@@ -10,5 +10,5 @@
     ./packages.nix
     ./users.nix
     ./zsh.nix
- ];
+  ];
 }
