@@ -1,8 +1,3 @@
-#if 0
-    g++ -std=c++14 -O2 -Wall -lm "$0" && ./a.out && rm a.out
-    exit
-#endif
-
 // You won't need this.
 
 #include <iostream>
