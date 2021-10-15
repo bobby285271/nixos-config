@@ -2,13 +2,13 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "narHash": "sha256-DcoEGdPvsK5uHbNjnFkximOQ9mx55LdQNi5JLNM/uBc=",
-        "path": "/home/bobby285271/nixpkgs",
-        "type": "path"
+        "narHash": "sha256-XZkSSvKqce2vDe4jhdTzS+o6I5aEciHUMID3Qm5gG10=",
+        "type": "tarball",
+        "url": "https://hub.fastgit.org/NixOS/nixpkgs/archive/refs/heads/nixos-unstable-small.tar.gz"
       },
       "original": {
-        "path": "/home/bobby285271/nixpkgs",
-        "type": "path"
+        "type": "tarball",
+        "url": "https://hub.fastgit.org/NixOS/nixpkgs/archive/refs/heads/nixos-unstable-small.tar.gz"
       }
     },
     "root": {
