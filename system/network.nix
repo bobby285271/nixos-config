@@ -10,7 +10,7 @@
     ];
     hosts = {
       # https://github.com/521xueweihan/GitHub520
-            "140.82.112.25" = [ "alive.github.com" ];
+      "140.82.112.25" = [ "alive.github.com" ];
       "140.82.112.26" = [ "live.github.com" ];
       "140.82.112.4" = [ "github.com" ];
       "140.82.113.10" = [ "codeload.github.com" ];
