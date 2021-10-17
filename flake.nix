@@ -2,10 +2,9 @@
   description = "nixos-bobby285271";
 
   inputs = {
-    # Daily use.
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable-small";
-    # Pantheon updates preparation.
-    # nixpkgs.url = "path:/home/bobby285271/nixpkgs";
+    # Use the following when preparing Pantheon updates:
+    # nix flake update --override-input nixpkgs path:/home/bobby285271/nixpkgs
+    nixpkgs.url = "git+https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git?ref=nixos-unstable-small";
   };
 
   outputs = { self, nixpkgs }: {
