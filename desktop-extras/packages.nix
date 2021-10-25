@@ -8,6 +8,8 @@
     jetbrains.idea-community
     libreoffice-fresh
     qemu
+    texlive.combined.scheme-full
+    texstudio
     x11docker
   ];
 }
