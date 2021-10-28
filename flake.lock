@@ -2,7 +2,7 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "narHash": "sha256-+uH+ufG2YvBEHv/UCzhrf6vxNHBj3u7x8nm06+Cc1VQ=",
+        "narHash": "sha256-LEYrXIbJgFa+5p8Zy/RCtlSiSQ8fX/tTGNxM6mpAaP4=",
         "path": "/home/bobby285271/nixpkgs",
         "type": "path"
       },
