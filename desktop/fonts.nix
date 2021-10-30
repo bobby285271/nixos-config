@@ -6,7 +6,7 @@
     fontconfig = {
       enable = true;
       defaultFonts.emoji = [ "Noto Color Emoji" ];
-      defaultFonts.monospace = [ "Hack" "Sarasa Mono SC" ];
+      defaultFonts.monospace = [ "Hack" "Source Han Mono SC" ];
       defaultFonts.sansSerif = [ "Inter" "Liberation Sans" "Soruce Han Sans SC" ];
       defaultFonts.serif = [ "Liberation Serif" "Source Han Serif SC" ];
     };
@@ -18,7 +18,6 @@
       liberation_ttf
       noto-fonts-emoji
       roboto
-      sarasa-gothic
       source-han-mono
       source-han-sans
       source-han-sans-simplified-chinese
