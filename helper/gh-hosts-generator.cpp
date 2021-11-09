@@ -27,6 +27,7 @@ std::string wrapstring(std::string ori)
 
 int main()
 {
+    std::cout << "Input raw data:" << std::endl;
     std::string k, v;
     while (std::cin >> k >> v)
     {
@@ -49,4 +50,5 @@ int main()
             std::cout << getprefix(INDCNT) << "];" << std::endl;
         }
     }
+    return 0;
 }
