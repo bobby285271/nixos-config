@@ -8,12 +8,12 @@
         "rev": "935f133a7b58ef2910fb72b1b5b9546b2d90b7e9",
         "revCount": 331026,
         "type": "git",
-        "url": "https://github.com/NixOS/nixpkgs.git"
+        "url": "https://hub.fastgit.org/NixOS/nixpkgs.git"
       },
       "original": {
         "ref": "nixos-unstable-small",
         "type": "git",
-        "url": "https://github.com/NixOS/nixpkgs.git"
+        "url": "https://hub.fastgit.org/NixOS/nixpkgs.git"
       }
     },
     "root": {
