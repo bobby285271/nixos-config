@@ -9,7 +9,6 @@
     libreoffice-fresh
     meteo
     qemu
-    texlive.combined.scheme-full
     texstudio
     x11docker
   ];
