@@ -2,16 +2,16 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1636851273,
-        "narHash": "sha256-0jiZEG0J4Mm7/CBY2tPQMJyfV7P1ZaZ6Fi5DhCDsyk0=",
-        "ref": "nixos-unstable-small",
-        "rev": "1950b7d6f005c487674d53c4e7393957b57ee67c",
-        "revCount": 330647,
+        "lastModified": 1636800699,
+        "narHash": "sha256-SwbyVxXffu3G2ulJIbTf0iQfqhbGbdml4Dyv5j9BiAI=",
+        "ref": "nixos-unstable",
+        "rev": "2fa862644fc15ecb525eb8cd0a60276f1c340c7c",
+        "revCount": 330462,
         "type": "git",
         "url": "https://mirrors.nju.edu.cn/git/nixpkgs.git"
       },
       "original": {
-        "ref": "nixos-unstable-small",
+        "ref": "nixos-unstable",
         "type": "git",
         "url": "https://mirrors.nju.edu.cn/git/nixpkgs.git"
       }
