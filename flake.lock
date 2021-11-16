@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1636851273,
-        "narHash": "sha256-0jiZEG0J4Mm7/CBY2tPQMJyfV7P1ZaZ6Fi5DhCDsyk0=",
+        "lastModified": 1636963175,
+        "narHash": "sha256-PC4jXUTAOHC5rrQKecPrTuJLqVFZj99BPIqvD5ylsOQ=",
         "ref": "nixos-unstable-small",
-        "rev": "1950b7d6f005c487674d53c4e7393957b57ee67c",
-        "revCount": 330647,
+        "rev": "935f133a7b58ef2910fb72b1b5b9546b2d90b7e9",
+        "revCount": 331026,
         "type": "git",
         "url": "https://mirrors.nju.edu.cn/git/nixpkgs.git"
       },
