@@ -2,8 +2,10 @@
 
 {
   environment.systemPackages = with pkgs; [
+    eclipses.eclipse-java
     firefox
     gnome.gnome-boxes
-    vscodium
+    libreoffice-fresh
+    vscode-fhs
   ];
 }

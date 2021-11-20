@@ -18,7 +18,6 @@
     p7zip
     pciutils
     pinentry-curses
-    python3
     screenfetch
     tree
     unrar

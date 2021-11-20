@@ -9,7 +9,6 @@
       "223.5.5.5"
     ];
     hosts = {
-      # https://github.com/521xueweihan/GitHub520
       "140.82.112.22" = [ "central.github.com" ];
       "140.82.112.25" = [ "live.github.com" ];
       "140.82.112.3" = [
