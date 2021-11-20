@@ -1,7 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  services.tlp.enable = true;
+  services = {
+    tlp.enable = true;
+    openssh.enable = true;
+  };
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 

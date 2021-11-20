@@ -11,10 +11,6 @@
         system = "x86_64-linux";
         modules = [ ./profiles/inspiron.nix ];
       };
-      inspiron-light = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [ ./profiles/inspiron-light.nix ];
-      };
     };
   };
 }

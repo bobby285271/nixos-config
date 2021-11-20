@@ -8,7 +8,11 @@
       ohMyZsh = {
         enable = true;
         theme = "ys";
-        plugins = [ "git" "python" "man" ];
+        plugins = [
+          "git"
+          "python"
+          "man"
+        ];
       };
     };
     thefuck.enable = true;

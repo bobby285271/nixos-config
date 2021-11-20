@@ -1,3 +1,10 @@
+#if 0
+    clear
+    g++ -std=c++14 -O2 -Wall -lm "$0" -o gh-hosts-generator.out && ./gh-hosts-generator.out
+    rm -f ./gh-hosts-generator.out
+    exit
+#endif
+
 // You won't need this.
 
 #include <iostream>

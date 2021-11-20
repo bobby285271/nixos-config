@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     firefox
-    vscode-fhs
+    gnome.gnome-boxes
+    vscodium
   ];
 }

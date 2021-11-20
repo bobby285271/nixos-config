@@ -12,6 +12,5 @@
       virtualHosts.localhost.documentRoot = "/srv/html";
       enablePHP = true;
     };
-    openssh.enable = true;
   };
 }

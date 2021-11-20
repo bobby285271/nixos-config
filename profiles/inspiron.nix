@@ -2,8 +2,10 @@
 
 {
   imports = [
-    ./inspiron-light.nix
-    ../desktop-extras/default.nix
-    ../system-extras/default.nix
+    ../desktop
+    ../machines/inspiron
+    ../programs
+    ../system
+    ../users/bobby285271
   ];
 }

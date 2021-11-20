@@ -1,14 +1,11 @@
-{ config, pkgs, ... }:
+{ pkgs, lib, ... }:
 
+let
+  folder = ./.;
+  toImport = name: value: folder + ("/" + name);
+  filterConfig = key: value: value == "regular" && lib.hasSuffix ".nix" key && key != "default.nix";
+  imports = lib.mapAttrsToList toImport (lib.filterAttrs filterConfig (builtins.readDir folder));
+in
 {
-  imports = [
-    ./boot.nix
-    ./locale.nix
-    ./misc.nix
-    ./network.nix
-    ./nixconfig.nix
-    ./packages.nix
-    ./users.nix
-    ./zsh.nix
-  ];
+  inherit imports;
 }
