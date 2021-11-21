@@ -1,9 +1,7 @@
 {
   description = "nixos-bobby285271";
 
-  # Use the following when preparing Pantheon updates:
-  # nix flake update --override-input nixpkgs git+file:///home/bobby285271/nixpkgs
-  inputs.nixpkgs.url = "git+https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git?ref=nixos-unstable";
+  inputs.nixpkgs.url = "git+file:///home/bobby285271/nixpkgs?ref=nixos-unstable";
 
   outputs = { self, nixpkgs }: {
     nixosConfigurations = {
