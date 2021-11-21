@@ -11,9 +11,9 @@
         "url": "file:///home/bobby285271/nixpkgs"
       },
       "original": {
-        "ref": "nixos-unstable",
+        "ref": "pantheon",
         "type": "git",
-        "url": "https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git"
+        "url": "file:///home/bobby285271/nixpkgs"
       }
     },
     "root": {
