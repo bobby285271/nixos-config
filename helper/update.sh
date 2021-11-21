@@ -18,4 +18,5 @@ else
     nix flake update --commit-lock-file --override-input nixpkgs "git+file://${nixpkgs_dir}/?ref=${1}"
 fi
 
+nixos-rebuild --flake "${nixos_config_dir}#inspiron" dry-run
 sudo nixos-rebuild --flake "${nixos_config_dir}#inspiron" boot
