@@ -15,7 +15,7 @@ cd "${nixos_config_dir}"
 if [ "$#" -eq 0 ]; then
     nix flake update --commit-lock-file
 else
-    nix flake update --commit-lock-file --override-input nixpkgs "git+file://${nixpkgs_dir}/?ref=${1}"
+    nix flake update --commit-lock-file --override-input nixpkgs "git+file://${nixpkgs_dir}?ref=${1}"
 fi
 
 nixos-rebuild --flake "${nixos_config_dir}#inspiron" dry-run
