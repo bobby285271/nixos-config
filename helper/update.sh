@@ -4,7 +4,11 @@ nixpkgs_dir="${HOME}/nixpkgs"
 nixos_config_dir="${HOME}/nixos"
 
 cd "${nixpkgs_dir}"
-git checkout upstream
+
+if [ $(git branch --show-current) == "nixos-unstable" ]; then
+    git checkout upstream
+fi
+
 git fetch ${nixpkgs_remote} nixos-unstable:nixos-unstable
 cd "${nixos_config_dir}"
 
