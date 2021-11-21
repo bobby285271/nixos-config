@@ -8,7 +8,7 @@
         "rev": "c4f57b9489400f52bc7add26574bbc6051c35634",
         "revCount": 331463,
         "type": "git",
-        "url": "file:///home/bobby285271/nixpkgs/"
+        "url": "file:///home/bobby285271/nixpkgs"
       },
       "original": {
         "ref": "nixos-unstable",
