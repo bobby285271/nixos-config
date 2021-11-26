@@ -6,6 +6,7 @@
     firefox
     gnome.gnome-boxes
     libreoffice-fresh
+    marktext
     vscode-fhs
   ];
 }
