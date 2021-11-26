@@ -14,7 +14,7 @@
         sansSerif = [
           "Inter"
           "Liberation Sans"
-          "Soruce Han Sans SC"
+          "Source Han Sans SC"
         ];
         serif = [
           "Liberation Serif"
