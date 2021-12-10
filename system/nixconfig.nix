@@ -23,6 +23,11 @@
         path = "/home/bobby285271/nixpkgs";
       };
     };
+
+    trustedUsers = [
+      "root"
+      "bobby285271"
+    ];
   };
 
   nixpkgs.config = {
