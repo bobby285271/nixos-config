@@ -18,22 +18,6 @@
     binaryCachePublicKeys = [
       "bobby285271.cachix.org-1:suZrwf/wphZbNXocjgcc49lcn/RB0iFxlh1peSVOE3w="
     ];
-
-    registry.nixpkgs = {
-      from = {
-        type = "indirect";
-        id = "local";
-      };
-      to = {
-        type = "path";
-        path = "/home/bobby285271/nixpkgs";
-      };
-    };
-
-    trustedUsers = [
-      "root"
-      "bobby285271"
-    ];
   };
 
   nixpkgs.config = {
