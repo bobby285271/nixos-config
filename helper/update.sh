@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-nixpkgs_remote="https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git"
+nixpkgs_remote="https://hub.fastgit.org/NixOS/nixpkgs.git"
 nixpkgs_dir="${HOME}/nixpkgs"
 nixos_config_dir="${HOME}/nixos"
 
