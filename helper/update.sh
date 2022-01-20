@@ -7,9 +7,9 @@ cd "${nixpkgs_dir}"
 
 if [ "$(git branch --show-current)" == "nixos-unstable" ]; then
     git pull ${nixpkgs_remote}
+else
+    git fetch ${nixpkgs_remote} nixos-unstable:nixos-unstable
 fi
-
-git fetch ${nixpkgs_remote} nixos-unstable:nixos-unstable
 cd "${nixos_config_dir}"
 
 if [ "$#" -eq 0 ]; then
