@@ -3,10 +3,10 @@
     "nixpkgs": {
       "locked": {
         "lastModified": 1643027469,
-        "narHash": "sha256-445icXlttlpFhpZpILw7F7d1tT3mOHUrouAqxh1wKgA=",
+        "narHash": "sha256-ggjPZLJmzyyd3W8BNYGxfYii8b+TUU5DdOP8O/A7cB8=",
         "ref": "pantheon",
-        "rev": "eea33a7b719f3b76e99952c608147e783af9e257",
-        "revCount": 347951,
+        "rev": "45ec3d3d4abdfa98be7b02afd0f1c5b870b6d775",
+        "revCount": 347950,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
