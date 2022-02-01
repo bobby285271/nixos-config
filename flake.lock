@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1643532989,
-        "narHash": "sha256-TN+pDCWbO82dQRCp1c+w73hlrexyFyxG2A44Zuf8Tb0=",
-        "ref": "elementary-music",
-        "rev": "83e96efd141413352d0a40695738a3cfb2897642",
-        "revCount": 349248,
+        "lastModified": 1643730431,
+        "narHash": "sha256-UTwBCP36iSJjbg6RRHBJLIu9J/13HaAkUWsmlgmhUJw=",
+        "ref": "pantheon",
+        "rev": "7052f413d8cfd01d7f0d661cd6e0cedac44ab07d",
+        "revCount": 350606,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
