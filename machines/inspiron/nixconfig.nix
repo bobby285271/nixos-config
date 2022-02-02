@@ -14,7 +14,7 @@
       };
     };
 
-    trustedUsers = [
+    settings.trusted-users = [
       "root"
       "bobby285271"
     ];
