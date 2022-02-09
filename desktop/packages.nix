@@ -8,7 +8,6 @@
     gitg
     gnome.gnome-boxes
     libreoffice-fresh
-    pantheon.appcenter
     vscode-fhs
   ];
 }
