@@ -7,7 +7,7 @@
       "flakes"
     ];
     auto-optimise-store = true;
-    flake-registry = "https://cdn.jsdelivr.net/gh/NixOS/flake-registry/flake-registry.json";
+    flake-registry = "https://gitee.com/bobby285271/flake-registry/raw/master/flake-registry.json";
     substituters = lib.mkBefore [
       "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
       "https://mirror.sjtu.edu.cn/nix-channels/store"
