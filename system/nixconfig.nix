@@ -2,10 +2,10 @@
 
 {
   nix.settings = {
-    experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
+    # experimental-features = [
+    #   "nix-command"
+    #   "flakes"
+    # ];
     auto-optimise-store = true;
     flake-registry = "https://gitee.com/bobby285271/flake-registry/raw/master/flake-registry.json";
     substituters = lib.mkBefore [
