@@ -6,7 +6,7 @@ nixos_config_dir="${HOME}/nixos"
 cd "${nixpkgs_dir}"
 
 if [ "$(git branch --show-current)" == "nixos-unstable" ]; then
-    git pull ${nixpkgs_remote}
+    git pull ${nixpkgs_remote} nixos-unstable
 else
     git fetch ${nixpkgs_remote} nixos-unstable:nixos-unstable
 fi
