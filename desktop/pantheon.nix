@@ -7,9 +7,7 @@
     desktopManager.pantheon = {
       enable = true;
       debug = true;
-      extraSwitchboardPlugs = with pkgs; [
-        pantheon-tweaks
-      ];
+      extraSwitchboardPlugs = [ pkgs.pantheon-tweaks ];
     };
   };
 }
