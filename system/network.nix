@@ -2,7 +2,6 @@
 
 {
   networking = {
-    hostName = "inspiron";
     networkmanager.enable = true;
     nameservers = [
       "119.29.29.29"
