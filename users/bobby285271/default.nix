@@ -17,12 +17,4 @@
       "camera"
     ];
   };
-
-  security.sudo.extraRules = [{
-    users = [ "bobby285271" ];
-    commands = [{
-      command = "ALL";
-      options = [ "NOPASSWD" ];
-    }];
-  }];
 }
