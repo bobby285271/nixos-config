@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 {
   nix = {
     registry.nixpkgs = {
