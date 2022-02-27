@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
+
+set -e
+
 nixpkgs_remote="https://hub.fastgit.xyz/NixOS/nixpkgs.git"
 nixpkgs_dir="${HOME}/nixpkgs"
 nixos_config_dir="${HOME}/nixos"
 
 cd "${nixpkgs_dir}"
 
-if [ "$(git branch --show-current)" == "nixos-unstable" ]; then
-    git pull ${nixpkgs_remote} nixos-unstable
-else
-    git fetch ${nixpkgs_remote} nixos-unstable:nixos-unstable
-fi
+git fetch ${nixpkgs_remote} nixos-unstable:nixos-unstable
 cd "${nixos_config_dir}"
 
 if [ "$#" -eq 0 ]; then
