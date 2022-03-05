@@ -19,3 +19,5 @@ fi
 
 nixos-rebuild --flake "${nixos_config_dir}#inspiron" dry-run
 sudo nixos-rebuild --flake "${nixos_config_dir}#inspiron" boot
+
+sudo nix-channel --update
