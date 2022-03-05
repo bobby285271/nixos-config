@@ -15,6 +15,7 @@
     nixpkgs-fmt
     nixpkgs-review
     ntfs3g
+    openjdk
     p7zip
     pciutils
     pinentry-curses
