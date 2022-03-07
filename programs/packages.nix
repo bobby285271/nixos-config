@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     cachix
+    distrobox
     dos2unix
     gcc
     gdb
