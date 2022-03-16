@@ -9,10 +9,6 @@
         system = "x86_64-linux";
         modules = [ ./profiles/inspiron.nix ];
       };
-      pr163554 = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [ ./profiles/pr163554.nix ];
-      };
     };
   };
 }
