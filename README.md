@@ -1,4 +1,8 @@
-![](screenshot.jpg)
+<center>
+  
+[![](screenshot.png)](https://twitter.com/risu13e15/status/1504050343092494340)
+  
+</center>
 
 ## NixOS 配置
 
