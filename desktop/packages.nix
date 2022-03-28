@@ -9,5 +9,8 @@
     gnome.gnome-boxes
     libreoffice-fresh
     vscode-fhs
+
+    # test only
+    htop
   ];
 }
