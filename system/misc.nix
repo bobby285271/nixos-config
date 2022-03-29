@@ -1,10 +1,7 @@
 {
   environment.localBinInPath = true;
 
-  services = {
-    tlp.enable = true;
-    openssh.enable = true;
-  };
+  services.openssh.enable = true;
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
