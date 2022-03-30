@@ -9,6 +9,5 @@
     gnome.gnome-boxes
     libreoffice-fresh
     vscode-fhs
-    gnome.dconf-editor
   ];
 }
