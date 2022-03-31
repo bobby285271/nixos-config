@@ -1,15 +1,17 @@
 { pkgs, ... }:
 
 {
-  services.xserver = {
-    enable = true;
-    layout = "us";
-    desktopManager.pantheon = {
+  services = {
+    xserver = {
       enable = true;
-      debug = true;
-      extraSwitchboardPlugs = [ pkgs.pantheon-tweaks ];
+      layout = "us";
+      desktopManager.pantheon = {
+        enable = true;
+        debug = true;
+        extraSwitchboardPlugs = [ pkgs.pantheon-tweaks ];
+      };
     };
-
+    
     flatpak.enable = true;
   };
 
