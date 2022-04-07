@@ -11,7 +11,6 @@
         extraSwitchboardPlugs = [ pkgs.pantheon-tweaks ];
       };
     };
-    
     flatpak.enable = true;
   };
 
@@ -19,5 +18,4 @@
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
-
 }
