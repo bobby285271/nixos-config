@@ -4,6 +4,7 @@
   services = {
     tlp.enable = true;
     openssh.enable = true;
+    thermald.enable = true;
   };
   sound.enable = true;
   hardware.pulseaudio.enable = true;
