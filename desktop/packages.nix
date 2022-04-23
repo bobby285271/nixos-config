@@ -11,6 +11,4 @@
     libreoffice-fresh
     vscode-fhs
   ];
-
-  environment.variables.MOZ_DISABLE_CONTENT_SANDBOX = "1";
 }
