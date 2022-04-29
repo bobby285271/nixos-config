@@ -9,4 +9,4 @@ stages:
 Run tests:
   stage: test
   script:
-    - nix flake check
+    - nix --experimental-features "nix-command flakes" flake check
