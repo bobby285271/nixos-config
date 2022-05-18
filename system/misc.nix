@@ -2,7 +2,6 @@
   environment.localBinInPath = true;
 
   services = {
-    tlp.enable = true;
     openssh.enable = true;
     thermald.enable = true;
   };
