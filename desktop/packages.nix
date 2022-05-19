@@ -9,6 +9,7 @@
     gitg
     gnome.gnome-boxes
     libreoffice-fresh
+    slack
     vscode-fhs
   ];
 }
