@@ -7,6 +7,7 @@
     eclipses.eclipse-java
     firefox
     gitg
+    gnome.geary
     gnome.gnome-boxes
     libreoffice-fresh
     slack
