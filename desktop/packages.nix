@@ -6,8 +6,8 @@
     chromium
     eclipses.eclipse-java
     firefox
-    geary
     gitg
+    gnome.geary
     gnome.gnome-boxes
     libreoffice-fresh
     slack
