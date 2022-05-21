@@ -18,4 +18,17 @@
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
+
+  nixpkgs.overlays = [
+    (self: super: {
+      pantheon = super.pantheon.overrideScope' (pself: psuper: {
+        elementary-mail = psuper.elementary-mail.overrideAttrs (oldAttrs: {
+          prePatch = ''
+            substituteInPlace src/MessageList/GravatarIcon.vala \
+              --replace "https://secure.gravatar.com/avatar/" "https://gravatar.loli.net/avatar/"
+          '';
+        });
+      });
+    })
+  ];
 }
