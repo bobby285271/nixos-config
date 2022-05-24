@@ -10,7 +10,6 @@
     gnome.gnome-boxes
     libreoffice-fresh
     slack
-    thunderbird
     vscode-fhs
   ];
 }
