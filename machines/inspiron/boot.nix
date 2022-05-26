@@ -15,14 +15,7 @@
     };
   };
 
-  services.xserver = {
-    videoDrivers = [ "nvidia" ];
-    screenSection = ''
-      Option         "metamodes" "nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
-      Option         "AllowIndirectGLXProtocol" "off"
-      Option         "TripleBuffer" "on"
-    '';
-  };
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia.prime = {
     offload.enable = true;
