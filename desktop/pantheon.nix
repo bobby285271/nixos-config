@@ -31,7 +31,7 @@
 
         wingpanel = psuper.wingpanel.overrideAttrs (oldAttrs: {
           prePatch = ''
-            substituteInPlace wingpanel/wingpanel-interface/BackgroundManager.vala \
+            substituteInPlace wingpanel-interface/BackgroundManager.vala \
               --replace "new_state = BackgroundState.TRANSLUCENT_LIGHT;" "new_state = BackgroundState.TRANSLUCENT_DARK;"
           '';
         });
