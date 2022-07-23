@@ -28,6 +28,13 @@
               --replace "https://secure.gravatar.com/avatar/" "https://gravatar.loli.net/avatar/"
           '';
         });
+
+        wingpanel = psuper.wingpanel.overrideAttrs (oldAttrs: {
+          prePatch = ''
+            substituteInPlace wingpanel/wingpanel-interface/BackgroundManager.vala \
+              --replace "new_state = BackgroundState.TRANSLUCENT_LIGHT;" "new_state = BackgroundState.TRANSLUCENT_DARK;"
+          '';
+        });
       });
     })
   ];
