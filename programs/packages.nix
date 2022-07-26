@@ -12,6 +12,7 @@
     gnumake
     gnupg
     gptfdisk
+    kubectl
     minikube
     nix-update
     nixpkgs-fmt
