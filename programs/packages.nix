@@ -12,6 +12,7 @@
     gnumake
     gnupg
     gptfdisk
+    minikube
     nix-update
     nixpkgs-fmt
     nixpkgs-review
