@@ -29,12 +29,12 @@
           '';
         });
 
-        # wingpanel = psuper.wingpanel.overrideAttrs (oldAttrs: {
-        #   prePatch = ''
-        #     substituteInPlace wingpanel-interface/BackgroundManager.vala \
-        #       --replace "new_state = BackgroundState.TRANSLUCENT_DARK;" "new_state = BackgroundState.TRANSLUCENT_LIGHT;"
-        #   '';
-        # });
+        wingpanel = psuper.wingpanel.overrideAttrs (oldAttrs: {
+          prePatch = ''
+            substituteInPlace wingpanel-interface/BackgroundManager.vala \
+              --replace "new_state = BackgroundState.TRANSLUCENT_DARK;" "new_state = BackgroundState.TRANSLUCENT_LIGHT;"
+          '';
+        });
       });
     })
   ];
