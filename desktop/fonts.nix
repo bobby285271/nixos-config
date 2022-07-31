@@ -34,7 +34,6 @@
       source-han-mono
       source-han-sans
       source-han-serif
-      symbola
       wqy_microhei
       wqy_zenhei
     ];
