@@ -21,7 +21,7 @@
 
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid/7693343f-378a-44f8-b602-f7c50cbf7269";
+      device = "/dev/disk/by-uuid/581d7273-9cc5-416f-a1d3-1a420c832a5a";
       fsType = "btrfs";
     };
     "/boot" = {
@@ -31,8 +31,10 @@
   };
 
   swapDevices = [{
-    device = "/dev/disk/by-uuid/7735a559-7cdf-42b6-98f5-d12f300dd180";
+    device = "/dev/disk/by-uuid/0e9e3ec9-d686-4e4f-a88c-65ccd18772cc";
   }];
 
+  networking.useDHCP = lib.mkDefault true;
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
