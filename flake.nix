@@ -7,8 +7,11 @@
     nixosConfigurations = {
       inspiron = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = attrs;
         modules = [ ./profiles/inspiron.nix ];
+      };
+      inspiron-cinnamon = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [ ./profiles/inspiron-cinnamon.nix ];
       };
     };
   };

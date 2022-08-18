@@ -1,7 +1,7 @@
 {
   imports = [
     ../desktop
-    ../desktop/candidates/pantheon.nix
+    ../desktop/candidates/cinnamon.nix
     ../machines/inspiron
     ../programs
     ../system
