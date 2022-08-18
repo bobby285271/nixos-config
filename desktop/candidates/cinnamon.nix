@@ -7,8 +7,8 @@
       layout = "us";
       desktopManager.cinnamon.enable = true;
       displayManager.lightdm.greeters.slick = {
-        theme.name = "Mint-Y-Dark";
-        iconTheme.name = "Mint-Y";
+        theme.name = "Mint-Y";
+        iconTheme.name = "Mint-Y-Dark";
       };
     };
     flatpak.enable = true;
