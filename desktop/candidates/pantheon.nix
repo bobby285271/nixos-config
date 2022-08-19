@@ -2,6 +2,7 @@
 
 {
   services = {
+    packagekit.enable = true;
     xserver = {
       enable = true;
       layout = "us";
