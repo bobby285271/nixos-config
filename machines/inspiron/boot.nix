@@ -6,11 +6,8 @@
     plymouth.enable = true;
     loader = {
       efi.canTouchEfiVariables = true;
-      grub = {
+      systemd-boot = {
         enable = true;
-        device = "nodev";
-        useOSProber = true;
-        efiSupport = true;
         configurationLimit = 5;
       };
     };
