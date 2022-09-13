@@ -7,6 +7,7 @@
       enable = true;
       layout = "us";
       desktopManager.cinnamon.enable = true;
+      displayManager.lightdm.greeters.slick.draw-user-backgrounds = true;
     };
     flatpak.enable = true;
   };
