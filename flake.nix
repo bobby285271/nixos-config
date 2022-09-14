@@ -5,7 +5,7 @@
 
   outputs = { self, nixpkgs, ... }@attrs: {
     nixosConfigurations = {
-      inspiron-pantheon = nixpkgs.lib.nixosSystem {
+      inspiron = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [ ./profiles/inspiron-pantheon.nix ];
       };
