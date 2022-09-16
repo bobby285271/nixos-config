@@ -5,11 +5,11 @@
 
   outputs = { self, nixpkgs, ... }@attrs: {
     nixosConfigurations = {
-      inspiron = nixpkgs.lib.nixosSystem {
+      inspiron-pantheon = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [ ./profiles/inspiron-pantheon.nix ];
       };
-      inspiron-cinnamon = nixpkgs.lib.nixosSystem {
+      inspiron = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [ ./profiles/inspiron-cinnamon.nix ];
       };
