@@ -8,8 +8,8 @@
       layout = "us";
       desktopManager.cinnamon.enable = true;
       displayManager.lightdm.greeters.slick = {
-        theme.name = "Mint-Y";
-        iconTheme.name = "Mint-Y-Dark";
+        theme.name = "Mint-Y-Aqua";
+        iconTheme.name = "Mint-Y-Dark-Aqua";
         draw-user-backgrounds = true;
       };
     };
