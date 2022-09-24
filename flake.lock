@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1663684086,
-        "narHash": "sha256-Yz9RCktRNtFnSXwmuHHhegBzjrdGu9anDt5iHzsHOP0=",
-        "ref": "webkit",
-        "rev": "de68c80c40d38b8bd79eaf694ddf922426036b59",
-        "revCount": 407935,
+        "lastModified": 1663760399,
+        "narHash": "sha256-06Vh7e0pAjw3DZDSJRyHxuURknkfuDuu/iXZKRt8t6M=",
+        "ref": "bobby285271/pantheon-gnome43-fixes",
+        "rev": "02431b722ff99bae1b41ef33601c438b97bab022",
+        "revCount": 407932,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
