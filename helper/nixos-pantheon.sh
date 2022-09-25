@@ -2,7 +2,7 @@
 
 set -e
 
-nixpkgs_remote="git@github.com:NixOS/nixpkgs.git"
+nixpkgs_remote="http://hub.fgit.ml/NixOS/nixpkgs"
 nixpkgs_dir="${HOME}/nixpkgs"
 nixos_config_dir="${HOME}/nixos"
 
