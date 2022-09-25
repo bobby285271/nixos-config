@@ -7,6 +7,7 @@
     eclipses.eclipse-java
     firefox
     gitg
+    glib
     gnome.gnome-boxes
     libreoffice-fresh
     marktext
