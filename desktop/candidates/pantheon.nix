@@ -36,8 +36,9 @@
             # Fix weird font color
             # https://github.com/elementary/terminal/pull/684
             (super.fetchpatch {
-              url = "https://hub.fgit.ml/elementary/terminal/commit/c0c6ce352f9e25ea559bd98c1ca51a9771f58868.patch";
-              hash = "sha256-Yurlm5qGI2k1oRp9IGKtkqNiZmq1T5QIIBy8mCZ/gRw=";
+              url = "https://hub.fgit.ml/elementary/terminal/commit/873068fd20098ae0065473ce49c8b768e397091e.patch";
+              hash = "sha256-5JJwNp/3GjruNCLtEyAQnqSdIuAjw4fEEwSpXgsTN6I=";
+              revert = true;
             })
           ];
         });
