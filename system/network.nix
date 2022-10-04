@@ -46,6 +46,7 @@
       "52.217.90.252" = [ "github-production-release-asset-2e65be.s3.amazonaws.com" ];
       "54.231.193.73" = [ "github-cloud.s3.amazonaws.com" ];
       "64.71.144.202" = [ "github.community" ];
+      "104.26.13.82" = [ "nix-community.cachix.org" ];
     };
   };
 }
