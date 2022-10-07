@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1664337382,
-        "narHash": "sha256-wvuJrhVOnJosVmiZHfUcrup1SQFDT8lzJXOgpPWznIA=",
-        "ref": "gnome",
-        "rev": "c504f32dcab908e0ae8d6bad1e677606911bc864",
-        "revCount": 410542,
+        "lastModified": 1665156142,
+        "narHash": "sha256-2o0OKWNkTCor5mRnAOjL0OfYZFfh5dY54ShbLjIVK7k=",
+        "ref": "pantheon-mutter",
+        "rev": "b36155aca866e91cda6cd42f6bb9dd07ff9579c1",
+        "revCount": 414767,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
