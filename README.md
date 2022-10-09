@@ -1,10 +1,10 @@
 <div align="center" width="100%">
-  <a href="https://www.pixiv.net/artworks/91664204"><img src="screenshot.jpg"></a>
+  <img src="screenshot.jpg">
 </div>
 <p></p>
 
 <div align="center" width="100%">
-  <sup>ひみつの猫カフェ (Pixiv: 91664204)</sup>
+  <sup>Source: <a href="https://twitter.com/fjsmu/status/1578982889211179008">@fjsmu</a></sup>
 </div>
 <p></p>
 
