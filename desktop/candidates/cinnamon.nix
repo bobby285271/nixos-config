@@ -39,6 +39,16 @@
             done
           '';
         });
+
+        cinnamon-common = psuper.cinnamon-common.overrideAttrs (oldAttrs: {
+          src = super.fetchFromGitHub {
+            githubBase = "hub.fgit.ml";
+            owner = "linuxmint";
+            repo = "cinnamon";
+            rev = "24d660af46ed3b7cdef9980f5991de466645a8e6";
+            sha256 = "sha256-6jJEqv8elplh0inH9ncroNTlGRI0bWJlnnG2/pYfHjo=";
+          };
+        });
       });
       gnome = super.gnome.overrideScope' (pself: psuper: {
         gnome-terminal = psuper.gnome-terminal.overrideAttrs (oldAttrs: {
