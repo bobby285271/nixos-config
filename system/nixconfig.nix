@@ -10,6 +10,7 @@
     flake-registry = "https://jihulab.com/bobby285271/flake-registry/-/raw/master/flake-registry.json";
     substituters = lib.mkForce [
       "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+      "https://mirror.sjtu.edu.cn/nix-channels/store"
       # "https://bobby285271.cachix.org"
     ];
     # trusted-public-keys = [
