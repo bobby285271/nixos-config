@@ -4,7 +4,7 @@
       "locked": {
         "lastModified": 1666539104,
         "narHash": "sha256-jeuC+d375wHHxMOFLgu7etseCQVJuPNKoEc9X9CsErg=",
-        "ref": "blueman",
+        "ref": "nixos-unstable",
         "rev": "0e6df35f39651504249a05191f9a78d251707e22",
         "revCount": 420394,
         "type": "git",
