@@ -8,6 +8,7 @@
       layout = "us";
       desktopManager.mate.enable = true;
       displayManager.lightdm.greeters.slick = {
+        enable = true;
         theme.name = "Mint-Y";
         theme.package = pkgs.cinnamon.mint-themes;
         iconTheme.name = "Mint-Y-Dark";
@@ -32,5 +33,6 @@
   environment.systemPackages = with pkgs; [
     cinnamon.mint-themes
     cinnamon.mint-y-icons
+    networkmanagerapplet
   ];
 }
