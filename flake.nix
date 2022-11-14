@@ -13,10 +13,6 @@
         system = "x86_64-linux";
         modules = [ ./profiles/inspiron-cinnamon.nix ];
       };
-      inspiron-mate = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [ ./profiles/inspiron-mate.nix ];
-      };
     };
   };
 }
