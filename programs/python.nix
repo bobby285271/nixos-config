@@ -6,7 +6,6 @@ let
     boto3
     GitPython
     pandas
-    pyqt5
     pip
     requests
   ];
