@@ -23,30 +23,6 @@
 
   nixpkgs.overlays = [
     (self: super: {
-      cinnamon = super.cinnamon.overrideScope' (pself: psuper: {
-        nemo = psuper.nemo.overrideAttrs (oldAttrs: {
-          # Workaround for duplicate right-click menu items
-          # https://github.com/NixOS/nixpkgs/issues/190781
-          prePatch = ''
-            for f in \
-              src/nemo-action-config-widget.c \
-              src/nemo-script-config-widget.c \
-              libnemo-private/nemo-action-manager.c
-            do
-              substituteInPlace $f --replace \
-                'g_build_filename (data_dirs[i], "nemo", "actions", NULL)' \
-                'g_build_filename (NEMO_DATADIR, "actions", NULL)'
-            done
-          '';
-        });
-
-        cinnamon-common = psuper.cinnamon-common.overrideAttrs (oldAttrs: {
-          prePatch = ''
-            substituteInPlace js/ui/panel.js --replace \
-              "Main.restartCinnamon(true);" "// Main.restartCinnamon(true);"
-          '';
-        });
-      });
       gnome = super.gnome.overrideScope' (pself: psuper: {
         gnome-terminal = psuper.gnome-terminal.overrideAttrs (oldAttrs: {
           patches = (oldAttrs.patches or [ ]) ++ [
