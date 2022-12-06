@@ -9,7 +9,7 @@
       desktopManager.cinnamon.enable = true;
       displayManager.lightdm.greeters.slick = {
         theme.name = "Mint-Y-Aqua";
-        iconTheme.name = "Mint-Y-Dark-Aqua";
+        iconTheme.name = "Mint-Y-Aqua";
         draw-user-backgrounds = true;
       };
     };
