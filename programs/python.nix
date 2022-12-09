@@ -4,7 +4,7 @@ let
   my-python-packages = python3Packages: with pkgs.python3Packages; [
     autopep8
     boto3
-    GitPython
+    gitpython
     pandas
     pip
     requests
