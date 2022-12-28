@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1672235889,
-        "narHash": "sha256-7+G9e81lcn7W4u+W8iEjsxmqH3WjGCuv7qBeaHiCMQk=",
+        "lastModified": 1672240008,
+        "narHash": "sha256-sv6CZZMGbWuBBZNOzdlOK4dalDPMIBnGuGGKC/2L0GE=",
         "ref": "cinnamon",
-        "rev": "ddd9dbd69cd03c12591967b6ba96156b6fb036ef",
-        "revCount": 437631,
+        "rev": "bbc9e3c41adacbb4499dd8e2a9be43e17b793764",
+        "revCount": 437633,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
