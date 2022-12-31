@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1672466658,
-        "narHash": "sha256-JJKRshQDxyf1BTcc1kqsWd03EkjUve1gjfSg5uqtmFc=",
-        "ref": "cinnamon",
-        "rev": "fcb845a78aadc2df30e2f5083436e51f2d4f4f24",
-        "revCount": 438631,
+        "lastModified": 1672350804,
+        "narHash": "sha256-jo6zkiCabUBn3ObuKXHGqqORUMH27gYDIFFfLq5P4wg=",
+        "ref": "nixos-unstable",
+        "rev": "677ed08a50931e38382dbef01cba08a8f7eac8f6",
+        "revCount": 438630,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
@@ -16,9 +16,26 @@
         "url": "file:///home/bobby285271/nixpkgs"
       }
     },
+    "nixpkgs-gtk3-fixed": {
+      "locked": {
+        "lastModified": 1672107546,
+        "narHash": "sha256-vm0EQBWmwjPsqM3b83n52sJN9qR4g/C0nd2UQRoRhLk=",
+        "ref": "refs/heads/gtk3-libXdamage",
+        "rev": "6257a5ae5d24bbb23e37c65902875a65ae438f15",
+        "revCount": 436729,
+        "type": "git",
+        "url": "file:///home/bobby285271/nixpkgs"
+      },
+      "original": {
+        "rev": "6257a5ae5d24bbb23e37c65902875a65ae438f15",
+        "type": "git",
+        "url": "file:///home/bobby285271/nixpkgs"
+      }
+    },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-gtk3-fixed": "nixpkgs-gtk3-fixed"
       }
     }
   },
