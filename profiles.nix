@@ -24,4 +24,10 @@ in
       ./desktop/candidates/cinnamon.nix
     ] ++ sharedModules;
   };
+  inspiron-mate = inputs.nixpkgs.lib.nixosSystem {
+    inherit system specialArgs;
+    modules = [
+      ./desktop/candidates/mate.nix
+    ] ++ sharedModules;
+  };
 }
