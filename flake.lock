@@ -20,7 +20,6 @@
       "locked": {
         "lastModified": 1672107546,
         "narHash": "sha256-vm0EQBWmwjPsqM3b83n52sJN9qR4g/C0nd2UQRoRhLk=",
-        "ref": "refs/heads/gtk3-libXdamage",
         "rev": "6257a5ae5d24bbb23e37c65902875a65ae438f15",
         "revCount": 436729,
         "type": "git",
