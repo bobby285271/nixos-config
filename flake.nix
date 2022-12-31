@@ -3,16 +3,13 @@
 
   inputs.nixpkgs.url = "git+file:///home/bobby285271/nixpkgs?ref=nixos-unstable";
 
-  outputs = { self, nixpkgs, ... }@attrs: {
-    nixosConfigurations = {
-      inspiron = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [ ./profiles/inspiron-pantheon.nix ];
-      };
-      inspiron-cinnamon = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [ ./profiles/inspiron-cinnamon.nix ];
+  outputs = { self, nixpkgs, ... } @ inputs:
+    let
+      system = "x86_64-linux";
+    in
+    {
+      nixosConfigurations = import ./profiles.nix {
+        inherit inputs system;
       };
     };
-  };
 }
