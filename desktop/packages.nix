@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     # apostrophe
     chromium
+    drawing
     # eclipses.eclipse-java
     firefox
     gitg
