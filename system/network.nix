@@ -6,6 +6,7 @@
       "223.5.5.5"
     ];
     hosts = {
+      # GitHub
       "13.107.238.51" = [ "vscode.dev" ];
       "13.107.42.16" = [ "pipelines.actions.githubusercontent.com" ];
       "140.82.112.26" = [
@@ -54,6 +55,8 @@
       "52.217.234.145" = [ "github-com.s3.amazonaws.com" ];
       "54.231.132.193" = [ "github-cloud.s3.amazonaws.com" ];
       "54.231.139.249" = [ "github-production-release-asset-2e65be.s3.amazonaws.com" ];
+      # Cachix
+      "104.26.13.82" = [ "nix-community.cachix.org" ];
     };
   };
 }
