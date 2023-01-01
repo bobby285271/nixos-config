@@ -21,8 +21,8 @@
 
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid/581d7273-9cc5-416f-a1d3-1a420c832a5a";
-      fsType = "btrfs";
+      device = "/dev/disk/by-uuid/f93aa05d-c776-4b84-a9ec-46f116c5c1c7";
+      fsType = "xfs";
     };
     "/boot" = {
       device = "/dev/disk/by-uuid/E288-231E";
@@ -31,7 +31,7 @@
   };
 
   swapDevices = [{
-    device = "/dev/disk/by-uuid/0e9e3ec9-d686-4e4f-a88c-65ccd18772cc";
+    device = "/dev/disk/by-uuid/40b4055b-f484-4550-87fe-442bac5f5176";
   }];
 
   networking.useDHCP = lib.mkDefault true;
