@@ -21,8 +21,19 @@
 
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid/f93aa05d-c776-4b84-a9ec-46f116c5c1c7";
-      fsType = "xfs";
+      device = "/dev/disk/by-uuid/f0a481e3-1977-41ea-8211-8d4aa144a8ce";
+      fsType = "btrfs";
+      options = [ "subvol=@" "compress=zstd" ];
+    };
+    "/home" = {
+      device = "/dev/disk/by-uuid/f0a481e3-1977-41ea-8211-8d4aa144a8ce";
+      fsType = "btrfs";
+      options = [ "subvol=@home" "compress=zstd" ];
+    };
+    "/nix" = {
+      device = "/dev/disk/by-uuid/f0a481e3-1977-41ea-8211-8d4aa144a8ce";
+      fsType = "btrfs";
+      options = [ "subvol=@nix" "compress=zstd" "noatime" ];
     };
     "/boot" = {
       device = "/dev/disk/by-uuid/E288-231E";
