@@ -1,6 +1,7 @@
 {
   networking = {
     networkmanager.enable = true;
+    firewall.allowedTCPPorts = [ 80 443 8080 ];
     nameservers = [
       "119.29.29.29"
       "223.5.5.5"
