@@ -23,17 +23,27 @@
     "/" = {
       device = "/dev/disk/by-uuid/f0a481e3-1977-41ea-8211-8d4aa144a8ce";
       fsType = "btrfs";
-      options = [ "subvol=@" "compress=zstd" ];
+      options = [
+        "subvol=@"
+        "compress=zstd"
+      ];
     };
     "/home" = {
       device = "/dev/disk/by-uuid/f0a481e3-1977-41ea-8211-8d4aa144a8ce";
       fsType = "btrfs";
-      options = [ "subvol=@home" "compress=zstd" ];
+      options = [
+        "subvol=@home"
+        "compress=zstd"
+      ];
     };
     "/nix" = {
       device = "/dev/disk/by-uuid/f0a481e3-1977-41ea-8211-8d4aa144a8ce";
       fsType = "btrfs";
-      options = [ "subvol=@nix" "compress=zstd" "noatime" ];
+      options = [
+        "subvol=@nix"
+        "compress=zstd"
+        "noatime"
+      ];
     };
     "/boot" = {
       device = "/dev/disk/by-uuid/E288-231E";
