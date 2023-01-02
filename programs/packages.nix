@@ -22,7 +22,6 @@
     p7zip
     pciutils
     pinentry-curses
-    screenfetch
     tree
     unrar
     unzip
