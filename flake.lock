@@ -2,13 +2,9 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1672466658,
-        "narHash": "sha256-JJKRshQDxyf1BTcc1kqsWd03EkjUve1gjfSg5uqtmFc=",
-        "ref": "cinnamon",
-        "rev": "fcb845a78aadc2df30e2f5083436e51f2d4f4f24",
-        "revCount": 438631,
-        "type": "git",
-        "url": "file:///home/bobby285271/nixpkgs"
+        "narHash": "sha256-dSljrHJpbi3udbSA29t+7DyIa7jZZdqo29noza8LI0g=",
+        "type": "tarball",
+        "url": "https://mirrors.ustc.edu.cn/nix-channels/nixos-unstable/nixexprs.tar.xz"
       },
       "original": {
         "ref": "nixos-unstable",
