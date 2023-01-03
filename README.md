@@ -1,10 +1,10 @@
 <div align="center" width="100%">
-  <img src="screenshot.jpg">
+  <a href="https://twitter.com/IFsei_mahou/status/1609500102498058240"><img src="screenshot.jpg"></a>
 </div>
 <p></p>
 
 <div align="center" width="100%">
-  <sup>Source: <a href="https://twitter.com/fjsmu/status/1578982889211179008">@fjsmu</a></sup>
+  <sup>Source: <a href="https://twitter.com/IFsei_mahou">@IFsei_mahou</a></sup>
 </div>
 <p></p>
 
