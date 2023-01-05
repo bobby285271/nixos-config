@@ -24,6 +24,12 @@ in
       ./desktop/candidates/cinnamon.nix
     ] ++ sharedModules;
   };
+  inspiron-gnome = inputs.nixpkgs.lib.nixosSystem {
+    inherit system specialArgs;
+    modules = [
+      ./desktop/candidates/gnome.nix
+    ] ++ sharedModules;
+  };
   inspiron-mate = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
     modules = [
