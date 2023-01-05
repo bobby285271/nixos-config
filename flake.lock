@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1672791794,
-        "narHash": "sha256-mqGPpGmwap0Wfsf3o2b6qHJW1w2kk/I6cGCGIU+3t6o=",
-        "ref": "nixos-unstable",
-        "rev": "9813adc7f7c0edd738c6bdd8431439688bb0cb3d",
-        "revCount": 439706,
+        "lastModified": 1672924195,
+        "narHash": "sha256-n7n2AzsbAWcJWpcQuF9T42qOs9T1D9PzZ9T0D69mbGQ=",
+        "ref": "upd/gnome-bluetooth",
+        "rev": "80aca3bd36e55fba8704047a4ab34eb5ae69a042",
+        "revCount": 439707,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
