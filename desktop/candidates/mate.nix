@@ -9,7 +9,7 @@
       displayManager.lightdm.greeters.slick = {
         enable = true;
         theme.name = "Vimix";
-        theme.package = pkgs.vimix-gtk-theme;
+        theme.package = pkgs.vimix-gtk-themes;
         iconTheme.name = "Vimix";
         iconTheme.package = pkgs.vimix-icon-theme;
         draw-user-backgrounds = true;
@@ -30,7 +30,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    vimix-gtk-theme
+    vimix-gtk-themes
     vimix-icon-theme
     networkmanagerapplet
   ];
