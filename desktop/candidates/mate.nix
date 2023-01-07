@@ -2,17 +2,16 @@
 
 {
   services = {
-    packagekit.enable = true;
     xserver = {
       enable = true;
       layout = "us";
       desktopManager.mate.enable = true;
       displayManager.lightdm.greeters.slick = {
         enable = true;
-        theme.name = "Mint-Y-Aqua";
-        theme.package = pkgs.cinnamon.mint-themes;
-        iconTheme.name = "Mint-Y-Aqua";
-        iconTheme.package = pkgs.cinnamon.mint-y-icons;
+        theme.name = "Vimix";
+        theme.package = pkgs.vimix-gtk-theme;
+        iconTheme.name = "Vimix";
+        iconTheme.package = pkgs.vimix-icon-theme;
         draw-user-backgrounds = true;
       };
     };
@@ -31,8 +30,8 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    cinnamon.mint-themes
-    cinnamon.mint-y-icons
+    vimix-gtk-theme
+    vimix-icon-theme
     networkmanagerapplet
   ];
 }
