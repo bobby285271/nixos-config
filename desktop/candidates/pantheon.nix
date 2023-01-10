@@ -32,7 +32,7 @@
 
         elementary-terminal = psuper.elementary-terminal.overrideAttrs (oldAttrs: {
           patches = (oldAttrs.patches or [ ]) ++ [
-            # Fix weird font color
+            # Fix font color
             # https://github.com/elementary/terminal/pull/684
             (super.fetchpatch {
               url = "https://hub.fgit.ml/elementary/terminal/commit/873068fd20098ae0065473ce49c8b768e397091e.patch";
@@ -42,13 +42,13 @@
           ];
         });
 
-        # wingpanel = psuper.wingpanel.overrideAttrs (oldAttrs: {
-        #   # I prefer this, I don't care
-        #   prePatch = ''
-        #     substituteInPlace wingpanel-interface/BackgroundManager.vala \
-        #       --replace "new_state = BackgroundState.TRANSLUCENT_DARK;" "new_state = BackgroundState.TRANSLUCENT_LIGHT;"
-        #   '';
-        # });
+        wingpanel = psuper.wingpanel.overrideAttrs (oldAttrs: {
+          # I prefer this
+          prePatch = ''
+            substituteInPlace wingpanel-interface/BackgroundManager.vala \
+              --replace "new_state = BackgroundState.TRANSLUCENT_DARK;" "new_state = BackgroundState.TRANSLUCENT_LIGHT;"
+          '';
+        });
       });
     })
   ];
