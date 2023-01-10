@@ -30,4 +30,13 @@ in
       ./desktop/candidates/gnome.nix
     ] ++ sharedModules;
   };
+
+  # ?
+  inspiron-budgie = inputs.nixpkgs.lib.nixosSystem {
+    inherit system specialArgs;
+    modules = [
+      inputs.budgie.nixosModules.default
+      ./desktop/candidates/budgie.nix
+    ] ++ sharedModules;
+  };
 }
