@@ -1,5 +1,42 @@
 {
   "nodes": {
+    "budgie": {
+      "inputs": {
+        "flake-compat": "flake-compat",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1673324348,
+        "narHash": "sha256-wliW0cRB7j9+lJAW4CzL/48GQMkxqtCnhO7MFxfthYg=",
+        "ref": "refs/heads/main",
+        "rev": "647ae8bc8c2e95fc7c4cc6f9389a3f249f5ac13c",
+        "revCount": 91,
+        "type": "git",
+        "url": "file:///home/bobby285271/budgie-nix"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///home/bobby285271/budgie-nix"
+      }
+    },
+    "flake-compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1668681692,
+        "narHash": "sha256-Ht91NGdewz8IQLtWZ9LCeNXMSXHUss+9COoqu6JLmXU=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "009399224d5e398d03b22badca40a37ac85412a1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1673134516,
@@ -18,6 +55,7 @@
     },
     "root": {
       "inputs": {
+        "budgie": "budgie",
         "nixpkgs": "nixpkgs"
       }
     }
