@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1673325868,
-        "narHash": "sha256-xw4qVhHa/bd1i2odK2X/wv6u1bjIgiv4xRp6hamyIvc=",
+        "lastModified": 1673324348,
+        "narHash": "sha256-wliW0cRB7j9+lJAW4CzL/48GQMkxqtCnhO7MFxfthYg=",
         "ref": "refs/heads/main",
-        "rev": "cdccc115489421eb030a7c555f9717d3e80369f5",
-        "revCount": 92,
+        "rev": "647ae8bc8c2e95fc7c4cc6f9389a3f249f5ac13c",
+        "revCount": 91,
         "type": "git",
         "url": "file:///home/bobby285271/budgie-nix"
       },
@@ -39,11 +39,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1673424407,
-        "narHash": "sha256-iFGCIlVb4hSccIwzAKbMkxfRGO64JXIVM0S8ieNEDCQ=",
-        "ref": "upd/cinnamon",
-        "rev": "f2e8486bf84b7490da8bf9f61c5684cf7eb58c7c",
-        "revCount": 440080,
+        "lastModified": 1673226411,
+        "narHash": "sha256-b6cGb5Ln7Zy80YO66+cbTyGdjZKtkoqB/iIIhDX9gRA=",
+        "ref": "nixos-unstable",
+        "rev": "aa1d74709f5dac623adb4d48fdfb27cc2c92a4d4",
+        "revCount": 440928,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
