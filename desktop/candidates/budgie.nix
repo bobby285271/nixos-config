@@ -7,6 +7,7 @@
       layout = "us";
       desktopManager.budgie.enable = true;
       libinput.enable = true;
+      displayManager.lightdm.greeters.slick.draw-user-backgrounds = true;
     };
     flatpak.enable = true;
   };
