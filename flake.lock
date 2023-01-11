@@ -9,10 +9,7 @@
       },
       "locked": {
         "lastModified": 1673324348,
-        "narHash": "sha256-wliW0cRB7j9+lJAW4CzL/48GQMkxqtCnhO7MFxfthYg=",
-        "ref": "refs/heads/main",
-        "rev": "647ae8bc8c2e95fc7c4cc6f9389a3f249f5ac13c",
-        "revCount": 91,
+        "narHash": "sha256-wlEx1Q607Q8cO+uKr+8L/pFBu4wx5ak19goR1/L1nyE=",
         "type": "git",
         "url": "file:///home/bobby285271/budgie-nix"
       },
