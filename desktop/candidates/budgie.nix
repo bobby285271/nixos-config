@@ -6,6 +6,7 @@
       enable = true;
       layout = "us";
       desktopManager.budgie.enable = true;
+      libinput.enable = true;
     };
     flatpak.enable = true;
   };
