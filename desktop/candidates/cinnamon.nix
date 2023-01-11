@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   services = {
@@ -13,6 +13,12 @@
       };
     };
     flatpak.enable = true;
+  };
+
+  qt5 = { # qt
+    enable = true;
+    platformTheme = lib.mkForce "gtk2";
+    style = lib.mkForce "gtk2";
   };
 
   xdg.portal = {
