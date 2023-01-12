@@ -36,11 +36,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1673315479,
-        "narHash": "sha256-GNCFRtDHjTygXGJp/H+f2XQPMGxpYSmNiibIqYzihtM=",
-        "ref": "nixos-unstable",
-        "rev": "c07552f6f7d4eead7806645ec03f7f1eb71ba6bd",
-        "revCount": 441271,
+        "lastModified": 1673526931,
+        "narHash": "sha256-EoYfWWL1x9dlsixVboHF2ovVIfKw/HCdVAt2VdMUCvI=",
+        "ref": "upd/gnome",
+        "rev": "cf16356161f0b985016e45ecaa9bf8e2e0334bdf",
+        "revCount": 441279,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
