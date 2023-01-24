@@ -31,7 +31,7 @@
 
         mate-control-center = psuper.mate-control-center.overrideAttrs (oldAttrs: {
           patches = (oldAttrs.patches or [ ]) ++ [
-            # Dark style
+            # Mint theme support
             (super.fetchurl {
               url = "https://jihulab.com/bobby285271/mate-patches/-/raw/8b43598992aa452dc9045fe4d6bb959a06a8bdbb/mate-control-center-metacity-3-support.patch";
               hash = "1nhqa3q53af4fnv8ya5ffa20i9z543av4q86y7ak7f462rgga3zp";
