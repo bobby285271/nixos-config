@@ -1,4 +1,10 @@
 {
+  services.avahi = {
+    enable = true;
+    publish.enable = true;
+    publish.userServices = true;
+  };
+
   networking = {
     networkmanager.enable = true;
     firewall.allowedTCPPorts = [ 80 443 5353 8080 42000 42001 ];
