@@ -39,11 +39,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1675040793,
-        "narHash": "sha256-ddehWxbqKPqtVfwQGo8rVJvyeNurOdhxzbaf8jCVJyQ=",
-        "ref": "pantheon-mutter",
-        "rev": "a6deb5e8138b15de569481dab0ec77ace2f7a51a",
-        "revCount": 448697,
+        "lastModified": 1674958881,
+        "narHash": "sha256-p1E20TGSgzs+EUhRPMe6fyZIxUV6CbcwilZEzy+XmAk=",
+        "ref": "a0feb36dc510bfa8f8809980a8230617fb9eb618",
+        "rev": "a0feb36dc510bfa8f8809980a8230617fb9eb618",
+        "revCount": 448688,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
