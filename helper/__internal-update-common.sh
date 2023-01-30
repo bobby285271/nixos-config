@@ -13,12 +13,12 @@ nixpkgs_dir="${HOME}/nixpkgs"
 nixos_config_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && dirname "$(pwd)")"
 
 
-echo -e "\033[36m🛠️  Updating nixos-unstable checkout...\033[0m"
+echo -e "\033[36m🛠️  Updating nixos-unstable checkout\033[0m"
 cd "${nixpkgs_dir}"
 git fetch ${nixpkgs_remote} nixos-unstable:nixos-unstable || true
 
 
-echo -e "\n\033[36m🛠️  Updating flake lock...\033[0m"  
+echo -e "\n\033[36m🛠️  Updating flake lock\033[0m"  
 cd "${nixos_config_dir}"
 if [ "$#" -eq 1 ]; then
     nix flake update --commit-lock-file
