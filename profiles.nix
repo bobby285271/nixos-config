@@ -15,13 +15,13 @@ in
   inspiron = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
     modules = [
-      ./desktop/candidates/pantheon.nix
+      ./desktop/candidates/cinnamon.nix
     ] ++ sharedModules;
   };
-  inspiron-cinnamon = inputs.nixpkgs.lib.nixosSystem {
+  inspiron-pantheon = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
     modules = [
-      ./desktop/candidates/cinnamon.nix
+      ./desktop/candidates/pantheon.nix
     ] ++ sharedModules;
   };
   inspiron-gnome = inputs.nixpkgs.lib.nixosSystem {
