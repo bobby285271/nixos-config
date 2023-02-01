@@ -39,11 +39,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1675261857,
-        "narHash": "sha256-u0OU5c0XmhAcg0thD9l4tEIoZOz1RozqFgoYh+fO44M=",
-        "ref": "upd/pantheon-tweaks",
-        "rev": "204f8c21338ea6245d8737ac63dab71fb438d644",
-        "revCount": 449319,
+        "lastModified": 1675171911,
+        "narHash": "sha256-4M2f4WPnQf22B40qba59/AvHlVr1y2xT3v8V55RkYj4=",
+        "ref": "fix/cinnamon",
+        "rev": "701b297ef6cf0cc1f1b4a72cd684f4cc64f406f4",
+        "revCount": 448694,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
