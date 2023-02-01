@@ -7,8 +7,8 @@
       layout = "us";
       desktopManager.cinnamon.enable = true;
       displayManager.lightdm.greeters.slick = {
-        theme.name = "Mint-Y-Sand";
-        iconTheme.name = "Mint-Y-Sand";
+        # theme.name = "Mint-Y-Sand";
+        # iconTheme.name = "Mint-Y-Sand";
         draw-user-backgrounds = true;
       };
     };
