@@ -20,6 +20,8 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
+  services.redshift.enable = true;
+
   nixpkgs.overlays = [
     (self: super: {
       gnome = super.gnome.overrideScope' (pself: psuper: {
