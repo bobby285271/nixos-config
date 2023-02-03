@@ -8,13 +8,15 @@ if [ "$#" -ne 1 ] && [ "$#" -ne 2 ]; then
 fi
 
 
-nixpkgs_remote="http://hub.fgit.ml/NixOS/nixpkgs"
+nixpkgs_remote="https://hub.nuaa.cf/NixOS/nixpkgs"
 nixpkgs_dir="${HOME}/nixpkgs"
 nixos_config_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && dirname "$(pwd)")"
 
 
-echo -e "\033[36m🛠️  Updating nixos-unstable checkout\033[0m"
+echo -e "\033[36m🛠️  Updating nixpkgs checkout\033[0m"
 cd "${nixpkgs_dir}"
+git fetch ${nixpkgs_remote} master:upstream || true
+git fetch ${nixpkgs_remote} staging:staging || true
 git fetch ${nixpkgs_remote} nixos-unstable:nixos-unstable || true
 
 
