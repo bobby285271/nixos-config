@@ -46,7 +46,7 @@
           # I prefer this
           prePatch = ''
             substituteInPlace wingpanel-interface/BackgroundManager.vala \
-              --replace "new_state = BackgroundState.DARK;" "new_state = BackgroundState.TRANSLUCENT_LIGHT;"
+              --replace "new_state = BackgroundState.TRANSLUCENT_DARK;" "new_state = BackgroundState.TRANSLUCENT_LIGHT;"
           '';
         });
       });

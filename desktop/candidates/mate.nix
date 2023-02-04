@@ -8,8 +8,8 @@
       desktopManager.mate.enable = true;
       displayManager.lightdm.greeters.slick = {
         enable = true;
-        theme.name = "Mint-Y-Sand";
-        iconTheme.name = "Mint-Y-Sand";
+        theme.name = "Mint-Y-Aqua";
+        iconTheme.name = "Mint-Y-Aqua";
         draw-user-backgrounds = true;
       };
     };
