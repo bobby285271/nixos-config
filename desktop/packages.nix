@@ -1,5 +1,11 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
+let
+  libreoffice-icon-fixed = pkgs.callPackage ./libreoffice-icon-fixed.nix { };
+
+  # Using third party icon?
+  is-tp-icon = ((!config.services.xserver.desktopManager.gnome.enable) && (!config.services.xserver.desktopManager.pantheon.enable));
+in
 {
   environment.systemPackages = with pkgs; [
     # apostrophe
@@ -10,7 +16,7 @@
     gitg
     glib
     gnome.gnome-boxes
-    libreoffice-fresh
+    (if is-tp-icon then libreoffice-icon-fixed else libreoffice-fresh)
     # marktext
     slack
     thunderbird
