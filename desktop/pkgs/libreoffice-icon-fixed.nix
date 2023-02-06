@@ -10,12 +10,17 @@ pkgs.symlinkJoin {
     TMPDIR=$(mktemp -d)
     cp -r ${pkgs.libreoffice-fresh}/share/applications/. $TMPDIR
 
+    # Is the issue fixed upstream?
+    cat $TMPDIR/calc.desktop | grep 'Icon=calc' > /dev/null
+
     find $TMPDIR -type f -exec sed -i \
       -e s,Icon=,Icon=libreoffice-,g \
       -e s,Icon=libreoffice-document-new,Icon=document-new,g \
       {} +
 
     cp -r $TMPDIR/. $out/share/applications
+
+    # Is the issue fixed downstream?
     cat $out/share/applications/calc.desktop | grep 'Icon=libreoffice-calc' > /dev/null
     cat $out/share/applications/calc.desktop | grep 'Icon=document-new' > /dev/null
 
