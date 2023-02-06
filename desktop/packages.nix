@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  libreoffice-icon-fixed = pkgs.callPackage ./libreoffice-icon-fixed.nix { };
+  libreoffice-icon-fixed = pkgs.callPackage ./pkgs/libreoffice-icon-fixed.nix { };
 
   # Using third party icon?
   is-tp-icon = ((!config.services.xserver.desktopManager.gnome.enable) && (!config.services.xserver.desktopManager.pantheon.enable));
