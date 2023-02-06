@@ -18,5 +18,15 @@ pkgs.symlinkJoin {
     cp -r $TMPDIR/. $out/share/applications
     cat $out/share/applications/calc.desktop | grep 'Icon=libreoffice-calc' > /dev/null
     cat $out/share/applications/calc.desktop | grep 'Icon=document-new' > /dev/null
+
+    rm -r $out/share/icons
+    TMPDIR2=$(mktemp -d)
+    cp -r -L ${pkgs.libreoffice-fresh}/share/icons/. $TMPDIR2
+    find $TMPDIR2 -type d -exec chmod 755 {} \;
+
+    # https://unix.stackexchange.com/questions/310256/for-all-directories-rename-all-subdirectories-with-a-prefix
+    find $TMPDIR2 -maxdepth 4 -mindepth 4 -type f -execdir bash -c 'cp "$1" "./libreoffice-''${1#./}"' mover {} \;
+
+    cp -r $TMPDIR2/. $out/share/icons
   '';
 }
