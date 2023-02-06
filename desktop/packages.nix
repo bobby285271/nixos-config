@@ -2,9 +2,6 @@
 
 let
   libreoffice-icon-fixed = pkgs.callPackage ./pkgs/libreoffice-icon-fixed.nix { };
-
-  # Using third party icon?
-  is-tp-icon = ((!config.services.xserver.desktopManager.gnome.enable) && (!config.services.xserver.desktopManager.pantheon.enable));
 in
 {
   environment.systemPackages = with pkgs; [
@@ -16,7 +13,7 @@ in
     gitg
     glib
     gnome.gnome-boxes
-    (if is-tp-icon then libreoffice-icon-fixed else libreoffice-fresh)
+    libreoffice-icon-fixed
     # marktext
     slack
     thunderbird
