@@ -1,8 +1,12 @@
 {
-  services.avahi = {
-    enable = true;
-    publish.enable = true;
-    publish.userServices = true;
+  services = {
+    avahi = {
+      enable = true;
+      publish.enable = true;
+      publish.userServices = true;
+    };
+
+    v2raya.enable = true;
   };
 
   networking = {
