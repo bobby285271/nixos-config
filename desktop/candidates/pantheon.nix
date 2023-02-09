@@ -9,7 +9,6 @@
         enable = true;
         debug = true;
         extraSwitchboardPlugs = [ pkgs.pantheon-tweaks ];
-        extraWingpanelIndicators = [ pkgs.wingpanel-indicator-ayatana ];
       };
     };
     flatpak.enable = true;
@@ -18,18 +17,6 @@
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  };
-
-  environment.systemPackages = [ pkgs.indicator-application-gtk3 ];
-
-  systemd.user.services.indicator-application = {
-    description = "Indicator Application Service";
-    serviceConfig = {
-      ExecStart = "${pkgs.indicator-application-gtk3}/libexec/indicator-application/indicator-application-service";
-      Restart = "on-failure";
-    };
-    wantedBy = [ "graphical-session.target" ];
-    partOf = [ "graphical-session.target" ];
   };
 
   nixpkgs.overlays = [
