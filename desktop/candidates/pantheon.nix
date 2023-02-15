@@ -36,6 +36,8 @@
             substituteInPlace src/MessageList/GravatarIcon.vala \
               --replace "https://secure.gravatar.com/avatar/" "https://gravatar.loli.net/avatar/"
           '';
+
+          separateDebugInfo = true;
         });
 
         elementary-terminal = psuper.elementary-terminal.overrideAttrs (oldAttrs: {
