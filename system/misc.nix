@@ -1,8 +1,5 @@
 {
-  environment = {
-    enableDebugInfo = true;
-    localBinInPath = true;
-  };
+  environment.localBinInPath = true;
 
   services = {
     openssh.enable = true;
