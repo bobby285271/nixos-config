@@ -39,3 +39,9 @@ sudo nixos-rebuild --flake "${nixos_config_dir}#${1}" boot
 
 echo -e "\n\033[36m🛠️  Updating channel\033[0m"
 sudo nix-channel --update
+
+
+echo -e "\n\033[36m🛠️  Cleaning up\033[0m"
+gsettings reset-recursively org.gnome.desktop.wm.preferences || true
+gsettings reset-recursively org.gnome.desktop.interface || true
+gsettings reset-recursively org.gnome.settings-daemon.plugins.xsettings || true
