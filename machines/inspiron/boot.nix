@@ -2,8 +2,8 @@
 
 {
   boot = {
-    # kernelPackages = pkgs.linuxPackages_latest;
-    kernelPackages = pkgs.linuxKernel.packages.linux_6_1;
+    kernelPackages = pkgs.linuxPackages_latest;
+    # kernelPackages = pkgs.linuxKernel.packages.linux_6_1;
     plymouth.enable = true;
     loader = {
       efi.canTouchEfiVariables = true;
