@@ -16,7 +16,12 @@
 
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [
+      (pkgs.xdg-desktop-portal-gtk.override {
+        # Use the upstream default so this won't conflict with the pantheon portal.
+        buildPortalsInGnome = false;
+      })
+    ];
   };
 
   nixpkgs.overlays = [
