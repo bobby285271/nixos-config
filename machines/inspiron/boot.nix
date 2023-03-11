@@ -21,4 +21,8 @@
     intelBusId = "PCI:0:2:0";
     nvidiaBusId = "PCI:1:0:0";
   };
+
+  environment.variables."NIXPKGS_NO_GC_PATH" = [
+    "${pkgs.linuxPackages_latest.nvidia_x11.src}"
+  ];
 }
