@@ -6,11 +6,14 @@
       enable = true;
       layout = "us";
       desktopManager.xfce.enable = true;
-      displayManager.lightdm.greeters.slick = {
-        enable = true;
-        theme.name = "Mint-Y-Aqua";
-        iconTheme.name = "Mint-Y-Aqua";
-        draw-user-backgrounds = true;
+      displayManager = {
+        lightdm.greeters.slick = {
+          enable = true;
+          theme.name = "Mint-Y-Aqua";
+          iconTheme.name = "Mint-Y-Aqua";
+          draw-user-backgrounds = true;
+        };
+        defaultSession = "xfce";
       };
     };
     flatpak.enable = true;
