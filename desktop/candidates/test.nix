@@ -29,4 +29,6 @@
     cinnamon.mint-y-icons
     cinnamon.mint-themes
   ];
+
+  services.gnome.gnome-keyring.enable = true;
 }
