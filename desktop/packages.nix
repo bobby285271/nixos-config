@@ -18,6 +18,9 @@ in
     thunderbird
     vscode-fhs
     wpsoffice-cn
-    wpsoffice-cn.src # why?
+  ];
+
+  environment.variables."NIXPKGS_NO_GC_PATH" = toString [
+    "${pkgs.wpsoffice-cn.src}"
   ];
 }
