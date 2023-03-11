@@ -12,7 +12,7 @@ in
     firefox
     gitg
     # gnome.gnome-boxes
-    libreoffice-icon-fixed
+    # libreoffice-icon-fixed
     # marktext
     slack
     thunderbird
