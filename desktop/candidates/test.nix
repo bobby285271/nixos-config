@@ -5,11 +5,11 @@
     xserver = {
       enable = true;
       layout = "us";
-      desktopManager.mate.enable = true;
+      desktopManager.xfce.enable = true;
       displayManager.lightdm.greeters.slick = {
         enable = true;
-        theme.name = "Adwaita-dark";
-        iconTheme.name = "Adwaita";
+        theme.name = "Mint-Y-Aqua";
+        iconTheme.name = "Mint-Y-Aqua";
         draw-user-backgrounds = true;
       };
     };
@@ -23,5 +23,7 @@
 
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
+    cinnamon.mint-y-icons
+    cinnamon.mint-themes
   ];
 }
