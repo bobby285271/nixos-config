@@ -20,7 +20,7 @@ in
     wpsoffice-cn
   ];
 
-  environment.variables."NIXPKGS_NO_GC_PATH" = toString [
+  environment.variables."NIXPKGS_NO_GC_PATH" = [
     "${pkgs.wpsoffice-cn.src}"
   ];
 }
