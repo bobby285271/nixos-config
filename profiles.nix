@@ -30,17 +30,10 @@ in
       ./desktop/candidates/gnome.nix
     ] ++ sharedModules;
   };
-  inspiron-mate = inputs.nixpkgs.lib.nixosSystem {
+  inspiron-test = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
     modules = [
-      ./desktop/candidates/mate.nix
-    ] ++ sharedModules;
-  };
-
-  inspiron-budgie = inputs.nixpkgs.lib.nixosSystem {
-    inherit system specialArgs;
-    modules = [
-      ./desktop/candidates/budgie.nix
+      ./desktop/candidates/test.nix
     ] ++ sharedModules;
   };
 }
