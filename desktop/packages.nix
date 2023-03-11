@@ -11,12 +11,13 @@ in
     # eclipses.eclipse-java
     firefox
     gitg
-    glib
-    gnome.gnome-boxes
+    # gnome.gnome-boxes
     libreoffice-icon-fixed
     # marktext
     slack
     thunderbird
     vscode-fhs
+    wpsoffice-cn
+    wpsoffice-cn.src # why?
   ];
 }
