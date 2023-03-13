@@ -39,7 +39,7 @@
           # I do this for some well-known reasons (TM)
           prePatch = ''
             substituteInPlace src/MessageList/GravatarIcon.vala \
-              --replace "https://secure.gravatar.com/avatar/" "https://gravatar.loli.net/avatar/"
+              --replace "https://secure.gravatar.com/avatar/" "https://www.libravatar.org/avatar/"
           '';
 
           separateDebugInfo = true;
