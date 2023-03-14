@@ -11,5 +11,9 @@
       nixosConfigurations = import ./profiles.nix {
         inherit inputs system;
       };
+      # nix build '/path/to/flake#iso'
+      legacyPackages.${system} = {
+        iso = self.nixosConfigurations.inspiron.config.system.build.isoImage;
+      };
     };
 }
