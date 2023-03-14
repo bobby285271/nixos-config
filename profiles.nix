@@ -5,9 +5,11 @@ let
 
   sharedModules = [
     ./desktop
-    ./machines/inspiron
     ./programs
     ./system
+  ];
+  inspironSharedModules = sharedModules ++ [
+    ./machines/inspiron
     ./users/bobby285271
   ];
 in
@@ -16,24 +18,24 @@ in
     inherit system specialArgs;
     modules = [
       ./desktop/candidates/cinnamon.nix
-    ] ++ sharedModules;
+    ] ++ inspironSharedModules;
   };
   inspiron-pantheon = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
     modules = [
       ./desktop/candidates/pantheon.nix
-    ] ++ sharedModules;
+    ] ++ inspironSharedModules;
   };
   inspiron-gnome = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
     modules = [
       ./desktop/candidates/gnome.nix
-    ] ++ sharedModules;
+    ] ++ inspironSharedModules;
   };
   inspiron-test = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
     modules = [
       ./desktop/candidates/test.nix
-    ] ++ sharedModules;
+    ] ++ inspironSharedModules;
   };
 }
