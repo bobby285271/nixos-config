@@ -38,8 +38,8 @@
         elementary-mail = psuper.elementary-mail.overrideAttrs (oldAttrs: {
           # I do this for some well-known reasons (TM)
           prePatch = ''
-            substituteInPlace src/MessageList/GravatarIcon.vala \
-              --replace "https://secure.gravatar.com/avatar/" "https://www.libravatar.org/avatar/"
+            substituteInPlace src/MessageList/MessageListItem.vala \
+              --replace "avatar.set_loadable_icon" "// avatar.set_loadable_icon"
           '';
 
           separateDebugInfo = true;
