@@ -38,4 +38,11 @@ in
       ./desktop/candidates/test.nix
     ] ++ inspironSharedModules;
   };
+  iso = inputs.nixpkgs.lib.nixosSystem {
+    inherit system specialArgs;
+    modules = [
+      ./desktop/candidates/cinnamon.nix
+      ./machines/iso
+    ] ++ sharedModules;
+  };
 }

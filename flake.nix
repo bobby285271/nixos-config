@@ -13,7 +13,7 @@
       };
       # nix build '/path/to/flake#iso'
       legacyPackages.${system} = {
-        iso = self.nixosConfigurations.inspiron.config.system.build.isoImage;
+        iso = self.nixosConfigurations.iso.config.system.build.isoImage;
       };
     };
 }
