@@ -12,6 +12,7 @@
         inherit inputs system;
       };
       # nix build '/path/to/flake#iso'
+      # Takes ~1h to build on my laptop
       legacyPackages.${system} = {
         iso = self.nixosConfigurations.iso.config.system.build.isoImage;
       };
