@@ -41,6 +41,17 @@
           ];
         });
       });
+
+      cinnamon = super.cinnamon.overrideScope' (cself: csuper: {
+        xapp = csuper.xapp.overrideAttrs (oldAttrs: {
+          preFixup = ''
+            gappsWrapperArgs+=(
+              # Debug use only.
+              --set G_SLICE "always-malloc"
+            )
+          '';
+        });
+      });
     })
   ];
 }
