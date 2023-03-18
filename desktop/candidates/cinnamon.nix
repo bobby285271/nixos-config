@@ -1,6 +1,9 @@
 { pkgs, lib, ... }:
 
 {
+  # Debug use only.
+  environment.sessionVariables."G_SLICE" = "always-malloc";
+
   services = {
     xserver = {
       enable = true;
@@ -39,17 +42,6 @@
               hash = "sha256-WjQd+IFu0dj1dqoKByWpi9hQFek73ae0NCuwm9YRm4o=";
             })
           ];
-        });
-      });
-
-      cinnamon = super.cinnamon.overrideScope' (cself: csuper: {
-        xapp = csuper.xapp.overrideAttrs (oldAttrs: {
-          preFixup = ''
-            gappsWrapperArgs+=(
-              # Debug use only.
-              --set G_SLICE "always-malloc"
-            )
-          '';
         });
       });
     })
