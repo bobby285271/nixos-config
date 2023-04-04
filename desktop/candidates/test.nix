@@ -5,7 +5,7 @@
     xserver = {
       enable = true;
       layout = "us";
-      desktopManager.xfce.enable = true;
+      desktopManager.budgie.enable = true;
       displayManager = {
         lightdm.greeters.slick = {
           enable = true;
@@ -13,7 +13,7 @@
           iconTheme.name = "Mint-Y-Aqua";
           draw-user-backgrounds = true;
         };
-        defaultSession = "xfce";
+        # defaultSession = "xfce";
       };
     };
     flatpak.enable = true;
