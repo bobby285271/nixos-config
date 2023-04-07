@@ -11,7 +11,7 @@ in
     # eclipses.eclipse-java
     firefox
     gitg
-    # gnome.gnome-boxes
+    gnome.gnome-boxes
     # libreoffice-icon-fixed
     # marktext
     slack
