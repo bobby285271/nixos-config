@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 pkgs.symlinkJoin {
   name = "libreoffice-icon-fixed";
@@ -6,17 +6,22 @@ pkgs.symlinkJoin {
   paths = [ pkgs.libreoffice-fresh ];
 
   postBuild = ''
-    rm -rf $out/share $out/lib
+    rm -rf $out/share
 
     TMPDIR=$(mktemp -d)
     cp -r ${pkgs.libreoffice-fresh-unwrapped}/. $TMPDIR
     chmod -R +w $TMPDIR
+    rm $TMPDIR/share/applications   # symbolic link
+    cp -r ${pkgs.libreoffice-fresh}/share/applications/ $TMPDIR/share/applications/
+    chmod -R +w $TMPDIR
 
-    cat $TMPDIR/lib/libreoffice/share/xdg/calc.desktop | grep 'Icon=calc' > /dev/null
-    find $TMPDIR/lib/libreoffice/share/xdg -type f -exec sed -i \
-      -e s,Icon=,Icon=libreoffice-,g \
-      -e s,Icon=libreoffice-document-new,Icon=document-new,g \
-      {} +
+    pushd $TMPDIR/share/applications
+      cat calc.desktop | grep 'Icon=calc' > /dev/null
+      find . -type f -exec sed -i \
+        -e s,Icon=,Icon=libreoffice-,g \
+        -e s,Icon=libreoffice-document-new,Icon=document-new,g \
+        {} +
+    popd
 
     pushd $TMPDIR/share/icons
       [ ! -f 'hicolor/32x32/apps/libreoffice-base.png' ]
@@ -26,7 +31,6 @@ pkgs.symlinkJoin {
     popd
 
     cp -r $TMPDIR/share $out
-    cp -r $TMPDIR/lib $out
 
     cat $out/share/applications/calc.desktop | grep 'Icon=libreoffice-calc' > /dev/null
     cat $out/share/applications/calc.desktop | grep 'Icon=document-new' > /dev/null
