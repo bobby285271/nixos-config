@@ -12,10 +12,15 @@ in
     firefox
     gitg
     # gnome.gnome-boxes
-    libreoffice-icon-fixed
+    # libreoffice-icon-fixed
     # marktext
     slack
     thunderbird
     vscode-fhs
+    wpsoffice-cn
+  ];
+
+  environment.variables."NIXPKGS_NO_GC_PATH" = [
+    "${pkgs.wpsoffice-cn.src}"
   ];
 }
