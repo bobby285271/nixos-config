@@ -33,17 +33,4 @@
   ];
 
   services.gnome.gnome-keyring.enable = true;
-
-  system.replaceRuntimeDependencies = [
-    ({
-      original = pkgs.wayland;
-      replacement = pkgs.wayland.overrideAttrs (oldAttrs: {
-        version = "1.22.0";
-        src = fetchurl {
-          url = "https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.22.0/downloads/wayland-1.22.0.tar.xz";
-          hash = "sha256-FUCvHqaYpHHC2OnSiDMsfg/TYMjx0Sk267fny8JCWEI=";
-        };
-      });
-    })
-  ];
 }
