@@ -5,15 +5,15 @@
     xserver = {
       enable = true;
       layout = "us";
-      desktopManager.budgie.enable = true;
+      desktopManager.xfce.enable = true;
       displayManager = {
         lightdm.greeters.slick = {
           enable = true;
-          theme.name = "Mint-Y-Aqua";
-          iconTheme.name = "Mint-Y-Aqua";
+          theme.name = "Orchis";
+          iconTheme.name = "Tela";
           draw-user-backgrounds = true;
         };
-        # defaultSession = "xfce";
+        defaultSession = "xfce";
       };
     };
     flatpak.enable = true;
@@ -26,9 +26,24 @@
 
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
-    cinnamon.mint-y-icons
-    cinnamon.mint-themes
+    orchis-theme
+    tela-icon-theme
+    xfce.xfce4-whiskermenu-plugin
+    xfce.xfce4-genmon-plugin
   ];
 
   services.gnome.gnome-keyring.enable = true;
+
+  system.replaceRuntimeDependencies = [
+    ({
+      original = pkgs.wayland;
+      replacement = pkgs.wayland.overrideAttrs (oldAttrs: {
+        version = "1.22.0";
+        src = fetchurl {
+          url = "https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.22.0/downloads/wayland-1.22.0.tar.xz";
+          hash = "sha256-FUCvHqaYpHHC2OnSiDMsfg/TYMjx0Sk267fny8JCWEI=";
+        };
+      });
+    })
+  ];
 }
