@@ -38,6 +38,12 @@ in
       ./desktop/candidates/test.nix
     ] ++ inspironSharedModules;
   };
+  inspiron-xfce = inputs.nixpkgs.lib.nixosSystem {
+    inherit system specialArgs;
+    modules = [
+      ./desktop/candidates/xfce.nix
+    ] ++ inspironSharedModules;
+  };
   iso = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
     modules = [
