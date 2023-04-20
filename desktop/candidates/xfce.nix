@@ -7,11 +7,19 @@
       layout = "us";
       desktopManager.xfce.enable = true;
       displayManager = {
-        lightdm.greeters.slick = {
+        lightdm.greeters.gtk = {
           enable = true;
-          theme.name = "Orchis";
-          iconTheme.name = "Tela";
-          draw-user-backgrounds = true;
+          theme.name = "Greybird";
+          iconTheme.name = "elementary-xfce";
+          indicators = [
+            "~host"
+            "~spacer"
+            "~clock"
+            "~session"
+            "~language"
+            "~a11y"
+            "~power"
+          ];
         };
         defaultSession = "xfce";
       };
@@ -26,9 +34,10 @@
 
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
-    orchis-theme
-    tela-icon-theme
+    greybird
+    elementary-xfce-icon-theme
     xfce.xfce4-whiskermenu-plugin
+    gnome.file-roller
   ];
 
   services.gnome.gnome-keyring.enable = true;
