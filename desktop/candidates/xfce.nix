@@ -46,12 +46,10 @@
     (self: super: {
       xfce = super.xfce.overrideScope (pself: psuper: {
         xfwm4 = psuper.xfwm4.overrideAttrs (oldAttrs: {
-          prePatch = ''
-            # https://gitlab.xfce.org/xfce/xfwm4/-/merge_requests/27/diffs
-            substituteInPlace src/frame.c \
-              --replace "(w3 / 2) - (logical_rect.width / 2)" "(width / 2) - (logical_rect.width / 2) - left" \
-              --replace "left + ((right - left) / 2) - (w3 / 2) - w2" "(width / 2) - (logical_rect.width / 2) - w2"
-          '';
+          patches = (oldAttrs.patches or [ ]) ++ [
+            # https://gitlab.xfce.org/xfce/xfwm4/-/merge_requests/27
+            ../patches/xfwm4-title-center.patch
+          ];
         });
       });
     })
