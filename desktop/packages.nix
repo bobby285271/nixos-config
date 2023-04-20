@@ -5,22 +5,14 @@ let
 in
 {
   environment.systemPackages = with pkgs; [
-    # apostrophe
     chromium
     drawing
-    # eclipses.eclipse-java
     firefox
     gitg
     gnome.gnome-boxes
-    # libreoffice-icon-fixed
-    # marktext
+    libreoffice-icon-fixed
     slack
     thunderbird
     vscode-fhs
-    wpsoffice-cn
-  ];
-
-  environment.variables."NIXPKGS_NO_GC_PATH" = [
-    "${pkgs.wpsoffice-cn.src}"
   ];
 }
