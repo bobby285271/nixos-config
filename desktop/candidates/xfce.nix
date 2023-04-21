@@ -38,7 +38,12 @@
     elementary-xfce-icon-theme
     xfce.xfce4-whiskermenu-plugin
     gnome.file-roller
+    xfce.xfce4-battery-plugin
+    xfce.xfce4-fsguard-plugin
+    xfce.xfce4-mailwatch-plugin
   ];
+
+  # environment.pathsToLink = [ "/share" ];
 
   services.gnome.gnome-keyring.enable = true;
 
