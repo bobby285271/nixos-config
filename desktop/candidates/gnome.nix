@@ -17,23 +17,32 @@
 
   # system.replaceRuntimeDependencies =
   #   let
-  #     wayland-122 = pkgs.wayland.overrideAttrs (oldAttrs: {
-  #       version = "1.22.0";
+  #     gtk4-10-3 = pkgs.gtk4.overrideAttrs (oldAttrs: {
+  #       version = "4.10.3";
   #       src = pkgs.fetchurl {
-  #         url = "https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.22.0/downloads/wayland-1.22.0.tar.xz";
-  #         hash = "sha256-FUCvHqaYpHHC2OnSiDMsfg/TYMjx0Sk267fny8JCWEI=";
+  #         url = "mirror://gnome/sources/gtk/4.10/gtk-4.10.3.tar.xz";
+  #         sha256 = "sha256-RUVEGteeN3624KcFAm3HpGiG5GobA020CRKQnagBzqk=";
   #       };
   #     });
-  #     mesa-rebuilt = pkgs.mesa.override { wayland = wayland-122; };
+  #     libadwaita1-3-2 = pkgs.libadwaita.overrideAttrs (oldAttrs: {
+  #       version = "1.3.2";
+  #       src = pkgs.fetchFromGitLab {
+  #         domain = "gitlab.gnome.org";
+  #         owner = "GNOME";
+  #         repo = "libadwaita";
+  #         rev = "1.3.2";
+  #         hash = "sha256-9Qha8xN3lC/t5dQNYPbgMX6HAKgEk80pyycrd5MGYLo=";
+  #       };
+  #     });
   #   in
   #   (builtins.map
   #     (output: {
-  #       original = pkgs.wayland.${output};
-  #       replacement = wayland-122.${output};
-  #     }) [ "out" "bin" "dev" ])
+  #       original = pkgs.gtk4.${output};
+  #       replacement = gtk4-10-3.${output};
+  #     }) [ "out" /* "dev" "devdoc" */ ])
   #   ++ (builtins.map
   #     (output: {
-  #       original = pkgs.mesa.${output};
-  #       replacement = mesa-rebuilt.${output};
-  #     }) [ "out" "dev" "drivers" ]);
+  #       original = pkgs.libadwaita.${output};
+  #       replacement = libadwaita1-3-2.${output};
+  #     }) [ "out" /* "dev" "devdoc" */ ]);
 }
