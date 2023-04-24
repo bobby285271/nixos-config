@@ -1,11 +1,11 @@
-{ sources
-, stdenv
+# https://github.com/NixOS-CN/flakes/blob/main/packages/dingtalk/default.nix
+
+{ stdenv
 , autoPatchelfHook
 , makeWrapper
 , lib
 , callPackage
-, # DingTalk dependencies
-  alsa-lib
+, alsa-lib
 , at-spi2-atk
 , at-spi2-core
 , cairo
@@ -38,12 +38,8 @@
 , udev
 , util-linux
 , xorg
-, ...
-} @ args:
-################################################################################
-# Mostly based on dingtalk-bin package from AUR:
-# https://aur.archlinux.org/packages/dingtalk-bin
-################################################################################
+}:
+
 let
   libraries = [
     alsa-lib
@@ -73,6 +69,7 @@ let
     libinput
     libpulseaudio
     libsForQt5.qtbase
+    libsForQt5.qtwayland
     libthai
     libxkbcommon
     mesa.drivers
@@ -107,7 +104,13 @@ let
   ];
 in
 stdenv.mkDerivation rec {
-  inherit (sources.dingtalk) pname version src;
+  version = "1.3.0.20214";
+  pname = "dingtalk";
+
+  src = fetchurl {
+    url = "https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_${version}_amd64.deb";
+    sha256 = "111fikyp3van1b8d41viyll12pj2m0w8zm2y5szsbsq7vjsi1xda";
+  };
 
   nativeBuildInputs = [ autoPatchelfHook makeWrapper libsForQt5.wrapQtAppsHook ];
   buildInputs = libraries;
