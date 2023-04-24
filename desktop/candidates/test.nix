@@ -5,7 +5,7 @@
     xserver = {
       enable = true;
       layout = "us";
-      desktopManager.xfce.enable = true;
+      desktopManager.mate.enable = true;
       displayManager = {
         lightdm.greeters.slick = {
           enable = true;
@@ -13,7 +13,6 @@
           iconTheme.name = "Tela";
           draw-user-backgrounds = true;
         };
-        defaultSession = "xfce";
       };
     };
     flatpak.enable = true;
@@ -28,9 +27,5 @@
     networkmanagerapplet
     orchis-theme
     tela-icon-theme
-    xfce.xfce4-whiskermenu-plugin
-    xfce.xfce4-genmon-plugin
   ];
-
-  services.gnome.gnome-keyring.enable = true;
 }
