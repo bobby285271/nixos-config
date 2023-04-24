@@ -2,12 +2,13 @@
 
 let
   libreoffice-icon-fixed = pkgs.callPackage ./pkgs/libreoffice-icon-fixed.nix { };
-  dingtalk = pkgs.callPackage ./pkgs/dingtalk { };
+  # dingtalk = pkgs.callPackage ./pkgs/dingtalk { };
 in
 {
   environment.systemPackages = with pkgs; [
     chromium
-    dingtalk
+    # terminate called after throwing an instance of 'std::bad_alloc'
+    # dingtalk
     drawing
     firefox
     gitg

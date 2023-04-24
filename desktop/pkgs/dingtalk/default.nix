@@ -1,13 +1,13 @@
-# https://github.com/NixOS-CN/flakes/blob/main/packages/dingtalk/default.nix
-# https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=dingtalk-bin
+# https://github.com/nix-community/nur-combined/blob/master/repos/xddxdd/pkgs/uncategorized/dingtalk/default.nix#L155
 
-{ stdenv
-, fetchurl
+{ fetchurl
+, stdenv
 , autoPatchelfHook
 , makeWrapper
 , lib
 , callPackage
-, alsa-lib
+, # DingTalk dependencies
+  alsa-lib
 , at-spi2-atk
 , at-spi2-core
 , cairo
@@ -40,7 +40,6 @@
 , udev
 , util-linux
 , xorg
-, libxcrypt-legacy
 }:
 
 let
@@ -71,9 +70,7 @@ let
     libGLU
     libinput
     libpulseaudio
-    libxcrypt-legacy
     libsForQt5.qtbase
-    libsForQt5.qtwayland
     libthai
     libxkbcommon
     mesa.drivers
@@ -122,8 +119,10 @@ stdenv.mkDerivation rec {
   unpackPhase = ''
     ar x ${src}
     tar xf data.tar.xz
+
     mv opt/apps/com.alibabainc.dingtalk/files/version version
     mv opt/apps/com.alibabainc.dingtalk/files/*-Release.* release
+
     # Cleanup
     rm -rf release/Resources/{i18n/tool/*.exe,qss/mac}
     rm -f release/{*.a,*.la,*.prl}
@@ -138,14 +137,17 @@ stdenv.mkDerivation rec {
   installPhase = ''
     mkdir -p $out
     mv version $out/
+
     # Move libraries
     # DingTalk relies on (some of) the exact libraries it ships with
     mv release $out/lib
+
     # Entrypoint
     mkdir -p $out/bin
     makeWrapper $out/lib/com.alibabainc.dingtalk $out/bin/dingtalk \
       --argv0 "com.alibabainc.dingtalk" \
       --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath libraries}"
+
     # App Menu
     mkdir -p $out/share/applications $out/share/pixmaps
     ln -s ${./dingtalk.desktop} $out/share/applications/dingtalk.desktop
@@ -156,6 +158,6 @@ stdenv.mkDerivation rec {
     description = "钉钉";
     homepage = "https://www.dingtalk.com/";
     platforms = [ "x86_64-linux" ];
-    license = licenses.free; # it should be unfree
+    license = licenses.unfreeRedistributable;
   };
 }
