@@ -8,6 +8,10 @@
       system = "x86_64-linux";
     in
     {
+      packages = forAllSystems (system:
+        let pkgs = nixpkgs.legacyPackages.${system};
+        in import ./packages.nix { inherit pkgs; }
+      );
       nixosConfigurations = import ./profiles.nix {
         inherit inputs system;
       };
