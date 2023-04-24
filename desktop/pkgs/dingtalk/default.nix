@@ -1,4 +1,5 @@
 # https://github.com/nix-community/nur-combined/blob/master/repos/xddxdd/pkgs/uncategorized/dingtalk/default.nix#L155
+# nix profile install .#dingtalk  --override-input nixpkgs 'git+file:///home/bobby285271/nixpkgs?ref=release-22.11' --impure
 
 { fetchurl
 , stdenv
