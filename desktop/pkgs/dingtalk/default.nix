@@ -57,7 +57,14 @@ let
     glib
     gnutls
     graphite2
-    gtk2
+    (gtk2.override {
+      pango = pango.override {
+        harfbuzz = callPackage ./harfbuzz.nix {
+          ApplicationServices = null;
+          CoreText = null;
+        };
+      };
+    })
     krb5
     libdrm
     libgcrypt
