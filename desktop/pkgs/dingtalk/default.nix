@@ -1,6 +1,8 @@
 # https://github.com/NixOS-CN/flakes/blob/main/packages/dingtalk/default.nix
+# https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=dingtalk-bin
 
 { stdenv
+, fetchurl
 , autoPatchelfHook
 , makeWrapper
 , lib
@@ -38,6 +40,7 @@
 , udev
 , util-linux
 , xorg
+, libxcrypt-legacy
 }:
 
 let
@@ -54,20 +57,14 @@ let
     glib
     gnutls
     graphite2
-    (gtk2.override {
-      pango = pango.override {
-        harfbuzz = callPackage ./harfbuzz {
-          ApplicationServices = null;
-          CoreText = null;
-        };
-      };
-    })
+    gtk2
     krb5
     libdrm
     libgcrypt
     libGLU
     libinput
     libpulseaudio
+    libxcrypt-legacy
     libsForQt5.qtbase
     libsForQt5.qtwayland
     libthai
@@ -104,12 +101,12 @@ let
   ];
 in
 stdenv.mkDerivation rec {
-  version = "1.3.0.20214";
+  version = "1.7.0.30419";
   pname = "dingtalk";
 
   src = fetchurl {
     url = "https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_${version}_amd64.deb";
-    sha256 = "111fikyp3van1b8d41viyll12pj2m0w8zm2y5szsbsq7vjsi1xda";
+    sha256 = "sha256-Ycq3YzhIbk8nRltgcVgDFQUFqKq57kmcAlOsh/t9UGI=";
   };
 
   nativeBuildInputs = [ autoPatchelfHook makeWrapper libsForQt5.wrapQtAppsHook ];
@@ -152,6 +149,6 @@ stdenv.mkDerivation rec {
     description = "钉钉";
     homepage = "https://www.dingtalk.com/";
     platforms = [ "x86_64-linux" ];
-    license = licenses.unfreeRedistributable;
+    license = licenses.free; # it should be unfree
   };
 }
