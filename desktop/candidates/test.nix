@@ -1,11 +1,18 @@
 { pkgs, ... }:
 
 {
+  environment.sessionVariables."G_SLICE" = "always-malloc";
+
   services = {
     xserver = {
       enable = true;
       layout = "us";
-      desktopManager.mate.enable = true;
+      desktopManager.budgie = {
+        enable = true;
+        extraPlugins = [
+          pkgs.budgie.budgie-analogue-clock-applet
+        ];
+      };
       displayManager = {
         lightdm.greeters.slick = {
           enable = true;
