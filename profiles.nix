@@ -26,6 +26,12 @@ in
       ./desktop/candidates/pantheon.nix
     ] ++ inspironSharedModules;
   };
+  inspiron-mate = inputs.nixpkgs.lib.nixosSystem {
+    inherit system specialArgs;
+    modules = [
+      ./desktop/candidates/mate.nix
+    ] ++ inspironSharedModules;
+  };
   inspiron-gnome = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
     modules = [
