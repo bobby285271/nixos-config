@@ -35,15 +35,15 @@
           '';
         });
 
-        elementary-mail = psuper.elementary-mail.overrideAttrs (oldAttrs: {
-          # I do this for some well-known reasons (TM)
-          prePatch = ''
-            substituteInPlace src/MessageList/MessageListItem.vala \
-              --replace "avatar.set_loadable_icon" "// avatar.set_loadable_icon"
-          '';
+        # elementary-mail = psuper.elementary-mail.overrideAttrs (oldAttrs: {
+        #   # I do this for some well-known reasons (TM)
+        #   prePatch = ''
+        #     substituteInPlace src/MessageList/MessageListItem.vala \
+        #       --replace "avatar.set_loadable_icon" "// avatar.set_loadable_icon"
+        #   '';
 
-          separateDebugInfo = true;
-        });
+        #   separateDebugInfo = true;
+        # });
 
         elementary-terminal = psuper.elementary-terminal.overrideAttrs (oldAttrs: {
           patches = (oldAttrs.patches or [ ]) ++ [
