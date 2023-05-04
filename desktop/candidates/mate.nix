@@ -8,8 +8,8 @@
       desktopManager.mate.enable = true;
       displayManager.lightdm.greeters.slick = {
         enable = true;
-        theme.name = "Mint-Y-Aqua";
-        iconTheme.name = "Mint-Y-Aqua";
+        theme.name = "Mint-X-Aqua";
+        iconTheme.name = "Mint-X-Aqua";
         draw-user-backgrounds = true;
       };
     };
@@ -49,7 +49,7 @@
 
   environment.systemPackages = with pkgs; [
     cinnamon.mint-themes
-    cinnamon.mint-y-icons
+    cinnamon.mint-x-icons
     networkmanagerapplet
   ];
 }
