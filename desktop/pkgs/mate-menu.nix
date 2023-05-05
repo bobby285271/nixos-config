@@ -7,8 +7,7 @@
 , xvfb-run
 , wrapGAppsHook
 , gtk3
-, mate-menus
-, mate-panel
+, mate
 }:
 
 python3.pkgs.buildPythonApplication rec {
@@ -32,8 +31,8 @@ python3.pkgs.buildPythonApplication rec {
 
   buildInputs = [
     gtk3
-    mate-menus
-    mate-panel
+    mate.mate-menus
+    mate.mate-panel
   ];
 
   propagatedBuildInputs = with python3.pkgs; [
@@ -69,7 +68,7 @@ python3.pkgs.buildPythonApplication rec {
     # For desktop entries.
     + replaceAll "/usr/share/applications" "/run/current-system/sw/share/applications"
     # For editProcess.
-    + replaceAll "/usr/bin/mate-desktop-item-edit" "${mate-panel}/bin/mate-desktop-item-edit";
+    + replaceAll "/usr/bin/mate-desktop-item-edit" "${mate.mate-panel}/bin/mate-desktop-item-edit";
 
   postInstall = ''
     glib-compile-schemas $out/share/glib-2.0/schemas
