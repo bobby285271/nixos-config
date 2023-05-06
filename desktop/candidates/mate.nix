@@ -51,5 +51,6 @@
     cinnamon.mint-themes
     cinnamon.mint-x-icons
     networkmanagerapplet
+    gnome.zenity
   ];
 }
