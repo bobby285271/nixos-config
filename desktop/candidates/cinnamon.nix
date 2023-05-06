@@ -44,6 +44,10 @@
           ];
         });
       });
+
+      # cinnamon = super.cinnamon.overrideScope' (pself: psuper: {
+      #   nemo-with-extensions = psuper.nemo-with-extensions.override { useDefaultExtensions = false; };
+      # });
     })
   ];
 }
