@@ -8,8 +8,8 @@
       desktopManager.mate.enable = true;
       displayManager.lightdm.greeters.slick = {
         enable = true;
-        theme.name = "Mint-X-Aqua";
-        iconTheme.name = "Mint-X-Aqua";
+        theme.name = "vimix-dark-doder";
+        iconTheme.name = "Papirus-Dark";
         draw-user-backgrounds = true;
       };
     };
@@ -48,8 +48,8 @@
   };
 
   environment.systemPackages = with pkgs; [
-    cinnamon.mint-themes
-    cinnamon.mint-x-icons
+    papirus-icon-theme
+    vimix-gtk-themes
     networkmanagerapplet
     gnome.zenity
   ];
