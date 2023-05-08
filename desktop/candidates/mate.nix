@@ -14,6 +14,7 @@
       };
     };
     flatpak.enable = true;
+    accounts-daemon.enable = true;
   };
 
   nixpkgs.overlays = [
