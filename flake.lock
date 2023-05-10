@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1683680675,
-        "narHash": "sha256-UeoHOqTGrEq6nH/Gl7n9+wo67YL3v+8Pr1XH05GYFpo=",
-        "ref": "upd/elementary-planner",
-        "rev": "83fc737ae7591a12fa1aef1759b08223faee4bea",
-        "revCount": 481753,
+        "lastModified": 1683691654,
+        "narHash": "sha256-HpYfyNeAmUfeMh5RBC8dcbfiadzigShDfS1+myaq4tA=",
+        "ref": "upd/mate",
+        "rev": "f1a3e3824889e5eda5bf898666f36dbbc4f4a095",
+        "revCount": 481212,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
