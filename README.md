@@ -4,7 +4,7 @@
 <p></p>
 
 <div align="center" width="100%">
-  <sup><a href="https://www.pixiv.net/artworks/77052346">夜中に抜け出して</a></sup>
+  <sup><a href="https://www.pixiv.net/artworks/81163049">Wallpaper: Blonde Hair Angels!</a></sup>
 </div>
 <p></p>
 
