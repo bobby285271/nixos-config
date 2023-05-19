@@ -37,7 +37,7 @@
     greybird
     elementary-xfce-icon-theme
     xfce.xfce4-whiskermenu-plugin
-    gnome.file-roller
+    mate.engrampa
   ];
 
   # environment.pathsToLink = [ "/share" ];
