@@ -3,10 +3,10 @@
     "nixpkgs": {
       "locked": {
         "lastModified": 1684764396,
-        "narHash": "sha256-an/B3XHkuxwKgfVTZ4Ev/NwIFu06MDFbXJm4pcAbPk0=",
-        "ref": "pantheon-systemd",
-        "rev": "25276c0bef3f776844899b17b6e61890da69026c",
-        "revCount": 486736,
+        "narHash": "sha256-cDGNucDHY0Y/BDVjIg5K70HCWzGMIDa19ta91W/HLMc=",
+        "ref": "239d2acbc25cf3cef9b585d87f8df1c1fbe788cd",
+        "rev": "239d2acbc25cf3cef9b585d87f8df1c1fbe788cd",
+        "revCount": 486735,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
