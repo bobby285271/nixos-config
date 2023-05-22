@@ -36,7 +36,7 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
-  programs.gnome-terminal.enable = true;
+  # programs.gnome-terminal.enable = true;
 
   environment = {
     systemPackages = with pkgs; [
@@ -44,7 +44,7 @@
       orchis-theme
       tela-icon-theme
     ];
-    budgie.excludePackages = [ pkgs.mate.mate-terminal ];
+    # budgie.excludePackages = [ pkgs.mate.mate-terminal ];
   };
 
   # system.replaceRuntimeDependencies =
