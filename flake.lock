@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1684817998,
-        "narHash": "sha256-SlO4gVMiOTduGAu7jlSbhZzORPHByFARpO2lNj4xjA0=",
-        "ref": "fix/manual",
-        "rev": "44b98d80ea6a56ccc1838aa0ac9e891de9130913",
-        "revCount": 487588,
+        "lastModified": 1684919682,
+        "narHash": "sha256-iFoOydSgiPcLCum9bFq5hfQZKlPsF9m10pFKuWIb4t8=",
+        "ref": "chg/pantheon-location-rework",
+        "rev": "19a32d41e8efcfe080185007bb2d07613db951e9",
+        "revCount": 487208,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
