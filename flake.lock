@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1684991784,
-        "narHash": "sha256-gPwOx+XykPqQZfhFo/t56g6aexz2+assV3Fm0k6zAwM=",
-        "ref": "rm/pantheon-agent-geoclue2",
-        "rev": "f52db160fae2965aa2edf4b8bfaad9de227e2134",
-        "revCount": 487209,
+        "lastModified": 1684920274,
+        "narHash": "sha256-iFoOydSgiPcLCum9bFq5hfQZKlPsF9m10pFKuWIb4t8=",
+        "ref": "c97a4e0c4d6fb83dfc50c16b049238cf9b43d2b5",
+        "rev": "c97a4e0c4d6fb83dfc50c16b049238cf9b43d2b5",
+        "revCount": 487208,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
