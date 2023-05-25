@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1684942146,
-        "narHash": "sha256-gM2rDUebBZvpuHMyGcWMxS2h1brOHtw0OsUF15QdILY=",
-        "ref": "add/nemo-emblems",
-        "rev": "d376e7e4c10d8d38994b3771053d9ebcd3e4fafa",
-        "revCount": 487589,
+        "lastModified": 1684920274,
+        "narHash": "sha256-iFoOydSgiPcLCum9bFq5hfQZKlPsF9m10pFKuWIb4t8=",
+        "ref": "rm/pantheon-agent-geoclue2",
+        "rev": "c97a4e0c4d6fb83dfc50c16b049238cf9b43d2b5",
+        "revCount": 487208,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
