@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1684978945,
-        "narHash": "sha256-V8cwSOCzrdfFrgXF+uYRnnWLjY7ysnnjfKoL2nWRFsQ=",
-        "ref": "add/nemo-emblems",
-        "rev": "94458ad1540584c8b3824bf27c3d6ac12959433b",
-        "revCount": 487716,
+        "lastModified": 1685101872,
+        "narHash": "sha256-pTwsNRIZ0lKKwuOFSRQdr2jYf/+e2xIo1tfchSqpTiM=",
+        "ref": "upd/evolution",
+        "rev": "c3ec28037009adef0074d25961672dcd77b04863",
+        "revCount": 488029,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
