@@ -12,18 +12,18 @@
         extraPlugins = [
           # pkgs.budgie.budgie-analogue-clock-applet
         ];
-        extraGSettingsOverrides = ''
-          [org.gnome.desktop.interface:Budgie]
-          gtk-theme="Orchis"
-          icon-theme="Tela"
-          cursor-theme="Adwaita"
-        '';
+        # extraGSettingsOverrides = ''
+        #   [org.gnome.desktop.interface:Budgie]
+        #   gtk-theme="Orchis"
+        #   icon-theme="Tela"
+        #   cursor-theme="Adwaita"
+        # '';
       };
       displayManager = {
         lightdm.greeters.slick = {
           enable = true;
-          theme.name = "Orchis";
-          iconTheme.name = "Tela";
+          # theme.name = "Orchis";
+          # iconTheme.name = "Tela";
           draw-user-backgrounds = true;
         };
       };
@@ -36,7 +36,7 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
-  # programs.gnome-terminal.enable = true;
+  programs.gnome-terminal.enable = true;
 
   environment = {
     systemPackages = with pkgs; [
@@ -44,7 +44,7 @@
       orchis-theme
       tela-icon-theme
     ];
-    # budgie.excludePackages = [ pkgs.mate.mate-terminal ];
+    budgie.excludePackages = [ pkgs.mate.mate-terminal ];
   };
 
   # system.replaceRuntimeDependencies =
