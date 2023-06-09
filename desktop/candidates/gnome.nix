@@ -15,24 +15,41 @@
   programs.gpaste.enable = true;
   xdg.portal.enable = true;
 
-  # system.replaceRuntimeDependencies =
-  #   let
-  #     gtk4-10-3 = pkgs.gtk4.overrideAttrs (oldAttrs: {
-  #       patches = (oldAttrs.patches or [ ]) ++ [
-  #         (pkgs.fetchpatch2 {
-  #           url = "https://gitlab.gnome.org/GNOME/gtk/-/commit/4f47683710bbb4b56c286c6ee6a5c394fcf2b755.patch";
-  #           sha256 = "fU9SX8MH37ZN6Ffk/YhYmipTC7+uT9JXnWggArWNkqA=";
-  #         })
-  #         (pkgs.fetchpatch2 {
-  #           url = "https://gitlab.gnome.org/GNOME/gtk/-/commit/b686ce1cb62dba505120e0f1116c516662a06e30.patch";
-  #           sha256 = "0zjY5s+T4CVe3WiowgWE58ruVvqBFUuY2juwBOzMRN4=";
-  #         })
-  #       ];
-  #     });
-  #   in
-  #   (builtins.map
-  #     (output: {
-  #       original = pkgs.gtk4.${output};
-  #       replacement = gtk4-10-3.${output};
-  #     }) [ "out" /* "dev" "devdoc" */ ]);
+  system.replaceRuntimeDependencies =
+    let
+      gtk3-new = pkgs.gtk3.overrideAttrs (oldAttrs: {
+        version = "3.24.38";
+        src = pkgs.fetchurl {
+          url = "mirror://gnome/sources/gtk+/3.24/gtk+-3.24.38.tar.xz";
+          sha256 = "sha256-zhHezwGLJb3YUFVEpPhyQoVOyIvgVNmt5fOiBETdjuc=";
+        };
+      });
+      glib-new = pkgs.glib.overrideAttrs (oldAttrs: {
+        version = "2.76.3";
+        src = pkgs.fetchurl {
+          url = "mirror://gnome/sources/glib/2.76/glib-2.76.3.tar.xz";
+          sha256 = "wL5ETkA9fDGE0fOU+J8LZEcQtekzG1T6TotQN4E60yo=";
+        };
+      });
+      at-spi2-core-new = pkgs.at-spi2-core.overrideAttrs (oldAttrs: {
+        version = "2.48.3";
+        src = pkgs.fetchurl {
+          url = "mirror://gnome/sources/at-spi2-core/2.48/at-spi2-core-2.48.3.tar.xz";
+          sha256 = "NzFt9DypmJzlOdVM9CmnaMKLs4oLNJUL6t0EIYJ+31U=";
+        };
+      });
+    in
+    ((builtins.map
+      (output: {
+        original = pkgs.gtk3.${output};
+        replacement = gtk3-new.${output};
+      }) [ "out" "dev" ]) ++ (builtins.map
+      (output: {
+        original = pkgs.glib.${output};
+        replacement = glib-new.${output};
+      }) [ "out" "dev" ]) ++ (builtins.map
+      (output: {
+        original = pkgs.at-spi2-core.${output};
+        replacement = at-spi2-core-new.${output};
+      }) [ "out" "dev" ]));
 }
