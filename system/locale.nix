@@ -6,6 +6,9 @@
 
   time.timeZone = "Asia/Shanghai";
 
+  # Test https://github.com/NixOS/nixpkgs/issues/238025
+  environment.sessionVariables."TZ" = "Asia/Shanghai";
+
   location = {
     latitude = 23.0;
     longitude = 113.0;
