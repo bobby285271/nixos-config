@@ -38,13 +38,13 @@
   nixpkgs.overlays = [
     (self: super: {
       pantheon = super.pantheon.overrideScope' (pself: psuper: {
-        elementary-notifications = psuper.elementary-notifications.overrideAttrs (oldAttrs: {
-          # I prefer the bubbles never automatically disappear.
-          prePatch = ''
-            substituteInPlace src/Bubble.vala \
-              --replace "start_timeout" "// start_timeout"
-          '';
-        });
+        # elementary-notifications = psuper.elementary-notifications.overrideAttrs (oldAttrs: {
+        #   # I prefer the bubbles never automatically disappear.
+        #   prePatch = ''
+        #     substituteInPlace src/Bubble.vala \
+        #       --replace "start_timeout" "// start_timeout"
+        #   '';
+        # });
 
         # elementary-mail = psuper.elementary-mail.overrideAttrs (oldAttrs: {
         #   # I do this for some well-known reasons (TM)
