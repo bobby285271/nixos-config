@@ -10,7 +10,7 @@ in
     # terminate called after throwing an instance of 'std::bad_alloc'
     # dingtalk
     drawing
-    firefox
+    # firefox
     gitg
     gnome.gnome-boxes
     libreoffice-icon-fixed
