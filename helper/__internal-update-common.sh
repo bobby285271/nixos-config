@@ -12,15 +12,12 @@ nixpkgs_remote="origin"
 nixpkgs_dir="${HOME}/nixpkgs"
 nixos_config_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && dirname "$(pwd)")"
 
-# I wanna skip these when I am on some test environment and want to quickly go back
-if [ "$XDG_CURRENT_DESKTOP" = "Cinnamon" ] || [ "$XDG_CURRENT_DESKTOP" = "X-Cinnamon" ] || [ "$XDG_CURRENT_DESKTOP" = "Pantheon" ]; then
-    echo -e "\033[36m🛠️  Updating nixpkgs checkout\033[0m"
-    cd "${nixpkgs_dir}"
+echo -e "\033[36m🛠️  Updating nixpkgs checkout\033[0m"
+cd "${nixpkgs_dir}"
 
-    git fetch ${nixpkgs_remote} master:upstream || true
-    git fetch ${nixpkgs_remote} staging:staging || true
-    git fetch ${nixpkgs_remote} nixos-unstable:nixos-unstable || true
-fi
+git fetch ${nixpkgs_remote} master:upstream || true
+git fetch ${nixpkgs_remote} staging:staging || true
+git fetch ${nixpkgs_remote} nixos-unstable:nixos-unstable || true
 
 echo -e "\n\033[36m🛠️  Updating flake lock\033[0m"  
 cd "${nixos_config_dir}"
