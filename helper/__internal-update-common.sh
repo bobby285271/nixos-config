@@ -8,7 +8,7 @@ if [ "$#" -ne 1 ] && [ "$#" -ne 2 ]; then
 fi
 
 
-nixpkgs_remote="origin"
+nixpkgs_remote="https://hub.fgit.ml/NixOS/nixpkgs"
 nixpkgs_dir="${HOME}/nixpkgs"
 nixos_config_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && dirname "$(pwd)")"
 
