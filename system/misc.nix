@@ -1,6 +1,6 @@
 {
   environment = {
-    enableDebugInfo = true;
+    # enableDebugInfo = true;
     localBinInPath = true;
   };
 
