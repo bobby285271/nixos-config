@@ -61,7 +61,7 @@
             # Fix font color
             # https://github.com/elementary/terminal/pull/684
             (super.fetchpatch {
-              url = "https://hub.fgit.ml/elementary/terminal/commit/873068fd20098ae0065473ce49c8b768e397091e.patch";
+              url = "https://github.com/elementary/terminal/commit/873068fd20098ae0065473ce49c8b768e397091e.patch";
               hash = "sha256-5JJwNp/3GjruNCLtEyAQnqSdIuAjw4fEEwSpXgsTN6I=";
               revert = true;
             })
