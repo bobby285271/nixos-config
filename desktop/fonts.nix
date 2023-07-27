@@ -2,7 +2,7 @@
 
 {
   fonts = {
-    enableDefaultFonts = true;
+    enableDefaultPackages = true;
     fontconfig = {
       enable = true;
       defaultFonts = {
