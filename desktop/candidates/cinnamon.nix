@@ -50,4 +50,9 @@
       # });
     })
   ];
+
+  environment.systemPackages = with pkgs; [
+    colloid-gtk-theme
+    colloid-icon-theme
+  ];
 }
