@@ -4,7 +4,7 @@
 <p></p>
 
 <div align="center" width="100%">
-  <sup><a href="https://www.pixiv.net/artworks/81163049">Wallpaper: Blonde Hair Angels!</a></sup>
+  <sup>桌面截屏 (这不是 GNOME!) · <a href="https://static.wixstatic.com/media/adc191_8cb07718ca3a4f7ab60e0f510f43f804~mv2.png">壁纸来源</a></sup>
 </div>
 <p></p>
 
