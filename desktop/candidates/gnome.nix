@@ -12,7 +12,7 @@
     fwupd.enable = true;
   };
 
-  programs.gpaste.enable = true;
+  # programs.gpaste.enable = true;
   xdg.portal.enable = true;
 
   # system.replaceRuntimeDependencies =
