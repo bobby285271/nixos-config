@@ -13,12 +13,12 @@
     gnupg
     gptfdisk
     kubectl
-    minikube
+    # minikube
     nix-update
     nixpkgs-fmt
     nixpkgs-review
     ntfs3g
-    openjdk
+    # openjdk
     p7zip
     pciutils
     pinentry-curses

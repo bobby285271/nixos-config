@@ -6,17 +6,17 @@ let
 in
 {
   environment.systemPackages = with pkgs; [
-    chromium
+    # chromium
     # terminate called after throwing an instance of 'std::bad_alloc'
     # dingtalk
     drawing
     # firefox
     gitg
-    gnome.gnome-boxes
-    libreoffice-icon-fixed
+    # gnome.gnome-boxes
+    # libreoffice-icon-fixed
     slack
-    thunderbird
+    # thunderbird
     vscode-fhs
-    vscodium-fhs
+    # vscodium-fhs
   ];
 }

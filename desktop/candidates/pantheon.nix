@@ -24,6 +24,8 @@
     ];
   };
 
+  # services.xserver.desktopManager.pantheon.extraWingpanelIndicators = with pkgs; [monitor];
+
   # services.xserver.desktopManager.pantheon.extraWingpanelIndicators = with pkgs; [ wingpanel-indicator-ayatana ];
 
   # systemd.user.services.indicatorapp = {
