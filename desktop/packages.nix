@@ -18,5 +18,6 @@ in
     # thunderbird
     vscode-fhs
     # vscodium-fhs
+#    loupe
   ];
 }
