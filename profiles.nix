@@ -5,7 +5,6 @@ let
 
   sharedModules = [
     ./desktop
-    ./programs
     ./system
   ];
   inspironSharedModules = sharedModules ++ [
