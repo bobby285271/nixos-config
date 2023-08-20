@@ -52,7 +52,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    colloid-gtk-theme
-    colloid-icon-theme
+    # colloid-gtk-theme
+    # colloid-icon-theme
   ];
 }
