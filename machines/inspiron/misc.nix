@@ -12,4 +12,5 @@ in
 {
   networking.hostName = "inspiron";
   environment.systemPackages = [ nvidia-offload ];
+  zramSwap.enable = true;
 }
