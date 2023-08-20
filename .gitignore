@@ -1,4 +1,4 @@
 .vscode
-*.out
+gh-hosts-generator.out
 result
 result-*
