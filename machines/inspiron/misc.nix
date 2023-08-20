@@ -10,5 +10,6 @@ let
   '';
 in
 {
+  networking.hostName = "inspiron";
   environment.systemPackages = [ nvidia-offload ];
 }
