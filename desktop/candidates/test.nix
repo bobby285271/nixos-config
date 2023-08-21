@@ -12,12 +12,12 @@
         extraPlugins = [
           # pkgs.budgie.budgie-analogue-clock-applet
         ];
-        # extraGSettingsOverrides = ''
-        #   [org.gnome.desktop.interface:Budgie]
-        #   gtk-theme="Orchis"
-        #   icon-theme="Tela"
-        #   cursor-theme="Adwaita"
-        # '';
+        extraGSettingsOverrides = ''
+          [org.gnome.desktop.interface:Budgie]
+          gtk-theme="Qogir-Light"
+          # icon-theme="Tela"
+          # cursor-theme="Adwaita"
+        '';
       };
       displayManager = {
         lightdm.greeters.slick = {
