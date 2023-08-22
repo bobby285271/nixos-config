@@ -10,7 +10,8 @@
       desktopManager.budgie = {
         enable = true;
         extraPlugins = [
-          # pkgs.budgie.budgie-analogue-clock-applet
+          pkgs.budgiePlugins.budgie-analogue-clock-applet
+          pkgs.budgiePlugins.budgie-user-indicator-redux
         ];
         extraGSettingsOverrides = ''
           [org.gnome.desktop.interface:Budgie]
