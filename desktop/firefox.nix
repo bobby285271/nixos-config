@@ -1,8 +1,8 @@
 { pkgs, ... }:
 
 {
-  # programs.firefox = {
-  #   enable = true;
-  #   languagePacks = [ "zh-CN" ];
-  # };
+  programs.firefox = {
+    enable = true;
+    languagePacks = [ "zh-CN" ];
+  };
 }
