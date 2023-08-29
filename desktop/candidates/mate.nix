@@ -6,11 +6,21 @@
       enable = true;
       layout = "us";
       desktopManager.mate.enable = true;
-      displayManager.lightdm.greeters.slick = {
-        enable = true;
-        theme.name = "vimix-dark-doder";
-        iconTheme.name = "Papirus-Dark";
-        draw-user-backgrounds = true;
+      displayManager = {
+        lightdm.greeters.gtk = {
+          enable = true;
+          theme.name = "BlueMenta";
+          iconTheme.name = "elementary-xfce";
+          indicators = [
+            "~host"
+            "~spacer"
+            "~clock"
+            "~session"
+            "~language"
+            "~a11y"
+            "~power"
+          ];
+        };
       };
     };
     flatpak.enable = true;
@@ -55,8 +65,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    papirus-icon-theme
-    vimix-gtk-themes
+    elementary-xfce-icon-theme
     networkmanagerapplet
     gnome.zenity
   ];
