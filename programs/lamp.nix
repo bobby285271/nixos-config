@@ -10,7 +10,7 @@
       enable = true;
       adminAddr = "admin@bobby285271.top";
       virtualHosts.localhost.documentRoot = "/srv/html";
-      enablePHP = true;
+      # enablePHP = true;
     };
   };
 }
