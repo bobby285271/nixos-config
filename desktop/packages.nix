@@ -14,7 +14,7 @@ in
     gitg
     # gnome.gnome-boxes
     # libreoffice-icon-fixed
-    slack
+    # slack
     # thunderbird
     vscode-fhs
     # vscodium-fhs
