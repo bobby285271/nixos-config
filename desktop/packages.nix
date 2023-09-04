@@ -9,7 +9,7 @@ in
     # chromium
     # terminate called after throwing an instance of 'std::bad_alloc'
     # dingtalk
-    drawing
+    # drawing
     # firefox
     gitg
     # gnome.gnome-boxes
