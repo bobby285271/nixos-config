@@ -10,7 +10,7 @@
         lightdm.greeters.gtk = {
           enable = true;
           theme.name = "BlueMenta";
-          iconTheme.name = "elementary-xfce";
+          iconTheme.name = "MATE";
           indicators = [
             "~host"
             "~spacer"
@@ -65,7 +65,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    elementary-xfce-icon-theme
+    # elementary-xfce-icon-theme
     networkmanagerapplet
     gnome.zenity
   ];
