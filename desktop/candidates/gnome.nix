@@ -12,6 +12,24 @@
     fwupd.enable = true;
   };
 
+  programs.gnome-terminal.enable = true;
+
+  # xdg.portal.config = {
+  #   gnome = {
+  #     "default" = [ "gnome" "gtk" ];
+  #   };
+  #   x-cinnamon = {
+  #     "default" = [ "xapp" "gtk" ];
+  #   };
+  #   pantheon = {
+  #     "default" = [ "pantheon" "gtk" ];
+  #     "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
+  #   };
+  #   common = {
+  #     "default" = [ "gtk" ];
+  #   };
+  # };
+
   # programs.gpaste.enable = true;
   xdg.portal.enable = true;
 
