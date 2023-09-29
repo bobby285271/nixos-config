@@ -28,7 +28,8 @@
       hack-font
       inter
       liberation_ttf
-      noto-fonts-emoji
+      # noto-fonts-emoji
+      noto-fonts-color-emoji
       roboto
       sarasa-gothic
       source-han-mono
