@@ -7,6 +7,6 @@
     #     "live-restore" = false;
     #   };
     # };
-    # libvirtd.enable = true;
+    libvirtd.enable = true;
   };
 }
