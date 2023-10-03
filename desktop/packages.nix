@@ -12,12 +12,14 @@ in
     # drawing
     # firefox
     gitg
-    # gnome.gnome-boxes
+    gnome.gnome-boxes
     # libreoffice-icon-fixed
     # slack
     # thunderbird
     vscode-fhs
     # vscodium-fhs
 #    loupe
+  
+    gnome.polari
   ];
 }
