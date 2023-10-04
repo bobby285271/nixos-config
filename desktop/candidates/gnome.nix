@@ -35,15 +35,15 @@
   # programs.gpaste.enable = true;
   xdg.portal.enable = true;
 
-  system.replaceRuntimeDependencies =
-    let
-      cairo = pkgs.callPackage ./cairo.nix { };
-    in
-    (
-      (builtins.map
-        (output: {
-          original = pkgs.cairo.${output};
-          replacement = cairo.${output};
-        }) [ "out" "dev" ])
-    );
+  # system.replaceRuntimeDependencies =
+  #   let
+  #     cairo = pkgs.callPackage ./cairo.nix { };
+  #   in
+  #   (
+  #     (builtins.map
+  #       (output: {
+  #         original = pkgs.cairo.${output};
+  #         replacement = cairo.${output};
+  #       }) [ "out" "dev" ])
+  #   );
 }
