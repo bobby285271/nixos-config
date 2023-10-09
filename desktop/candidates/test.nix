@@ -41,8 +41,8 @@
   environment = {
     systemPackages = with pkgs; [
       networkmanagerapplet
-      orchis-theme
-      tela-icon-theme
+      # orchis-theme
+      # tela-icon-theme
     ];
     budgie.excludePackages = [ pkgs.mate.mate-terminal ];
   };

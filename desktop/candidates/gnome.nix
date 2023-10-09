@@ -5,7 +5,10 @@
     xserver = {
       enable = true;
       layout = "us";
-      desktopManager.gnome.enable = true;
+      desktopManager.gnome = {
+        enable = true;
+        flashback.enableMetacity = true;
+      };
       displayManager.gdm.enable = true;
     };
     flatpak.enable = true;
