@@ -50,6 +50,9 @@
 
   # environment.pathsToLink = [ "/share" ];
 
+  programs.nm-applet.enable = true;
+  programs.nm-applet.indicator = true;
+
   services.gnome.gnome-keyring.enable = true;
 
   nixpkgs.overlays = [
