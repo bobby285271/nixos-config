@@ -21,11 +21,14 @@
         '';
       };
       displayManager = {
-        lightdm.greeters.slick = {
-          enable = true;
-          # theme.name = "Orchis";
-          # iconTheme.name = "Tela";
-          draw-user-backgrounds = true;
+        lightdm = {
+          background = "/var/lib/wallpaper/bobby285271/hoshikuzu-telepath-2.jpg";
+          greeters.slick = {
+            enable = true;
+            # theme.name = "Orchis";
+            # iconTheme.name = "Tela";
+            draw-user-backgrounds = true;
+          };
         };
       };
     };

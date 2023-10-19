@@ -7,19 +7,22 @@
       layout = "us";
       desktopManager.xfce.enable = true;
       displayManager = {
-        lightdm.greeters.gtk = {
-          enable = true;
-          theme.name = "Greybird";
-          iconTheme.name = "elementary-xfce";
-          indicators = [
-            "~host"
-            "~spacer"
-            "~clock"
-            "~session"
-            "~language"
-            "~a11y"
-            "~power"
-          ];
+        lightdm = {
+          background = "/var/lib/wallpaper/bobby285271/hoshikuzu-telepath-2.jpg";
+          greeters.gtk = {
+            enable = true;
+            theme.name = "Greybird";
+            iconTheme.name = "elementary-xfce";
+            indicators = [
+              "~host"
+              "~spacer"
+              "~clock"
+              "~session"
+              "~language"
+              "~a11y"
+              "~power"
+            ];
+          };
         };
         defaultSession = "xfce";
       };
