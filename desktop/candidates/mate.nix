@@ -58,9 +58,9 @@
     extraPortals = [
       (pkgs.xdg-desktop-portal-gtk.override {
         # Use the upstream default so this won't conflict with the xapp portal.
-        buildPortalsInGnome = false;
+        # buildPortalsInGnome = false;
       })
-      pkgs.xdg-desktop-portal-xapp
+      # pkgs.xdg-desktop-portal-xapp
     ];
   };
 
