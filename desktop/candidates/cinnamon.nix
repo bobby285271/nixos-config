@@ -45,11 +45,45 @@
         });
       });
 
+      # python310 = super.python310.override {
+      #   packageOverrides = pyself: pysuper: {
+      #     pygobject3 = pysuper.pygobject3.overrideAttrs (_: {
+      #       src = pkgs.fetchFromGitLab {
+      #         domain = "gitlab.gnome.org";
+      #         owner = "GNOME";
+      #         repo = "pygobject";
+      #         rev = "3.46.0";
+      #         sha256 = "sha256-WdUmi5gZcHz+y10kxVSlefj5VlyIv7K8KpILZFiE+FY=";
+      #       };
+      #     });
+      #   };
+      # };
+
       # cinnamon = super.cinnamon.overrideScope' (pself: psuper: {
       #   nemo-with-extensions = psuper.nemo-with-extensions.override { useDefaultExtensions = false; };
       # });
     })
   ];
+
+  # system.replaceRuntimeDependencies =
+  #   let
+  #     pygobject3 = pkgs.python310.pkgs.pygobject3.overrideAttrs (_: {
+  #       src = pkgs.fetchFromGitLab {
+  #         domain = "gitlab.gnome.org";
+  #         owner = "GNOME";
+  #         repo = "pygobject";
+  #         rev = "fbbeb9d92bf98f21b5f419a182079a007e6ee6b6";
+  #         sha256 = "sha256-dh0BdNaAS1pZj6fkVmS9lIplJenTDrzY8apM3PlW0E4=";
+  #       };
+  #     });
+  #   in
+  #   (
+  #     (builtins.map
+  #       (output: {
+  #         original = pkgs.python310.pkgs.pygobject3.${output};
+  #         replacement = pygobject3.${output};
+  #       }) [ "out" "dev" ])
+  #   );
 
   services.geoclue2.enable = true;
 
