@@ -3,11 +3,11 @@
 let
   libreoffice-icon-fixed = pkgs.callPackage ./pkgs/libreoffice-icon-fixed.nix { };
   # dingtalk = pkgs.callPackage ./pkgs/dingtalk { };
-  clash-for-windows = pkgs.callPackage ./pkgs/clash-for-windows.nix { };
+  # clash-for-windows = pkgs.callPackage ./pkgs/clash-for-windows.nix { };
 in
 {
   environment.systemPackages = with pkgs; [
-    clash-for-windows
+    # clash-for-windows
     # chromium
     # terminate called after throwing an instance of 'std::bad_alloc'
     # dingtalk
