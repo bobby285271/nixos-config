@@ -1,6 +1,6 @@
-{ sources
-, stdenv
+{ stdenv
 , lib
+, fetchurl
 , autoPatchelfHook
 , xorg
 , gtk3
@@ -34,7 +34,7 @@ stdenv.mkDerivation rec {
   src = fetchurl {
     url = "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/${version}/Clash.for.Windows-${version}-x64-linux.tar.gz";
     hash = "sha256:1h1xshc2jylzn0kqirpj881cfrq1dl6vlqij20f536fficsmwz70";
-  }
+  };
 
   nativeBuildInputs = [
     autoPatchelfHook
