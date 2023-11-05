@@ -37,10 +37,10 @@ in
       ./desktop/candidates/gnome.nix
     ] ++ inspironSharedModules;
   };
-  inspiron-test = inputs.nixpkgs.lib.nixosSystem {
+  inspiron-budgie = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
     modules = [
-      ./desktop/candidates/test.nix
+      ./desktop/candidates/budgie.nix
     ] ++ inspironSharedModules;
   };
   inspiron-xfce = inputs.nixpkgs.lib.nixosSystem {
