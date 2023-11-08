@@ -9,10 +9,13 @@
       enable = true;
       layout = "us";
       desktopManager.cinnamon.enable = true;
-      displayManager.lightdm.greeters.slick = {
-        theme.name = "Mint-Y-Sand";
-        iconTheme.name = "Mint-Y-Sand";
-        draw-user-backgrounds = true;
+      displayManager.lightdm = {
+        background = "/var/lib/wallpaper/bobby285271/current.png";
+        greeters.slick = {
+          theme.name = "Mint-Y-Sand";
+          iconTheme.name = "Mint-Y-Sand";
+          draw-user-backgrounds = true;
+        };
       };
     };
     flatpak.enable = true;
