@@ -22,7 +22,7 @@
       };
       displayManager = {
         lightdm = {
-          background = "/var/lib/wallpaper/bobby285271/current.png";
+          background = "/var/lib/wallpaper/bobby285271/hoshikuzu-telepath-2.jpg";
           greeters.slick = {
             enable = true;
             # theme.name = "Orchis";

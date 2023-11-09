@@ -8,7 +8,7 @@
       desktopManager.xfce.enable = true;
       displayManager = {
         lightdm = {
-          background = "/var/lib/wallpaper/bobby285271/current.png";
+          background = "/var/lib/wallpaper/bobby285271/hoshikuzu-telepath-2.jpg";
           greeters.gtk = {
             enable = true;
             theme.name = "Greybird";
