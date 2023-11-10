@@ -18,10 +18,10 @@
         to = 1764; # KDE connect
       }];
     };
-    nameservers = [
-      "119.29.29.29"
-      "223.5.5.5"
-    ];
+    # nameservers = [
+    #   "119.29.29.29"
+    #   "223.5.5.5"
+    # ];
     hosts = {
       # GitHub
       "13.107.253.40" = [ "vscode.dev" ];
