@@ -10,10 +10,10 @@
       layout = "us";
       desktopManager.cinnamon.enable = true;
       displayManager.lightdm = {
-        background = "/var/lib/wallpaper/bobby285271/hoshikuzu-telepath-2.jpg";
+        background = "/var/lib/wallpaper/bobby285271/current.jpg";
         greeters.slick = {
-          theme.name = "Mint-Y-Sand";
-          iconTheme.name = "Mint-Y-Sand";
+          # theme.name = "Mint-Y-Sand";
+          # iconTheme.name = "Mint-Y-Sand";
           draw-user-backgrounds = true;
         };
       };
