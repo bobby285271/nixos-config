@@ -13,7 +13,7 @@ let
   ];
 in
 {
-  inspiron = inputs.nixpkgs.lib.nixosSystem {
+  inspiron-cinnamon = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
     modules = [
       ./desktop/candidates/cinnamon.nix
@@ -49,10 +49,11 @@ in
       ./desktop/candidates/xfce.nix
     ] ++ inspironSharedModules;
   };
+  inspiron = inspiron-xfce;
   iso = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
     modules = [
-      ./desktop/candidates/cinnamon.nix
+      ./desktop/candidates/xfce.nix
       ./machines/iso
     ] ++ sharedModules;
   };
