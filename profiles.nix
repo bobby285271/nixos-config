@@ -11,6 +11,9 @@ let
     ./machines/inspiron
     ./users/bobby285271
   ];
+  defaultDesktop = [
+    ./desktop/candidates/cinnamon.nix
+  ];
 in
 {
   inspiron-cinnamon = inputs.nixpkgs.lib.nixosSystem {
@@ -49,12 +52,14 @@ in
       ./desktop/candidates/xfce.nix
     ] ++ inspironSharedModules;
   };
-  inspiron = inspiron-xfce;
+  inspiron = inputs.nixpkgs.lib.nixosSystem {
+    inherit system specialArgs;
+    modules = defaultDesktop ++ inspironSharedModules;
+  };
   iso = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
     modules = [
-      ./desktop/candidates/xfce.nix
       ./machines/iso
-    ] ++ sharedModules;
+    ] ++ defaultDesktop ++ sharedModules;
   };
 }
