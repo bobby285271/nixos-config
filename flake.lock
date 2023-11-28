@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1700876315,
-        "narHash": "sha256-TIXdJ/aC+BqWYZitT++qifayyAokPwpOuj73xr1OpZI=",
+        "lastModified": 1701175888,
+        "narHash": "sha256-9P5MHss5S77Yp9NlWop48EeiRT/zobfT8vCyS/q01vc=",
         "ref": "upd/cinnamon-condor",
-        "rev": "23efb8e39d033571e5bf62f5678a127db8206ec4",
-        "revCount": 551721,
+        "rev": "2521b3978260466952b1719f710bbc72d0ed7c5d",
+        "revCount": 552316,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
