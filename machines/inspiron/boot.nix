@@ -2,8 +2,8 @@
 
 {
   boot = {
-    # kernelPackages = pkgs.linuxPackages_latest;
-    kernelPackages = pkgs.linuxKernel.packages.linux_6_5;
+    kernelPackages = pkgs.linuxPackages_latest;
+    # kernelPackages = pkgs.linuxKernel.packages.linux_6_5;
     plymouth.enable = true;
     loader = {
       efi.canTouchEfiVariables = true;
@@ -29,7 +29,7 @@
   zramSwap.enable = true;
 
   environment.variables."NIXPKGS_NO_GC_PATH" = [
-    # "${pkgs.linuxPackages_latest.nvidia_x11.src}"
-    "${pkgs.linuxKernel.packages.linux_6_5.nvidia_x11.src}"
+    "${pkgs.linuxPackages_latest.nvidia_x11.src}"
+    # "${pkgs.linuxKernel.packages.linux_6_5.nvidia_x11.src}"
   ];
 }
