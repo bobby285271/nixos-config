@@ -45,11 +45,14 @@
     networkmanagerapplet
     greybird
     elementary-xfce-icon-theme
+    xfce.xfce4-clipman-plugin
     xfce.xfce4-whiskermenu-plugin
     mate.engrampa
     # cinnamon.xapp
     # file
   ];
+
+  programs.thunar.plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman ];
 
   # environment.pathsToLink = [ "/share" ];
 
