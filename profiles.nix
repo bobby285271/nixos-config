@@ -11,9 +11,9 @@ let
     ./machines/inspiron
     ./users/bobby285271
   ];
-  defaultDesktop = [
-    ./desktop/candidates/cinnamon.nix
-  ];
+  # Randomly chosen but I want one
+  # https://github.com/NixOS/nixpkgs/blob/23.11/pkgs/os-specific/linux/nixos-rebuild/nixos-rebuild.sh#L359
+  oneOfTheDesktopsBobbyUses = [ ./desktop/candidates/cinnamon.nix ];
 in
 {
   inspiron-cinnamon = inputs.nixpkgs.lib.nixosSystem {
@@ -54,12 +54,12 @@ in
   };
   inspiron = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
-    modules = defaultDesktop ++ inspironSharedModules;
+    modules = oneOfTheDesktopsBobbyUses ++ inspironSharedModules;
   };
   iso = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
     modules = [
       ./machines/iso
-    ] ++ defaultDesktop ++ sharedModules;
+    ] ++ oneOfTheDesktopsBobbyUses ++ sharedModules;
   };
 }
