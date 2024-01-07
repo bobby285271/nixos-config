@@ -12,8 +12,8 @@
       displayManager.lightdm = {
         background = "/var/lib/wallpaper/bobby285271/current.jpg";
         greeters.slick = {
-          theme.name = "Mint-Y-Sand";
-          iconTheme.name = "Mint-Y-Sand";
+          # theme.name = "Mint-Y-Sand";
+          # iconTheme.name = "Mint-Y-Sand";
           draw-user-backgrounds = true;
         };
       };
