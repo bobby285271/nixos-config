@@ -11,7 +11,7 @@
           background = "/var/lib/wallpaper/bobby285271/current.jpg";
           greeters.gtk = {
             enable = true;
-            theme.name = "Qogir";
+            theme.name = "Qogir-Light";
             iconTheme.name = "Qogir";
             indicators = [
               "~host"
