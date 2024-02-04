@@ -14,7 +14,7 @@ in
   environment.systemPackages = [
     (pkgs.writeShellScriptBin "review.sh" ''
       cd /home/bobby285271/nixpkgs
-      git fetch https://hub.fgit.cf/nixos/nixpkgs pull/''${1}/head
+      git fetch ssh://git@ssh.github.com:443/nixos/nixpkgs pull/''${1}/head
       git checkout FETCH_HEAD
     '')
   ] ++ (map
