@@ -8,15 +8,15 @@
       system = "x86_64-linux";
     in
     {
-      packages."x86_64-linux" = import ./packages.nix {
-        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+      packages.system = import ./packages.nix {
+        pkgs = nixpkgs.legacyPackages.system;
       };
       nixosConfigurations = import ./profiles.nix {
         inherit inputs system;
       };
       # nix build '/path/to/flake#iso'
       # Takes ~1h to build on my laptop
-      legacyPackages.${system} = {
+      legacyPackages.system = {
         iso = self.nixosConfigurations.iso.config.system.build.isoImage;
       };
     };
