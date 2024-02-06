@@ -4,7 +4,7 @@
   services = {
     xserver = {
       enable = true;
-      layout = "us";
+      xkb.layout = "us";
       desktopManager.mate.enable = true;
       displayManager = {
         lightdm.greeters.gtk = {

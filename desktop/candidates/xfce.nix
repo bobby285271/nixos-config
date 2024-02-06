@@ -4,7 +4,7 @@
   services = {
     xserver = {
       enable = true;
-      layout = "us";
+      xkb.layout = "us";
       desktopManager.xfce.enable = true;
       displayManager = {
         lightdm = {
