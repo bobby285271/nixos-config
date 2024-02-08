@@ -17,7 +17,7 @@ in
       git fetch ssh://git@ssh.github.com:443/nixos/nixpkgs pull/''${1}/head
       git checkout FETCH_HEAD
     '')
-    (pkgs.writeShellScriptBin "nonemast.sh" ''
+    (pkgs.writeShellScriptBin "tape.sh" ''
       nix run /home/bobby285271/nonemast --override-input nixpkgs \
         'git+file:///home/bobby285271/nixpkgs?ref=nixos-unstable' -- "$@"
     '')
