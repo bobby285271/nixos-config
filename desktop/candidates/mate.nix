@@ -9,8 +9,8 @@
       displayManager = {
         lightdm.greeters.gtk = {
           enable = true;
-          theme.name = "BlueMenta";
-          iconTheme.name = "MATE";
+          theme.name = "Matcha-sea";
+          iconTheme.name = "Qogir-manjaro";
           indicators = [
             "~host"
             "~spacer"
@@ -68,5 +68,7 @@
     # elementary-xfce-icon-theme
     networkmanagerapplet
     gnome.zenity
+    qogir-icon-theme
+    matcha-gtk-theme
   ];
 }
