@@ -7,10 +7,10 @@
       xkb.layout = "us";
       desktopManager.mate.enable = true;
       displayManager.lightdm = {
-        background = "/var/lib/wallpaper/bobby285271/login.jpg";
+        background = "/var/lib/wallpaper/bobby285271/current.jpg";
         greeters.gtk = {
           enable = true;
-          extraConfig = "user-background = false";
+          # extraConfig = "user-background = false";
           theme.name = "Matcha-sea";
           iconTheme.name = "Qogir-manjaro";
           indicators = [
