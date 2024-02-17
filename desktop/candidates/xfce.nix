@@ -8,9 +8,10 @@
       desktopManager.xfce.enable = true;
       displayManager = {
         lightdm = {
-          background = "/var/lib/wallpaper/bobby285271/current.jpg";
+          background = "/var/lib/wallpaper/bobby285271/login.jpg";
           greeters.gtk = {
             enable = true;
+            extraConfig = "user-background = false";
             theme.name = "Qogir-Light";
             iconTheme.name = "Qogir";
             indicators = [
