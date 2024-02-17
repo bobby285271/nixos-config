@@ -37,7 +37,7 @@
 
   nixpkgs.overlays = [
     (self: super: {
-      pantheon = super.pantheon.overrideScope' (pself: psuper: {
+      pantheon = super.pantheon.overrideScope (pself: psuper: {
         # elementary-notifications = psuper.elementary-notifications.overrideAttrs (oldAttrs: {
         #   # I prefer the bubbles never automatically disappear.
         #   prePatch = ''

@@ -31,7 +31,7 @@
 
   nixpkgs.overlays = [
     (self: super: {
-      mate = super.mate.overrideScope' (pself: psuper: {
+      mate = super.mate.overrideScope (pself: psuper: {
         # mate-terminal = psuper.mate-terminal.overrideAttrs (oldAttrs: {
         #   patches = (oldAttrs.patches or [ ]) ++ [
         #     # Dark style

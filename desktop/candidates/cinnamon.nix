@@ -35,7 +35,7 @@
 
   nixpkgs.overlays = [
     (self: super: {
-      # gnome = super.gnome.overrideScope' (pself: psuper: {
+      # gnome = super.gnome.overrideScope (pself: psuper: {
       #   gnome-terminal = psuper.gnome-terminal.overrideAttrs (oldAttrs: {
       #     patches = (oldAttrs.patches or [ ]) ++ [
       #       # Restore transparency
@@ -62,7 +62,7 @@
       #   };
       # };
 
-      # cinnamon = super.cinnamon.overrideScope' (pself: psuper: {
+      # cinnamon = super.cinnamon.overrideScope (pself: psuper: {
       #   nemo-with-extensions = psuper.nemo-with-extensions.override { useDefaultExtensions = false; };
       # });
     })
