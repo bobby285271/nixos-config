@@ -11,8 +11,8 @@
         greeters.gtk = {
           enable = true;
           # extraConfig = "user-background = false";
-          theme.name = "Matcha-sea";
-          iconTheme.name = "Qogir-manjaro";
+          theme.name = "Menta";
+          iconTheme.name = "Menta";
           indicators = [
             "~host"
             "~spacer"
@@ -70,7 +70,7 @@
     # elementary-xfce-icon-theme
     networkmanagerapplet
     gnome.zenity
-    qogir-icon-theme
-    matcha-gtk-theme
+    # qogir-icon-theme
+    # matcha-gtk-theme
   ];
 }
