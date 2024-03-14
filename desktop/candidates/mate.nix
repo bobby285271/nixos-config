@@ -6,24 +6,10 @@
       enable = true;
       xkb.layout = "us";
       desktopManager.mate.enable = true;
-      displayManager.lightdm = {
-        background = "/var/lib/wallpaper/bobby285271/current.jpg";
-        greeters.gtk = {
-          enable = true;
-          # extraConfig = "user-background = false";
-          theme.name = "Menta";
-          iconTheme.name = "Menta";
-          indicators = [
-            "~host"
-            "~spacer"
-            "~clock"
-            "~session"
-            "~language"
-            "~a11y"
-            "~power"
-          ];
-        };
-      };
+
+      desktopManager.mate.enableWaylandSession = true;
+      displayManager.sddm.enable = true;
+
     };
     flatpak.enable = true;
     accounts-daemon.enable = true;
