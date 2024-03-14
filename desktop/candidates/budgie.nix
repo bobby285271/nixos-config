@@ -12,7 +12,7 @@
         extraPlugins = [
           pkgs.budgiePlugins.budgie-analogue-clock-applet
           pkgs.budgiePlugins.budgie-user-indicator-redux
-          pkgs.budgiePlugins.budgiePlugins.budgie-media-player-applet
+          pkgs.budgiePlugins.budgie-media-player-applet
         ];
         extraGSettingsOverrides = ''
           [org.gnome.desktop.interface:Budgie]
