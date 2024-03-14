@@ -31,7 +31,7 @@
       # noto-fonts-emoji
       noto-fonts-color-emoji
       roboto
-      sarasa-gothic
+      # sarasa-gothic
       source-han-mono
       source-han-sans
       source-han-serif
