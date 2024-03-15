@@ -26,8 +26,9 @@
           background = "/var/lib/wallpaper/bobby285271/current.jpg";
           greeters.slick = {
             enable = true;
-            # theme.name = "Orchis";
-            # iconTheme.name = "Tela";
+            theme.name = "Qogir-Dark";
+            iconTheme.name = "Qogir";
+            cursorTheme.name = "Qogir";
             draw-user-backgrounds = true;
           };
         };
