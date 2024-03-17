@@ -5,11 +5,8 @@
     xserver = {
       enable = true;
       xkb.layout = "us";
-      desktopManager.mate.enable = true;
-
       desktopManager.mate.enableWaylandSession = true;
       displayManager.sddm.enable = true;
-
     };
     flatpak.enable = true;
     accounts-daemon.enable = true;
