@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1711027411,
-        "narHash": "sha256-K53s9sOJIgFcC3kVDfxUIzvn5OFMxjThXsskpRIvEDI=",
-        "ref": "upd/budgie-use-gnome-terminal",
-        "rev": "bd3566fc36ef46f8452cdc918d16ccbdc6fc9c52",
-        "revCount": 598983,
+        "lastModified": 1710806803,
+        "narHash": "sha256-qrxvLS888pNJFwJdK+hf1wpRCSQcqA6W5+Ox202NDa0=",
+        "ref": "nixos-unstable",
+        "rev": "b06025f1533a1e07b6db3e75151caa155d1c7eb3",
+        "revCount": 598982,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
