@@ -2,10 +2,10 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1711037800,
-        "narHash": "sha256-mweC8r9rjmPyGXm3LnzThFbK9+lwftTv1XyVLtBADhU=",
+        "lastModified": 1711041135,
+        "narHash": "sha256-szG0xATR2kVWJFvRvmjtHm9T/ijDfE45R0a/JFD5xXs=",
         "ref": "upd/nemo-as-root",
-        "rev": "ae396fcd542e1ec31bba75a97ecfee44c86cdd8a",
+        "rev": "ac6c949ae97f5e322314c0e38c0b1e27e4b32ec7",
         "revCount": 598983,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
