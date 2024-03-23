@@ -16,12 +16,13 @@
             indicators = [
               "~host"
               "~spacer"
-              "~clock"
               "~session"
               "~language"
               "~a11y"
+              "~clock"
               "~power"
             ];
+            clock-format = "%a, %b %d, %H:%M";
           };
         };
         defaultSession = "xfce";
