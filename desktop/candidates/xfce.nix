@@ -62,24 +62,6 @@
 
   services.gnome.gnome-keyring.enable = true;
 
-  system.replaceRuntimeDependencies =
-    let
-      xdg-utils = pkgs.xdg-utils.overrideAttrs (oldAttrs: {
-        postFixup = (oldAttrs.postFixup or "") + ''
-          substituteInPlace $out/bin/xdg-screensaver \
-            --replace-fail 'if [ -n "lockfile" ] ; then' 'if [ -n "$lockfile_command" ] ; then' \
-            --replace-fail 'lockfile -1 -l 10' '$lockfile_command -1 -l 10'
-        '';
-      });
-    in
-    (
-      (builtins.map
-        (output: {
-          original = pkgs.xdg-utils.${output};
-          replacement = xdg-utils.${output};
-        }) [ "out" ])
-    );
-
   nixpkgs.overlays = [
     (self: super: {
       xfce = super.xfce.overrideScope (pself: psuper: {
