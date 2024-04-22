@@ -35,8 +35,6 @@
       source-han-mono
       source-han-sans
       source-han-serif
-      wqy_microhei
-      wqy_zenhei
     ];
   };
 }
