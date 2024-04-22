@@ -17,6 +17,6 @@ in
     # slack
     thunderbird
     vscode-fhs
-    vscodium-fhs
+    # vscodium-fhs
   ];
 }
