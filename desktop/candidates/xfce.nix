@@ -71,6 +71,11 @@
             ../patches/xfwm4-title-center.patch
           ];
         });
+        xfce4-screensaver = psuper.xfce4-screensaver.overrideAttrs (oldAttrs: {
+          patches = (oldAttrs.patches or [ ]) ++ [
+            ../patches/xfce4-screensaver-mega.patch
+          ];
+        });
       });
     })
   ];
