@@ -25,9 +25,9 @@
             clock-format = "%a, %b %d, %H:%M";
           };
         };
-        defaultSession = "xfce";
       };
     };
+    displayManager.defaultSession = "xfce";
     flatpak.enable = true;
   };
 
