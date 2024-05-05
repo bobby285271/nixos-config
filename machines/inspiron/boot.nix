@@ -4,7 +4,7 @@
   boot = {
     # kernelPackages = pkgs.linuxPackages_latest;
     # kernelPackages = pkgs.linuxKernel.packages.linux_6_5;
-    plymouth.enable = true;
+    # plymouth.enable = true;
     loader = {
       efi.canTouchEfiVariables = true;
       systemd-boot = {
