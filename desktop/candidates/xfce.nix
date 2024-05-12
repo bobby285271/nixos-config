@@ -11,8 +11,9 @@
           background = "/var/lib/wallpaper/bobby285271/current.jpg";
           greeters.gtk = {
             enable = true;
-            theme.name = "Greybird";
-            iconTheme.name = "elementary-xfce";
+            # extraConfig = "user-background = false";
+            theme.name = "Qogir-Light";
+            iconTheme.name = "Qogir";
             indicators = [
               "~host"
               "~spacer"
@@ -44,8 +45,8 @@
 
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
-    greybird
-    elementary-xfce-icon-theme
+    qogir-theme
+    qogir-icon-theme
     xfce.xfce4-clipman-plugin
     xfce.xfce4-whiskermenu-plugin
     mate.engrampa
