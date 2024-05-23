@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  libreoffice-icon-fixed = pkgs.callPackage ./pkgs/libreoffice-icon-fixed.nix { };
+  # libreoffice-icon-fixed = pkgs.callPackage ./pkgs/libreoffice-icon-fixed.nix { };
   # dingtalk = pkgs.callPackage ./pkgs/dingtalk { };
 in
 {
@@ -13,7 +13,7 @@ in
     # firefox
     gitg
     gnome.gnome-boxes
-    libreoffice-icon-fixed
+    libreoffice-fresh
     # slack
     thunderbird
     vscode-fhs

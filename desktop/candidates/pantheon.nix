@@ -8,11 +8,15 @@
       desktopManager.pantheon = {
         enable = true;
         debug = true;
-        extraSwitchboardPlugs = [ pkgs.pantheon-tweaks ];
+        # extraSwitchboardPlugs = [ pkgs.pantheon-tweaks ];
       };
     };
     flatpak.enable = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    pantheon-tweaks
+  ];
 
   xdg.portal = {
     enable = true;
@@ -34,6 +38,8 @@
   #     ExecStart = "${pkgs.indicator-application-gtk3}/libexec/indicator-application/indicator-application-service";
   #   };
   # };
+
+  # programs.pantheon-tweaks.enable = true;
 
   nixpkgs.overlays = [
     (self: super: {
