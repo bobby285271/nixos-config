@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1716907738,
-        "narHash": "sha256-L8igZiQkKQkWM0q+ys6zuDa9f+ZfHVQeF4wmvqDRDxs=",
-        "ref": "upd/pantheon-agent-polkit",
-        "rev": "e39533f6d818d93863e22289124654fc7dc5a132",
-        "revCount": 630837,
+        "lastModified": 1716509168,
+        "narHash": "sha256-4zSIhSRRIoEBwjbPm3YiGtbd8HDWzFxJjw5DYSDy1n8=",
+        "ref": "nixos-unstable",
+        "rev": "bfb7a882678e518398ce9a31a881538679f6f092",
+        "revCount": 630835,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
