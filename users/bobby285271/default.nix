@@ -17,6 +17,7 @@
       "input"
       "tty"
       "camera"
+      "pipewire"
     ];
   };
 
