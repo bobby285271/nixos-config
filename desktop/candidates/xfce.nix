@@ -48,6 +48,7 @@
     qogir-theme
     qogir-icon-theme
     xfce.xfce4-clipman-plugin
+    xfce.xfce4-pulseaudio-plugin
     xfce.xfce4-whiskermenu-plugin
     mate.engrampa
     # cinnamon.xapp
