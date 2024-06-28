@@ -61,6 +61,7 @@
   programs.nm-applet.enable = true;
   programs.nm-applet.indicator = true;
 
+  services.blueman.enable  = true;
   services.gnome.gnome-keyring.enable = true;
 
   nixpkgs.overlays = [
