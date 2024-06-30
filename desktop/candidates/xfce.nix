@@ -53,6 +53,8 @@
     mate.engrampa
     # cinnamon.xapp
     # file
+    xfce.xfmpc
+    vala-language-server
   ];
 
   programs.thunar.plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman ];
