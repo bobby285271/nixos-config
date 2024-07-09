@@ -12,8 +12,8 @@
           greeters.gtk = {
             enable = true;
             # extraConfig = "user-background = false";
-            theme.name = "Mint-Y";
-            iconTheme.name = "Mint-Y";
+            theme.name = "Qogir-Light";
+            iconTheme.name = "Qogir";
             indicators = [
               "~host"
               "~spacer"
@@ -55,8 +55,6 @@
     # file
     xfce.xfmpc
     vala-language-server
-    cinnamon.mint-y-icons
-    cinnamon.mint-themes
   ];
 
   programs.thunar.plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman ];
