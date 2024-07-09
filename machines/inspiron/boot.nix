@@ -6,6 +6,7 @@
     # kernelPackages = pkgs.linuxKernel.packages.linux_6_5;
     # plymouth.enable = true;
     loader = {
+      timeout = 10;
       efi.canTouchEfiVariables = true;
       systemd-boot = {
         enable = true;
