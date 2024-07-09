@@ -12,8 +12,8 @@
           greeters.gtk = {
             enable = true;
             # extraConfig = "user-background = false";
-            theme.name = "Mint-Y-Aqua";
-            iconTheme.name = "Papirus";
+            theme.name = "Mint-Y";
+            iconTheme.name = "Mint-Y";
             indicators = [
               "~host"
               "~spacer"
@@ -45,8 +45,8 @@
 
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
-    # qogir-theme
-    # qogir-icon-theme
+    qogir-theme
+    qogir-icon-theme
     xfce.xfce4-clipman-plugin
     xfce.xfce4-pulseaudio-plugin
     xfce.xfce4-whiskermenu-plugin
@@ -55,7 +55,7 @@
     # file
     xfce.xfmpc
     vala-language-server
-    papirus-icon-theme
+    cinnamon.mint-y-icons
     cinnamon.mint-themes
   ];
 
