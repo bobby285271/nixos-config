@@ -2,7 +2,7 @@
 
 {
   environment = {
-    # enableDebugInfo = true;
+    enableDebugInfo = true;
     localBinInPath = true;
   };
 
@@ -33,7 +33,6 @@
       '';
     };
   };
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
 
   system.stateVersion = "23.11";
