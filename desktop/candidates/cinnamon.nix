@@ -31,7 +31,7 @@
     ];
   };
 
-  services.redshift.enable = true;
+  # services.redshift.enable = true;
 
   nixpkgs.overlays = [
     (self: super: {
