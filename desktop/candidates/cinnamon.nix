@@ -14,7 +14,7 @@
         greeters.slick = {
           # theme.name = "Mint-Y-Sand";
           # iconTheme.name = "Mint-Y-Sand";
-          draw-user-backgrounds = true;
+          draw-user-backgrounds = false;
         };
       };
     };

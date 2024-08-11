@@ -29,7 +29,7 @@
             theme.name = "Qogir-Dark";
             iconTheme.name = "Qogir";
             cursorTheme.name = "Qogir";
-            draw-user-backgrounds = true;
+            draw-user-backgrounds = false;
           };
         };
       };
