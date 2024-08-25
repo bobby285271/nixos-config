@@ -1,13 +1,14 @@
-{ python3
-, lib
-, fetchFromGitHub
-, intltool
-, glib
-, gobject-introspection
-, xvfb-run
-, wrapGAppsHook
-, gtk3
-, mate
+{
+  python3,
+  lib,
+  fetchFromGitHub,
+  intltool,
+  glib,
+  gobject-introspection,
+  xvfb-run,
+  wrapGAppsHook,
+  gtk3,
+  mate,
 }:
 
 python3.pkgs.buildPythonApplication rec {

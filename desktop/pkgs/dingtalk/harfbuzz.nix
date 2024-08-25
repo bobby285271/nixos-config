@@ -1,45 +1,42 @@
-{ lib
-, stdenv
-, fetchFromGitHub
-, pkg-config
-, glib
-, freetype
-, fontconfig
-, libintl
-, meson
-, ninja
-, gobject-introspection
-, icu
-, graphite2
-, harfbuzz
-, # The icu variant uses and propagates the non-icu one.
-  ApplicationServices
-, CoreText
-, withCoreText ? false
-, withIcu ? false
-, # recommended by upstream as default, but most don't needed and it's big
-  withGraphite2 ? true
-, # it is small and major distros do include it
-  python3
-, gtk-doc
-, docbook-xsl-nons
-, docbook_xml_dtd_43
-, # for passthru.tests
-  gimp
-, gtk3
-, gtk4
-, mapnik
-, qt5
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  pkg-config,
+  glib,
+  freetype,
+  fontconfig,
+  libintl,
+  meson,
+  ninja,
+  gobject-introspection,
+  icu,
+  graphite2,
+  harfbuzz,
+  # The icu variant uses and propagates the non-icu one.
+  ApplicationServices,
+  CoreText,
+  withCoreText ? false,
+  withIcu ? false,
+  # recommended by upstream as default, but most don't needed and it's big
+  withGraphite2 ? true,
+  # it is small and major distros do include it
+  python3,
+  gtk-doc,
+  docbook-xsl-nons,
+  docbook_xml_dtd_43,
+  # for passthru.tests
+  gimp,
+  gtk3,
+  gtk4,
+  mapnik,
+  qt5,
 }:
 
 let
   version = "3.3.2";
   inherit (lib) optional optionals optionalString;
-  mesonFeatureFlag = opt: b: "-D${opt}=${
-    if b
-    then "enabled"
-    else "disabled"
-  }";
+  mesonFeatureFlag = opt: b: "-D${opt}=${if b then "enabled" else "disabled"}";
   isNativeCompilation = stdenv.buildPlatform == stdenv.hostPlatform;
 in
 stdenv.mkDerivation {
@@ -63,7 +60,11 @@ stdenv.mkDerivation {
         --replace '#pragma GCC diagnostic error   "-Wcast-align"' ""
     '';
 
-  outputs = [ "out" "dev" "devdoc" ];
+  outputs = [
+    "out"
+    "dev"
+    "devdoc"
+  ];
   outputBin = "dev";
 
   mesonFlags = [
@@ -93,13 +94,22 @@ stdenv.mkDerivation {
   ];
 
   buildInputs =
-    [ glib freetype ]
-    ++ lib.optionals withCoreText [ ApplicationServices CoreText ]
+    [
+      glib
+      freetype
+    ]
+    ++ lib.optionals withCoreText [
+      ApplicationServices
+      CoreText
+    ]
     ++ lib.optionals isNativeCompilation [ gobject-introspection ];
 
   propagatedBuildInputs =
     optional withGraphite2 graphite2
-    ++ optionals withIcu [ icu harfbuzz ];
+    ++ optionals withIcu [
+      icu
+      harfbuzz
+    ];
 
   doCheck = true;
 
@@ -115,7 +125,12 @@ stdenv.mkDerivation {
   '';
 
   passthru.tests = {
-    inherit gimp gtk3 gtk4 mapnik;
+    inherit
+      gimp
+      gtk3
+      gtk4
+      mapnik
+      ;
     inherit (qt5) qtbase;
   };
 

@@ -1,9 +1,9 @@
 { config, pkgs, ... }:
 
 let
-  # libreoffice-icon-fixed = pkgs.callPackage ./pkgs/libreoffice-icon-fixed.nix { };
-  # dingtalk = pkgs.callPackage ./pkgs/dingtalk { };
 in
+# libreoffice-icon-fixed = pkgs.callPackage ./pkgs/libreoffice-icon-fixed.nix { };
+# dingtalk = pkgs.callPackage ./pkgs/dingtalk { };
 {
   environment.systemPackages = with pkgs; [
     chromium

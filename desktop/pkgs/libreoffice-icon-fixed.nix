@@ -1,7 +1,8 @@
-{ symlinkJoin
-, lib
-, libreoffice-fresh
-, libreoffice-fresh-unwrapped
+{
+  symlinkJoin,
+  lib,
+  libreoffice-fresh,
+  libreoffice-fresh-unwrapped,
 }:
 
 symlinkJoin {

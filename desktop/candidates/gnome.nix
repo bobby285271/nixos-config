@@ -18,7 +18,6 @@
   # programs.gnome-terminal.enable = true;
   # services.telepathy.enable = true;
 
-
   # xdg.portal.config = {
   #   gnome = {
   #     "default" = [ "gnome" "gtk" ];

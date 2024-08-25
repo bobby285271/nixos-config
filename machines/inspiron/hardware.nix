@@ -1,4 +1,9 @@
-{ config, lib, modulesPath, ... }:
+{
+  config,
+  lib,
+  modulesPath,
+  ...
+}:
 
 {
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
@@ -51,9 +56,7 @@
     };
   };
 
-  swapDevices = [{
-    device = "/dev/disk/by-uuid/40b4055b-f484-4550-87fe-442bac5f5176";
-  }];
+  swapDevices = [ { device = "/dev/disk/by-uuid/40b4055b-f484-4550-87fe-442bac5f5176"; } ];
 
   networking.useDHCP = lib.mkDefault true;
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";

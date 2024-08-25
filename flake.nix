@@ -3,17 +3,14 @@
 
   inputs.nixpkgs.url = "git+file:///home/bobby285271/nixpkgs?ref=nixos-unstable";
 
-  outputs = { self, nixpkgs, ... } @ inputs:
+  outputs =
+    { self, nixpkgs, ... }@inputs:
     let
       system = "x86_64-linux";
     in
     {
-      packages.system = import ./packages.nix {
-        pkgs = nixpkgs.legacyPackages.system;
-      };
-      nixosConfigurations = import ./profiles.nix {
-        inherit inputs system;
-      };
+      packages.system = import ./packages.nix { pkgs = nixpkgs.legacyPackages.system; };
+      nixosConfigurations = import ./profiles.nix { inherit inputs system; };
       # nix build '/path/to/flake#iso'
       # Takes ~1h to build on my laptop
       legacyPackages.system = {

@@ -57,7 +57,10 @@
     vala-language-server
   ];
 
-  programs.thunar.plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman ];
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-archive-plugin
+    thunar-volman
+  ];
 
   # environment.pathsToLink = [ "/share" ];
 
@@ -65,24 +68,24 @@
   programs.nm-applet.indicator = true;
 
   hardware.bluetooth.enable = true;
-  services.blueman.enable  = true;
+  services.blueman.enable = true;
   services.gnome.gnome-keyring.enable = true;
 
   nixpkgs.overlays = [
     (self: super: {
-      xfce = super.xfce.overrideScope (pself: psuper: {
-        xfwm4 = psuper.xfwm4.overrideAttrs (oldAttrs: {
-          patches = (oldAttrs.patches or [ ]) ++ [
-            # https://gitlab.xfce.org/xfce/xfwm4/-/merge_requests/27
-            ../patches/xfwm4-title-center.patch
-          ];
-        });
-        xfce4-screensaver = psuper.xfce4-screensaver.overrideAttrs (oldAttrs: {
-          patches = (oldAttrs.patches or [ ]) ++ [
-            ../patches/xfce4-screensaver-mega.patch
-          ];
-        });
-      });
+      xfce = super.xfce.overrideScope (
+        pself: psuper: {
+          xfwm4 = psuper.xfwm4.overrideAttrs (oldAttrs: {
+            patches = (oldAttrs.patches or [ ]) ++ [
+              # https://gitlab.xfce.org/xfce/xfwm4/-/merge_requests/27
+              ../patches/xfwm4-title-center.patch
+            ];
+          });
+          xfce4-screensaver = psuper.xfce4-screensaver.overrideAttrs (oldAttrs: {
+            patches = (oldAttrs.patches or [ ]) ++ [ ../patches/xfce4-screensaver-mega.patch ];
+          });
+        }
+      );
     })
   ];
 }

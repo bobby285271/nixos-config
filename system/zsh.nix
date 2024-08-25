@@ -20,7 +20,10 @@
   };
 
   environment = {
-    shells = [ pkgs.bashInteractive pkgs.zsh ];
+    shells = [
+      pkgs.bashInteractive
+      pkgs.zsh
+    ];
     shellInit = ''
       export GPG_TTY="$(tty)"
     '';

@@ -1,46 +1,47 @@
 # https://github.com/nix-community/nur-combined/blob/master/repos/xddxdd/pkgs/uncategorized/dingtalk/default.nix#L155
 # nix profile install .#dingtalk  --override-input nixpkgs 'git+file:///home/bobby285271/nixpkgs?ref=release-22.11' --impure
 
-{ fetchurl
-, stdenv
-, autoPatchelfHook
-, makeWrapper
-, lib
-, callPackage
-, # DingTalk dependencies
-  alsa-lib
-, at-spi2-atk
-, at-spi2-core
-, cairo
-, cups
-, curl
-, dbus
-, e2fsprogs
-, gdk-pixbuf
-, glib
-, gnutls
-, graphite2
-, gtk2
-, harfbuzz
-, krb5
-, libdrm
-, libgcrypt
-, libGLU
-, libinput
-, libpulseaudio
-, libsForQt5
-, libthai
-, libxkbcommon
-, mesa
-, mtdev
-, nspr
-, nss
-, openldap
-, pango
-, rtmpdump
-, udev
-, util-linux
-, xorg
+{
+  fetchurl,
+  stdenv,
+  autoPatchelfHook,
+  makeWrapper,
+  lib,
+  callPackage,
+  # DingTalk dependencies
+  alsa-lib,
+  at-spi2-atk,
+  at-spi2-core,
+  cairo,
+  cups,
+  curl,
+  dbus,
+  e2fsprogs,
+  gdk-pixbuf,
+  glib,
+  gnutls,
+  graphite2,
+  gtk2,
+  harfbuzz,
+  krb5,
+  libdrm,
+  libgcrypt,
+  libGLU,
+  libinput,
+  libpulseaudio,
+  libsForQt5,
+  libthai,
+  libxkbcommon,
+  mesa,
+  mtdev,
+  nspr,
+  nss,
+  openldap,
+  pango,
+  rtmpdump,
+  udev,
+  util-linux,
+  xorg,
 }:
 
 let
@@ -114,7 +115,11 @@ stdenv.mkDerivation rec {
     sha256 = "sha256-Ycq3YzhIbk8nRltgcVgDFQUFqKq57kmcAlOsh/t9UGI=";
   };
 
-  nativeBuildInputs = [ autoPatchelfHook makeWrapper libsForQt5.wrapQtAppsHook ];
+  nativeBuildInputs = [
+    autoPatchelfHook
+    makeWrapper
+    libsForQt5.wrapQtAppsHook
+  ];
   buildInputs = libraries;
 
   unpackPhase = ''
