@@ -12,6 +12,11 @@
     accounts-daemon.enable = true;
   };
 
+  programs.wayfire.plugins = with pkgs.wayfirePlugins; [
+    firedecor
+    wf-shell
+  ];
+
   nixpkgs.overlays = [
     (self: super: {
       mate = super.mate.overrideScope (
