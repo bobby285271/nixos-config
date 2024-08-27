@@ -43,6 +43,10 @@ in
     inherit system specialArgs;
     modules = [ ./desktop/candidates/xfce.nix ] ++ inspironSharedModules;
   };
+  inspiron-labwc = inputs.nixpkgs.lib.nixosSystem {
+    inherit system specialArgs;
+    modules = [ ./desktop/candidates/labwc.nix ] ++ inspironSharedModules;
+  };
   inspiron = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
     modules = oneOfTheDesktopsBobbyUses ++ inspironSharedModules;

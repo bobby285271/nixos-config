@@ -5,6 +5,7 @@ let
     "budgie"
     "cinnamon"
     "gnome"
+    "labwc"
     "mate"
     "pantheon"
     "xfce"
