@@ -53,7 +53,7 @@
     mate.engrampa
     # cinnamon.xapp
     # file
-    xfce.xfmpc
+    # xfce.xfmpc
     vala-language-server
   ];
 
