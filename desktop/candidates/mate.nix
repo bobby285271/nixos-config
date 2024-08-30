@@ -59,7 +59,7 @@
   environment.systemPackages = with pkgs; [
     # elementary-xfce-icon-theme
     networkmanagerapplet
-    gnome.zenity
+    zenity
     # qogir-icon-theme
     # matcha-gtk-theme
   ];

@@ -12,7 +12,7 @@ in
     drawing
     # firefox
     gitg
-    gnome.gnome-boxes
+    gnome-boxes
     libreoffice-fresh
     # slack
     thunderbird
