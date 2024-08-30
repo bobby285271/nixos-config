@@ -59,6 +59,6 @@
   swapDevices = [ { device = "/dev/disk/by-uuid/40b4055b-f484-4550-87fe-442bac5f5176"; } ];
 
   networking.useDHCP = lib.mkDefault true;
-  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  # powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
+  hardware.cpu.intel.updateMicrocode = true;
 }
