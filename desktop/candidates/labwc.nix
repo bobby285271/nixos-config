@@ -2,16 +2,22 @@
 
 {
   programs.labwc.enable = true;
-  programs.thunar.enable = true;
-  programs.xfconf.enable = true;
-  programs.dconf.enable = true;
+
+  services.xserver = {
+    enable = true;
+    desktopManager.xfce = {
+      enable = true;
+      noDesktop = true;
+      enableXfwm = false;
+      enableScreensaver = false;
+    };
+  };
 
   environment.systemPackages = with pkgs; [
     bemenu
     labwc-tweaks
     labwc-gtktheme
     labwc-menu-generator
-    # waybar
     mako
     sfwbar
     swaybg
@@ -21,5 +27,8 @@
     xfce.xfce4-terminal
     networkmanagerapplet
     adwaita-icon-theme
+    greybird
+    elementary-xfce-icon-theme
+    glib
   ];
 }
