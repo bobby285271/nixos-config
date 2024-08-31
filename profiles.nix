@@ -14,9 +14,8 @@ let
     ./users/bobby285271
     ./users/misc
   ];
-  # Randomly chosen but I want one
   # https://github.com/NixOS/nixpkgs/blob/23.11/pkgs/os-specific/linux/nixos-rebuild/nixos-rebuild.sh#L359
-  oneOfTheDesktopsBobbyUses = [ ./desktop/candidates/cinnamon.nix ];
+  oneOfTheDesktopsBobbyUses = [ ./desktop/candidates/xfce.nix ];
 in
 {
   inspiron-cinnamon = inputs.nixpkgs.lib.nixosSystem {
