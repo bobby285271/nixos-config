@@ -14,26 +14,26 @@
     tlp.enable = true;
     pipewire = {
       enable = true;
-      systemWide = true;
+      # systemWide = true;
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
       jack.enable = true;
       wireplumber.enable = true;
     };
-    mpd = {
-      enable = true;
-      extraConfig = ''
-        auto_update "yes"
+    # mpd = {
+    #   enable = true;
+    #   extraConfig = ''
+    #     auto_update "yes"
 
-        audio_output {
-          type "pipewire"
-          name "pipewire"
-        }
-      '';
-    };
+    #     audio_output {
+    #       type "pipewire"
+    #       name "pipewire"
+    #     }
+    #   '';
+    # };
   };
-  hardware.pulseaudio.enable = false;
+  # hardware.pulseaudio.enable = false;
 
   system.stateVersion = "23.11";
 }
