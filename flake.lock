@@ -4,7 +4,7 @@
       "locked": {
         "lastModified": 1726992150,
         "narHash": "sha256-NgRrqUKXW8kAeQZPlPBjQBuySPJLyvOihDMV9Siu6P4=",
-        "ref": "upd/gnome-47",
+        "ref": "8ca0f07",
         "rev": "8ca0f07af178d16795a0b511662bbb84b83f484e",
         "revCount": 680233,
         "type": "git",
