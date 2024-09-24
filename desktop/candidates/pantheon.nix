@@ -39,6 +39,26 @@
 
   # programs.pantheon-tweaks.enable = true;
 
+  system.replaceRuntimeDependencies =
+    let
+      glib = pkgs.glib.overrideAttrs (old: {
+        mesonFlags = old.mesonFlags ++ [ "-Dglib_debug=disabled" ];
+      });
+    in
+    (
+      (builtins.map
+        (output: {
+          original = pkgs.glib.${output};
+          replacement = glib.${output};
+        })
+        [
+          "bin"
+          "out"
+          "dev"
+        ]
+      )
+    );
+
   nixpkgs.overlays = [
     (self: super: {
       pantheon = super.pantheon.overrideScope (
