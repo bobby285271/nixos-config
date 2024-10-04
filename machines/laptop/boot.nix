@@ -53,7 +53,7 @@
   #   };
   # };
 
-  networking.hostName = "laptop";
+  networking.hostName = "thinkbook";
   zramSwap.enable = true;
 
   environment.variables."NIXPKGS_NO_GC_PATH" = [
