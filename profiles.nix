@@ -9,8 +9,8 @@ let
     ./desktop
     ./system
   ];
-  inspironSharedModules = sharedModules ++ [
-    ./machines/inspiron
+  laptopSharedModules = sharedModules ++ [
+    ./machines/laptop
     ./users/bobby285271
     ./users/misc
   ];
@@ -18,37 +18,37 @@ let
   oneOfTheDesktopsBobbyUses = [ ./desktop/candidates/xfce.nix ];
 in
 {
-  inspiron-cinnamon = inputs.nixpkgs.lib.nixosSystem {
+  laptop-cinnamon = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
-    modules = [ ./desktop/candidates/cinnamon.nix ] ++ inspironSharedModules;
+    modules = [ ./desktop/candidates/cinnamon.nix ] ++ laptopSharedModules;
   };
-  inspiron-pantheon = inputs.nixpkgs.lib.nixosSystem {
+  laptop-pantheon = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
-    modules = [ ./desktop/candidates/pantheon.nix ] ++ inspironSharedModules;
+    modules = [ ./desktop/candidates/pantheon.nix ] ++ laptopSharedModules;
   };
-  inspiron-mate = inputs.nixpkgs.lib.nixosSystem {
+  laptop-mate = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
-    modules = [ ./desktop/candidates/mate.nix ] ++ inspironSharedModules;
+    modules = [ ./desktop/candidates/mate.nix ] ++ laptopSharedModules;
   };
-  inspiron-gnome = inputs.nixpkgs.lib.nixosSystem {
+  laptop-gnome = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
-    modules = [ ./desktop/candidates/gnome.nix ] ++ inspironSharedModules;
+    modules = [ ./desktop/candidates/gnome.nix ] ++ laptopSharedModules;
   };
-  inspiron-budgie = inputs.nixpkgs.lib.nixosSystem {
+  laptop-budgie = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
-    modules = [ ./desktop/candidates/budgie.nix ] ++ inspironSharedModules;
+    modules = [ ./desktop/candidates/budgie.nix ] ++ laptopSharedModules;
   };
-  inspiron-xfce = inputs.nixpkgs.lib.nixosSystem {
+  laptop-xfce = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
-    modules = [ ./desktop/candidates/xfce.nix ] ++ inspironSharedModules;
+    modules = [ ./desktop/candidates/xfce.nix ] ++ laptopSharedModules;
   };
-  inspiron-labwc = inputs.nixpkgs.lib.nixosSystem {
+  laptop-labwc = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
-    modules = [ ./desktop/candidates/labwc.nix ] ++ inspironSharedModules;
+    modules = [ ./desktop/candidates/labwc.nix ] ++ laptopSharedModules;
   };
-  inspiron = inputs.nixpkgs.lib.nixosSystem {
+  laptop = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
-    modules = oneOfTheDesktopsBobbyUses ++ inspironSharedModules;
+    modules = oneOfTheDesktopsBobbyUses ++ laptopSharedModules;
   };
   iso = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;

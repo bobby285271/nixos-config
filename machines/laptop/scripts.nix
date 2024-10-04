@@ -27,7 +27,7 @@ in
     ++ (map (
       desktop:
       pkgs.writeShellScriptBin "nixos-${desktop}.sh" ''
-        /home/bobby285271/nixos/helper/__internal-update-common.sh "inspiron-${desktop}" "$@"
+        /home/bobby285271/nixos/helper/__internal-update-common.sh "laptop-${desktop}" "$@"
       ''
     ) desktops);
 }

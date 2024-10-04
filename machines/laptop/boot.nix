@@ -53,7 +53,7 @@
   #   };
   # };
 
-  networking.hostName = "inspiron";
+  networking.hostName = "laptop";
   zramSwap.enable = true;
 
   environment.variables."NIXPKGS_NO_GC_PATH" = [
