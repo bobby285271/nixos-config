@@ -1,5 +1,16 @@
 { pkgs, ... }:
 
+let
+  lightdm-scale-wrapper = pkgs.writeShellScript "lightdm-scale-wrapper" ''
+    #!/bin/sh
+    # Wrapper to run around LightDM Greeter X sessions.
+
+    export GDK_SCALE=2
+    export GDK_DPI_SCALE=1
+    exec $@
+  '';
+in
+
 {
   services = {
     xserver = {
@@ -9,9 +20,15 @@
       displayManager = {
         lightdm = {
           background = "/var/lib/wallpaper/bobby285271/current.jpg";
+          extraSeatDefaults = ''
+            greeter-wrapper = ${lightdm-scale-wrapper}
+          '';
           greeters.gtk = {
             enable = true;
-            # extraConfig = "user-background = false";
+            extraConfig = ''
+              user-background = false
+              cursor-theme-size = 48
+            '';
             theme.name = "Greybird";
             iconTheme.name = "elementary-xfce";
             indicators = [
