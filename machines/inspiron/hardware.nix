@@ -26,7 +26,7 @@
 
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid/f0a481e3-1977-41ea-8211-8d4aa144a8ce";
+      device = "/dev/disk/by-uuid/d094ad99-0754-413e-9f4b-47153bc9775b";
       fsType = "btrfs";
       options = [
         "subvol=@"
@@ -34,7 +34,7 @@
       ];
     };
     "/home" = {
-      device = "/dev/disk/by-uuid/f0a481e3-1977-41ea-8211-8d4aa144a8ce";
+      device = "/dev/disk/by-uuid/d094ad99-0754-413e-9f4b-47153bc9775b";
       fsType = "btrfs";
       options = [
         "subvol=@home"
@@ -42,7 +42,7 @@
       ];
     };
     "/nix" = {
-      device = "/dev/disk/by-uuid/f0a481e3-1977-41ea-8211-8d4aa144a8ce";
+      device = "/dev/disk/by-uuid/d094ad99-0754-413e-9f4b-47153bc9775b";
       fsType = "btrfs";
       options = [
         "subvol=@nix"
@@ -51,12 +51,13 @@
       ];
     };
     "/boot" = {
-      device = "/dev/disk/by-uuid/E288-231E";
+      device = "/dev/disk/by-uuid/761F-0A47";
       fsType = "vfat";
+      options = [ "fmask=0022" "dmask=0022" ];
     };
   };
 
-  swapDevices = [ { device = "/dev/disk/by-uuid/40b4055b-f484-4550-87fe-442bac5f5176"; } ];
+  # swapDevices = [ { device = "/dev/disk/by-uuid/40b4055b-f484-4550-87fe-442bac5f5176"; } ];
 
   networking.useDHCP = lib.mkDefault true;
   # powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
