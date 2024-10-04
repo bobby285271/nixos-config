@@ -2,9 +2,6 @@
 
 let
   lightdm-scale-wrapper = pkgs.writeShellScript "lightdm-scale-wrapper" ''
-    #!/bin/sh
-    # Wrapper to run around LightDM Greeter X sessions.
-
     export GDK_SCALE=2
     export GDK_DPI_SCALE=1
     exec $@
