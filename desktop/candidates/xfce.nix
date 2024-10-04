@@ -12,8 +12,8 @@
           greeters.gtk = {
             enable = true;
             # extraConfig = "user-background = false";
-            theme.name = "Qogir-Light";
-            iconTheme.name = "Qogir";
+            theme.name = "Greybird";
+            iconTheme.name = "elementary-xfce";
             indicators = [
               "~host"
               "~spacer"
@@ -43,19 +43,27 @@
     ];
   };
 
-  environment.systemPackages = with pkgs; [
-    networkmanagerapplet
-    qogir-theme
-    qogir-icon-theme
-    xfce.xfce4-clipman-plugin
-    xfce.xfce4-pulseaudio-plugin
-    xfce.xfce4-whiskermenu-plugin
-    mate.engrampa
-    # cinnamon.xapp
-    # file
-    # xfce.xfmpc
-    vala-language-server
-  ];
+  environment = {
+    sessionVariables = {
+      QT_SCALE_FACTOR = "2";
+    };
+
+    systemPackages = with pkgs; [
+      networkmanagerapplet
+      # qogir-theme
+      # qogir-icon-theme
+      greybird
+      elementary-xfce-icon-theme
+      xfce.xfce4-clipman-plugin
+      xfce.xfce4-pulseaudio-plugin
+      xfce.xfce4-whiskermenu-plugin
+      mate.engrampa
+      # cinnamon.xapp
+      # file
+      # xfce.xfmpc
+      vala-language-server
+    ];
+  };
 
   programs.thunar.plugins = with pkgs.xfce; [
     thunar-archive-plugin
