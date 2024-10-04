@@ -92,7 +92,7 @@ in
   programs.nm-applet.indicator = true;
 
   hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
+  # services.blueman.enable = true;
   services.gnome.gnome-keyring.enable = true;
 
   nixpkgs.overlays = [
