@@ -60,8 +60,8 @@ in
   environment = {
     sessionVariables = {
       QT_SCALE_FACTOR = "2";
-      GDK_DPI_SCALE = "0.5";
-      QT_FONT_DPI = "96";
+      # GDK_DPI_SCALE = "0.5";
+      # QT_FONT_DPI = "96";
     };
 
     systemPackages = with pkgs; [
