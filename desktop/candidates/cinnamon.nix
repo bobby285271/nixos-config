@@ -23,12 +23,12 @@
 
   xdg.portal = {
     enable = true;
-    extraPortals = [
-      (pkgs.xdg-desktop-portal-gtk.override {
-        # Use the upstream default so this won't conflict with the xapp portal.
-        buildPortalsInGnome = false;
-      })
-    ];
+    # extraPortals = [
+    #   (pkgs.xdg-desktop-portal-gtk.override {
+    #     # Use the upstream default so this won't conflict with the xapp portal.
+    #     # buildPortalsInGnome = false;
+    #   })
+    # ];
   };
 
   # services.redshift.enable = true;
