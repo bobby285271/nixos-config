@@ -1,30 +1,20 @@
 { pkgs, lib, ... }:
 
-let
-  lightdm-scale-wrapper = pkgs.writeShellScript "lightdm-scale-wrapper" ''
-    export GDK_SCALE=2
-    export GDK_DPI_SCALE=1
-    exec $@
-  '';
-in
 {
-  # Debug use only.
-  environment.sessionVariables."G_SLICE" = "always-malloc";
-
   services = {
     xserver = {
       enable = true;
       xkb.layout = "us";
       desktopManager.cinnamon.enable = true;
       displayManager.lightdm = {
-        extraSeatDefaults = ''
-          greeter-wrapper = ${lightdm-scale-wrapper}
-        '';
         background = "/var/lib/wallpaper/bobby285271/current.jpg";
         greeters.slick = {
           # theme.name = "Mint-Y-Sand";
           # iconTheme.name = "Mint-Y-Sand";
           draw-user-backgrounds = false;
+          extraConfig = ''
+            enable-hidpi = on
+          '';
         };
       };
     };
