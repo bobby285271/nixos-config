@@ -30,6 +30,9 @@
             iconTheme.name = "Qogir";
             cursorTheme.name = "Qogir";
             draw-user-backgrounds = false;
+            extraConfig = ''
+              enable-hidpi = on
+            '';
           };
         };
       };
