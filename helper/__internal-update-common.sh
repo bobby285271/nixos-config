@@ -8,7 +8,8 @@ if [ "$#" -ne 1 ] && [ "$#" -ne 2 ]; then
 fi
 
 
-nixpkgs_remote="ssh://git@ssh.github.com:443/NixOS/nixpkgs"
+# nixpkgs_remote="ssh://git@ssh.github.com:443/NixOS/nixpkgs"
+nixpkgs_remote="https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git/"
 nixpkgs_dir="${HOME}/nixpkgs"
 nixos_config_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && dirname "$(pwd)")"
 
@@ -40,7 +41,7 @@ echo -e "\n\033[36m🛠️  Updating channel\033[0m"
 sudo nix-channel --update
 
 
-echo -e "\n\033[36m🛠️  Cleaning up\033[0m"
-gsettings reset-recursively org.gnome.desktop.wm.preferences || true
-gsettings reset-recursively org.gnome.desktop.interface || true
-gsettings reset-recursively org.gnome.settings-daemon.plugins.xsettings || true
+# echo -e "\n\033[36m🛠️  Cleaning up\033[0m"
+# gsettings reset-recursively org.gnome.desktop.wm.preferences || true
+# gsettings reset-recursively org.gnome.desktop.interface || true
+# gsettings reset-recursively org.gnome.settings-daemon.plugins.xsettings || true
