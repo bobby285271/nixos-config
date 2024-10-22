@@ -40,8 +40,11 @@ sudo nixos-rebuild --flake "${nixos_config_dir}#${1}" boot --impure
 echo -e "\n\033[36m🛠️  Updating channel\033[0m"
 sudo nix-channel --update
 
+exit 0
 
 # echo -e "\n\033[36m🛠️  Cleaning up\033[0m"
-# gsettings reset-recursively org.gnome.desktop.wm.preferences || true
-###### gsettings reset-recursively org.gnome.desktop.interface || true
-# gsettings reset-recursively org.gnome.settings-daemon.plugins.xsettings || true
+gsettings reset-recursively org.gnome.desktop.wm.preferences || true
+gsettings reset-recursively org.gnome.settings-daemon.plugins.xsettings || true
+for i in icon-theme gtk-theme cursor-size cursor-theme; do
+  gsettings reset org.gnome.desktop.interface $i || true
+done
