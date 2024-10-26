@@ -20,7 +20,7 @@ git fetch ${nixpkgs_remote} nixos-unstable:nixos-unstable || true
 git fetch ${nixpkgs_remote} master:upstream || true
 git fetch ${nixpkgs_remote} staging:staging || true
 
-echo -e "\n\033[36m🛠️  Updating flake lock\033[0m"  
+echo -e "\n\033[36m🛠️  Updating flake lock\033[0m"
 cd "${nixos_config_dir}"
 if [ "$#" -eq 1 ]; then
     nix flake update --commit-lock-file
@@ -41,10 +41,3 @@ echo -e "\n\033[36m🛠️  Updating channel\033[0m"
 sudo nix-channel --update
 
 exit 0
-
-# echo -e "\n\033[36m🛠️  Cleaning up\033[0m"
-gsettings reset-recursively org.gnome.desktop.wm.preferences || true
-gsettings reset-recursively org.gnome.settings-daemon.plugins.xsettings || true
-for i in icon-theme gtk-theme cursor-size cursor-theme; do
-  gsettings reset org.gnome.desktop.interface $i || true
-done
