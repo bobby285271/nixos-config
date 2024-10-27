@@ -9,7 +9,6 @@
           command = ''
             ${pkgs.greetd.tuigreet}/bin/tuigreet \
               --remember \
-              --remember-user-session \
               --power-shutdown /run/current-system/systemd/bin/systemctl poweroff \
               --power-reboot /run/current-system/systemd/bin/systemctl reboot
           '';
