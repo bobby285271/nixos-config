@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 let
   lightdm-scale-wrapper = pkgs.writeShellScript "lightdm-scale-wrapper" ''
@@ -10,37 +10,55 @@ in
 
 {
   services = {
+    greetd = {
+      enable = true;
+      settings = {
+        default_session = {
+          command = ''
+            ${pkgs.greetd.tuigreet}/bin/tuigreet \
+              --remember \
+              --remember-user-session \
+              --xsessions ${config.services.xserver.displayManager.sessionData.desktops}/share/xsessions \
+              --sessions ${config.services.xserver.displayManager.sessionData.desktops}/share/wayland-sessions
+              --greeting "Ciallo >_<" \
+              --power-shutdown /run/current-system/systemd/bin/systemctl poweroff \
+              --power-reboot /run/current-system/systemd/bin/systemctl reboot
+          '';
+        };
+      };
+    };
     xserver = {
       enable = true;
       xkb.layout = "us";
       desktopManager.xfce.enable = true;
       desktopManager.xfce.enableWaylandSession = true;
       displayManager = {
-        lightdm = {
-          background = "/var/lib/wallpaper/bobby285271/current.jpg";
-          extraSeatDefaults = ''
-            greeter-wrapper = ${lightdm-scale-wrapper}
-          '';
-          greeters.gtk = {
-            enable = true;
-            extraConfig = ''
-              user-background = false
-              cursor-theme-size = 48
-            '';
-            theme.name = "Greybird";
-            iconTheme.name = "elementary-xfce";
-            indicators = [
-              "~host"
-              "~spacer"
-              "~session"
-              "~language"
-              "~a11y"
-              "~clock"
-              "~power"
-            ];
-            clock-format = "%a, %b %d, %H:%M";
-          };
-        };
+        startx.enable = true;
+        # lightdm = {
+        #   background = "/var/lib/wallpaper/bobby285271/current.jpg";
+        #   extraSeatDefaults = ''
+        #     greeter-wrapper = ${lightdm-scale-wrapper}
+        #   '';
+        #   greeters.gtk = {
+        #     enable = true;
+        #     extraConfig = ''
+        #       user-background = false
+        #       cursor-theme-size = 48
+        #     '';
+        #     theme.name = "Greybird";
+        #     iconTheme.name = "elementary-xfce";
+        #     indicators = [
+        #       "~host"
+        #       "~spacer"
+        #       "~session"
+        #       "~language"
+        #       "~a11y"
+        #       "~clock"
+        #       "~power"
+        #     ];
+        #     clock-format = "%a, %b %d, %H:%M";
+        #   };
+        # };
       };
     };
     displayManager.defaultSession = "xfce";
@@ -67,6 +85,7 @@ in
 
     systemPackages = with pkgs; [
       networkmanagerapplet
+      greetd.tuigreet
       # qogir-theme
       # qogir-icon-theme
       greybird
