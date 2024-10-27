@@ -6,6 +6,7 @@
       enable = true;
       settings = {
         default_session = {
+          vt = "next";
           command = ''
             ${pkgs.greetd.tuigreet}/bin/tuigreet \
               --remember \
