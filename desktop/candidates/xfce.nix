@@ -8,12 +8,16 @@
         default_session = {
           command = ''
             ${pkgs.greetd.tuigreet}/bin/tuigreet \
-              --greeting "Ciallo >_<" \
               --remember \
               --remember-user-session \
               --power-shutdown /run/current-system/systemd/bin/systemctl poweroff \
               --power-reboot /run/current-system/systemd/bin/systemctl reboot
           '';
+        };
+        initial_session = {
+          # autologin!
+          command = "startxfce4";
+          user = "bobby285271";
         };
       };
     };
