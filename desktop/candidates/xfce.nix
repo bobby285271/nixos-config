@@ -16,11 +16,10 @@ in
         default_session = {
           command = ''
             ${pkgs.greetd.tuigreet}/bin/tuigreet \
+              --time \
+              --greeting "Ciallo >_<" \
               --remember \
               --remember-user-session \
-              --xsessions ${config.services.xserver.displayManager.sessionData.desktops}/share/xsessions \
-              --sessions ${config.services.xserver.displayManager.sessionData.desktops}/share/wayland-sessions
-              --greeting "Ciallo >_<" \
               --power-shutdown /run/current-system/systemd/bin/systemctl poweroff \
               --power-reboot /run/current-system/systemd/bin/systemctl reboot
           '';
