@@ -1,36 +1,47 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
+
+let
+  lightdm-scale-wrapper = pkgs.writeShellScript "lightdm-scale-wrapper" ''
+    export GDK_SCALE=2
+    export GDK_DPI_SCALE=1
+    exec $@
+  '';
+in
 
 {
   services = {
-    greetd = {
-      enable = true;
-      settings = {
-        default_session = {
-          vt = "next";
-          command = ''
-            ${pkgs.greetd.tuigreet}/bin/tuigreet \
-              --remember \
-              --power-shutdown /run/current-system/systemd/bin/systemctl poweroff \
-              --power-reboot /run/current-system/systemd/bin/systemctl reboot
-          '';
-        };
-        initial_session = {
-          # autologin!
-          command = "startxfce4";
-          user = "bobby285271";
-        };
-      };
-    };
     xserver = {
       enable = true;
       xkb.layout = "us";
-      desktopManager.xfce = {
-        enable = true;
-        enableWaylandSession = true;
+      desktopManager.xfce.enable = true;
+      displayManager = {
+        lightdm = {
+          background = "/var/lib/wallpaper/bobby285271/current.jpg";
+          extraSeatDefaults = ''
+            greeter-wrapper = ${lightdm-scale-wrapper}
+          '';
+          greeters.gtk = {
+            enable = true;
+            extraConfig = ''
+              user-background = false
+              cursor-theme-size = 48
+            '';
+            theme.name = "Greybird";
+            iconTheme.name = "elementary-xfce";
+            indicators = [
+              "~host"
+              "~spacer"
+              "~session"
+              "~language"
+              "~a11y"
+              "~clock"
+              "~power"
+            ];
+            clock-format = "%a, %b %d, %H:%M";
+          };
+        };
       };
-      displayManager.startx.enable = true;
     };
-
     displayManager.defaultSession = "xfce";
     flatpak.enable = true;
   };
@@ -55,7 +66,6 @@
 
     systemPackages = with pkgs; [
       networkmanagerapplet
-      greetd.tuigreet
       # qogir-theme
       # qogir-icon-theme
       greybird
