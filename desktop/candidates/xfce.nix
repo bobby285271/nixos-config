@@ -44,15 +44,13 @@ in
     };
     displayManager.defaultSession = "xfce";
     flatpak.enable = true;
+    gnome.gnome-keyring.enable = true;
   };
 
   xdg.portal = {
     enable = true;
     extraPortals = [
-      (pkgs.xdg-desktop-portal-gtk.override {
-        # Use the upstream default so this won't conflict with the xapp portal.
-        # buildPortalsInGnome = false;
-      })
+      pkgs.xdg-desktop-portal-gtk
       # pkgs.xdg-desktop-portal-xapp
     ];
   };
@@ -66,8 +64,6 @@ in
 
     systemPackages = with pkgs; [
       networkmanagerapplet
-      # qogir-theme
-      # qogir-icon-theme
       greybird
       elementary-xfce-icon-theme
       xfce.xfce4-clipman-plugin
@@ -81,19 +77,18 @@ in
     ];
   };
 
-  programs.thunar.plugins = with pkgs.xfce; [
-    thunar-archive-plugin
-    thunar-volman
-  ];
-
-  # environment.pathsToLink = [ "/share" ];
-
-  programs.nm-applet.enable = true;
-  programs.nm-applet.indicator = true;
+  programs = {
+    thunar.plugins = with pkgs.xfce; [
+      thunar-archive-plugin
+      thunar-volman
+    ];
+    nm-applet = {
+      enable = true;
+      indicator = true;
+    };
+  };
 
   hardware.bluetooth.enable = true;
-  # services.blueman.enable = true;
-  services.gnome.gnome-keyring.enable = true;
 
   nixpkgs.overlays = [
     (self: super: {
