@@ -13,7 +13,10 @@ in
     xserver = {
       enable = true;
       xkb.layout = "us";
-      desktopManager.xfce.enable = true;
+      desktopManager.xfce = {
+        enable = true;
+        enableWaylandSession = true;
+      };
       displayManager = {
         lightdm = {
           background = "/var/lib/wallpaper/bobby285271/current.jpg";
