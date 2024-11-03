@@ -16,6 +16,7 @@ in
       desktopManager.xfce = {
         enable = true;
         enableWaylandSession = true;
+        waylandSessionCompositor = "wayfire";
       };
       displayManager = {
         lightdm = {
@@ -88,6 +89,13 @@ in
     nm-applet = {
       enable = true;
       indicator = true;
+    };
+    wayfire = {
+      enable = true;
+      plugins = with pkgs.wayfirePlugins; [
+        wcm
+        wayfire-plugins-extra
+      ];
     };
   };
 
