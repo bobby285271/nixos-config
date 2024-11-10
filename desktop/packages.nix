@@ -15,7 +15,7 @@ in
     gnome-boxes
     libreoffice-fresh
     # slack
-    thunderbird
+    # thunderbird
     vscode-fhs
     # vscodium-fhs
   ];
