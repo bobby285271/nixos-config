@@ -1,0 +1,28 @@
+diff --git a/src/MainWindow.vala b/src/MainWindow.vala
+index 83e56964..98bad705 100644
+--- a/src/MainWindow.vala
++++ b/src/MainWindow.vala
+@@ -191,7 +191,6 @@ namespace Terminal {
+                 _("Reset"),
+                 TerminalWidget.ACTION_RESET
+             );
+-            reset_menuitem.set_attribute_value ("accel", new Variant ("s", TerminalWidget.ACCELS_RESET[0]));
+ 
+             var paste_menuitem = new MenuItem (
+                 _("Paste"),
+diff --git a/src/Widgets/TerminalWidget.vala b/src/Widgets/TerminalWidget.vala
+index dee54455..6551b130 100644
+--- a/src/Widgets/TerminalWidget.vala
++++ b/src/Widgets/TerminalWidget.vala
+@@ -447,11 +447,6 @@ namespace Terminal {
+                 }
+             }
+ 
+-            if (CONTROL_MASK in modifiers && match_keycode (Gdk.Key.k, keycode)) {
+-                action_reset ();
+-                return true;
+-            }
+-
+             if (CONTROL_MASK in modifiers && match_keycode (Gdk.Key.l, keycode)) {
+                 action_clear_screen ();
+                 return true;

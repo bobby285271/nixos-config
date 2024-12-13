@@ -81,17 +81,11 @@
           #   separateDebugInfo = true;
           # });
 
-          # elementary-terminal = psuper.elementary-terminal.overrideAttrs (oldAttrs: {
-          #   patches = (oldAttrs.patches or [ ]) ++ [
-          #     # Fix font color
-          #     # https://github.com/elementary/terminal/pull/684
-          #     (super.fetchpatch {
-          #       url = "https://github.com/elementary/terminal/commit/873068fd20098ae0065473ce49c8b768e397091e.patch";
-          #       hash = "sha256-5JJwNp/3GjruNCLtEyAQnqSdIuAjw4fEEwSpXgsTN6I=";
-          #       revert = true;
-          #     })
-          #   ];
-          # });
+          elementary-terminal = psuper.elementary-terminal.overrideAttrs (oldAttrs: {
+            patches = (oldAttrs.patches or [ ]) ++ [
+              ../patches/elementary-terminal-ctrl-k.patch
+            ];
+          });
 
           # wingpanel = psuper.wingpanel.overrideAttrs (oldAttrs: {
           #   # I prefer this
