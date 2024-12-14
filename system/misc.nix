@@ -10,8 +10,8 @@
     openssh.enable = true;
     thermald.enable = true;
     printing.enable = true;
-    power-profiles-daemon.enable = false;
-    tlp.enable = true;
+    power-profiles-daemon.enable = true;
+    # tlp.enable = true;
     pipewire = {
       enable = true;
       # systemWide = true;
