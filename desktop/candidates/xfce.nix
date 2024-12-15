@@ -112,7 +112,7 @@ in
             ];
           });
           xfce4-screensaver = psuper.xfce4-screensaver.overrideAttrs (oldAttrs: {
-            # patches = (oldAttrs.patches or [ ]) ++ [ ../patches/xfce4-screensaver-mega.patch ];
+            patches = (oldAttrs.patches or [ ]) ++ [ ../patches/xfce4-screensaver-mega.patch ];
           });
         }
       );
