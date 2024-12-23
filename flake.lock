@@ -4,7 +4,7 @@
       "locked": {
         "lastModified": 1734971191,
         "narHash": "sha256-6LcfbuO63VWyKPB/27PYt5pO7q+ScQBFPbmRmmskwyg=",
-        "ref": "fix/cinnamon",
+        "ref": "fix/syslinux",
         "rev": "ed450ff0504ad701932aa217ee5628a0e644b2d5",
         "revCount": 728108,
         "type": "git",
