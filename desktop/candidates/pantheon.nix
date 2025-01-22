@@ -26,16 +26,16 @@
     ];
   };
 
-  # services.xserver.desktopManager.pantheon.extraWingpanelIndicators = with pkgs; [ wingpanel-indicator-ayatana ];
+  # services.xserver.desktopManager.pantheon.extraWingpanelIndicators = with pkgs; [ wingpanel-indicator-namarupa ];
 
-  # systemd.user.services.indicatorapp = {
-  #   description = "indicator-application-gtk3";
-  #   wantedBy = [ "graphical-session.target" ];
-  #   partOf = [ "graphical-session.target" ];
-  #   serviceConfig = {
-  #     ExecStart = "${pkgs.indicator-application-gtk3}/libexec/indicator-application/indicator-application-service";
-  #   };
-  # };
+  systemd.user.services.indicatorapp = {
+    description = "indicator-application-gtk3";
+    wantedBy = [ "graphical-session.target" ];
+    partOf = [ "graphical-session.target" ];
+    serviceConfig = {
+      ExecStart = "${pkgs.indicator-application-gtk3}/libexec/indicator-application/indicator-application-service";
+    };
+  };
 
   # programs.pantheon-tweaks.enable = true;
 
@@ -83,7 +83,7 @@
 
           elementary-terminal = psuper.elementary-terminal.overrideAttrs (oldAttrs: {
             patches = (oldAttrs.patches or [ ]) ++ [
-              ../patches/elementary-terminal-ctrl-k.patch
+              # ../patches/elementary-terminal-ctrl-k.patch
             ];
           });
 
