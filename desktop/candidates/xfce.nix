@@ -16,7 +16,7 @@ in
       desktopManager.xfce = {
         enable = true;
         enableWaylandSession = true;
-        waylandSessionCompositor = "wayfire";
+        # waylandSessionCompositor = "wayfire";
       };
       displayManager = {
         lightdm = {
@@ -84,6 +84,7 @@ in
   programs = {
     thunar.plugins = with pkgs.xfce; [
       thunar-archive-plugin
+      thunar-media-tags-plugin
       thunar-volman
     ];
     nm-applet = {
@@ -112,7 +113,7 @@ in
             ];
           });
           xfce4-screensaver = psuper.xfce4-screensaver.overrideAttrs (oldAttrs: {
-            patches = (oldAttrs.patches or [ ]) ++ [ ../patches/xfce4-screensaver-mega.patch ];
+            # patches = (oldAttrs.patches or [ ]) ++ [ ../patches/xfce4-screensaver-mega.patch ];
           });
         }
       );
