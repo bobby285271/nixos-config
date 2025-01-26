@@ -6,6 +6,7 @@ let
     "cinnamon"
     "gnome"
     "labwc"
+    "lxqt"
     "mate"
     "pantheon"
     "xfce"

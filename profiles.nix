@@ -46,6 +46,10 @@ in
     inherit system specialArgs;
     modules = [ ./desktop/candidates/labwc.nix ] ++ laptopSharedModules;
   };
+  laptop-lxqt = inputs.nixpkgs.lib.nixosSystem {
+    inherit system specialArgs;
+    modules = [ ./desktop/candidates/lxqt.nix ] ++ laptopSharedModules;
+  };
   thinkbook = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
     modules = oneOfTheDesktopsBobbyUses ++ laptopSharedModules;
