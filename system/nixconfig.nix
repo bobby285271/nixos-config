@@ -2,7 +2,7 @@
 
 {
   nix = {
-    # package = pkgs.nixVersions.latest;
+    package = pkgs.lix;
     settings = {
       experimental-features = [
         "nix-command"
@@ -13,7 +13,7 @@
       # substituters = lib.mkForce [
       substituters = [
         "https://mirrors.ustc.edu.cn/nix-channels/store"
-        "https://mirror.sjtu.edu.cn/nix-channels/store"
+        "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
         # "https://bobby285271.cachix.org"
       ];
       # trusted-public-keys = [
