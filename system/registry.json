@@ -1,0 +1,15 @@
+{
+    "flakes": [
+        {
+            "from": {
+                "id": "nixpkgs",
+                "type": "indirect"
+            },
+            "to": {
+                "type": "tarball",
+                "url": "https://mirrors.ustc.edu.cn/nix-channels/nixos-unstable/nixexprs.tar.xz"
+            }
+        }
+    ],
+    "version": 2
+}

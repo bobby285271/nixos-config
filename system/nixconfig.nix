@@ -9,7 +9,7 @@
         "flakes"
       ];
       auto-optimise-store = true;
-      flake-registry = "https://jihulab.com/bobby285271/flake-registry/-/raw/master/flake-registry.json";
+      flake-registry = "${./registry.json}";
       # substituters = lib.mkForce [
       substituters = [
         "https://mirrors.ustc.edu.cn/nix-channels/store"
