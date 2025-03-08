@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1741288315,
-        "narHash": "sha256-I2R/lZ9tUa16sh+eVXkcZcMZJ70xE0uNSHiATiLrW2Q=",
-        "ref": "4899e1306a94",
-        "rev": "4899e1306a941413a22de652bec9871bec1953ce",
-        "revCount": 763599,
+        "lastModified": 1741448714,
+        "narHash": "sha256-1kkGAqLXsYUwIXFKae2aXqMwjeozywtCzCcGFPxcssQ=",
+        "ref": "bpo/budgie-desktop",
+        "rev": "095635e746a0637689d9cee115cc96d97e036843",
+        "revCount": 763600,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
