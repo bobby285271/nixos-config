@@ -1,11 +1,9 @@
 {
   virtualisation = {
-    docker = {
+    podman = {
       enable = true;
-      daemon.settings = {
-        "registry-mirrors" = [ "https://bobm60dq.mirror.aliyuncs.com" ];
-        "live-restore" = false;
-      };
+      dockerCompat = true;
+      dockerSocket.enable = true;
     };
     libvirtd.enable = true;
   };

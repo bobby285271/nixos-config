@@ -10,6 +10,7 @@
       "wheel"
       "networkmanager"
       "docker"
+      "podman"
       "audio"
       "sound"
       "video"
