@@ -12,13 +12,13 @@
     gnumake
     gnupg
     gptfdisk
-    kubectl
-    minikube
+    # kubectl
+    # minikube
     nix-update
     nixfmt-rfc-style
     nixpkgs-review
     ntfs3g
-    openjdk
+    # openjdk
     p7zip
     pciutils
     pinentry-curses
