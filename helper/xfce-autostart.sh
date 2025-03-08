@@ -20,3 +20,5 @@ else
 fi
 
 xfconf-query --create --type string -c displays -p /Schemes/Apply -s Default
+
+sudo bash /home/bobby285271/nixos/helper/nix-daemon-proxy.sh

@@ -4,3 +4,5 @@ gsettings reset-recursively org.gnome.settings-daemon.plugins.xsettings || true
 for i in icon-theme gtk-theme cursor-size cursor-theme clock-show-date; do
   gsettings reset org.gnome.desktop.interface $i || true
 done
+
+sudo bash /home/bobby285271/nixos/helper/nix-daemon-proxy.sh
