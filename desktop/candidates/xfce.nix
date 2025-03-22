@@ -31,7 +31,7 @@ in
               cursor-theme-size = 48
             '';
             theme.name = "Greybird";
-            iconTheme.name = "elementary-xfce";
+            iconTheme.name = "elementary-xfce-hidpi";
             indicators = [
               "~host"
               "~spacer"
