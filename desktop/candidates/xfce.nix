@@ -20,7 +20,7 @@ in
       };
       displayManager = {
         lightdm = {
-          background = "/var/lib/wallpaper/bobby285271/current.jpg";
+          background = "#202020";
           extraSeatDefaults = ''
             greeter-wrapper = ${lightdm-scale-wrapper}
           '';
