@@ -10,6 +10,7 @@
     };
     flatpak.enable = true;
     accounts-daemon.enable = true;
+    udisks2.enable = true;
   };
 
   programs.wayfire.plugins = with pkgs.wayfirePlugins; [
@@ -56,28 +57,29 @@
     ];
   };
 
-  system.replaceDependencies.replacements =
-    let
-      glib_next = pkgs.glib.overrideAttrs (_: {
-        version = "2.84.0";
-        src = pkgs.fetchurl {
-          url = "mirror://gnome/sources/glib/2.84/glib-2.84.0.tar.xz";
-          hash = "sha256-+II2AMuFQl4oFc+tguog/apThIKrdOcpPViz9kpa/2o=";
-        };
-      });
-    in
-    (
-      (builtins.map
-        (output: {
-          original = pkgs.glib.${output};
-          replacement = glib_next.${output};
-        })
-        [
-          "out"
-          "dev"
-        ]
-      )
-    );
+  # system.replaceDependencies.replacements =
+  #   let
+  #     glib_next = pkgs.glib.overrideAttrs (_: {
+  #       version = "2.84.0";
+  #       src = pkgs.fetchurl {
+  #         url = "mirror://gnome/sources/glib/2.84/glib-2.84.0.tar.xz";
+  #         hash = "sha256-+II2AMuFQl4oFc+tguog/apThIKrdOcpPViz9kpa/2o=";
+  #       };
+  #     });
+  #   in
+  #   (
+  #     (builtins.map
+  #       (output: {
+  #         original = pkgs.glib.${output};
+  #         replacement = glib_next.${output};
+  #       })
+  #       [
+  #         "bin"
+  #         "out"
+  #         "dev"
+  #       ]
+  #     )
+  #   );
 
   environment.systemPackages = with pkgs; [
     # elementary-xfce-icon-theme
