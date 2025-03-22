@@ -39,7 +39,7 @@
 
   # programs.pantheon-tweaks.enable = true;
 
-  # system.replaceRuntimeDependencies =
+  # system.replaceDependencies.replacements =
   #   let
   #     glib = pkgs.glib.overrideAttrs (old: {
   #       mesonFlags = old.mesonFlags ++ [ "-Dglib_debug=disabled" ];

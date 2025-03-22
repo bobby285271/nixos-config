@@ -68,7 +68,7 @@
     })
   ];
 
-  # system.replaceRuntimeDependencies =
+  # system.replaceDependencies.replacements =
   #   let
   #     pygobject3 = pkgs.python310.pkgs.pygobject3.overrideAttrs (_: {
   #       src = pkgs.fetchFromGitLab {

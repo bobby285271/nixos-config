@@ -37,7 +37,7 @@
   # programs.gpaste.enable = true;
   xdg.portal.enable = true;
 
-  # system.replaceRuntimeDependencies =
+  # system.replaceDependencies.replacements =
   #   let
   #     cairo = pkgs.callPackage ./cairo.nix { };
   #   in
