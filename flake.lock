@@ -2,10 +2,10 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1744459766,
-        "narHash": "sha256-nyO5747dnv3+V0OhLgko1TOjCFivhP70QAEyj/7Lgi0=",
-        "ref": "upd/xfce",
-        "rev": "7debdbc921f8d00f8858e5dd8f2609afc79e8735",
+        "lastModified": 1744724978,
+        "narHash": "sha256-8GCVNJPuVm5bIVIRrCvs7xs8MfpH6n4JXuzrM0rSqtA=",
+        "ref": "upd/xfce4-weather-plugin",
+        "rev": "e6195526502d0bee9b4e1c1082a54fd737845699",
         "revCount": 781463,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
