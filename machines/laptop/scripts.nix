@@ -17,7 +17,7 @@ in
     [
       (pkgs.writeShellScriptBin "review.sh" ''
         cd /home/bobby285271/nixpkgs
-        git fetch ssh://git@ssh.github.com:443/nixos/nixpkgs pull/''${1}/head
+        git fetch https://github.com/nixos/nixpkgs pull/''${1}/head
         git checkout FETCH_HEAD
       '')
       (pkgs.writeShellScriptBin "tape.sh" ''
