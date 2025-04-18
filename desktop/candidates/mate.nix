@@ -57,29 +57,30 @@
     ];
   };
 
-  # system.replaceDependencies.replacements =
-  #   let
-  #     glib_next = pkgs.glib.overrideAttrs (_: {
-  #       version = "2.84.0";
-  #       src = pkgs.fetchurl {
-  #         url = "mirror://gnome/sources/glib/2.84/glib-2.84.0.tar.xz";
-  #         hash = "sha256-+II2AMuFQl4oFc+tguog/apThIKrdOcpPViz9kpa/2o=";
-  #       };
-  #     });
-  #   in
-  #   (
-  #     (builtins.map
-  #       (output: {
-  #         original = pkgs.glib.${output};
-  #         replacement = glib_next.${output};
-  #       })
-  #       [
-  #         "bin"
-  #         "out"
-  #         "dev"
-  #       ]
-  #     )
-  #   );
+  system.replaceDependencies.replacements =
+    let
+      libxml2_test = pkgs.libxml2.overrideAttrs (_: {
+        version = "2.13.8";
+        src = pkgs.fetchurl {
+          url = "mirror://gnome/sources/libxml2/2.13/libxml2-2.13.8.tar.xz";
+          hash = "sha256-J3KUyzMRmrcbK8gfL0Rem8lDW4k60VuyzSsOhZoO6Eo=";
+        };
+      });
+    in
+    (
+      (builtins.map
+        (output: {
+          oldDependency = pkgs.libxml2.${output};
+          newDependency = libxml2_test.${output};
+        })
+        [
+          "bin"
+          "dev"
+          "out"
+          "devdoc"
+        ]
+      )
+    );
 
   environment.systemPackages = with pkgs; [
     # elementary-xfce-icon-theme
