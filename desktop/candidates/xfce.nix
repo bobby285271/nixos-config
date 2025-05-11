@@ -30,8 +30,8 @@ in
               user-background = false
               cursor-theme-size = 48
             '';
-            theme.name = "Qogir-Light";
-            iconTheme.name = "Qogir-Light";
+            theme.name = "Greybird";
+            iconTheme.name = "elementary-xfce-hidpi";
             indicators = [
               "~host"
               "~spacer"
@@ -68,10 +68,8 @@ in
 
     systemPackages = with pkgs; [
       networkmanagerapplet
-      qogir-theme
-      qogir-icon-theme
-      # greybird
-      # elementary-xfce-icon-theme
+      greybird
+      elementary-xfce-icon-theme
       xfce.xfce4-clipman-plugin
       xfce.xfce4-pulseaudio-plugin
       xfce.xfce4-whiskermenu-plugin
