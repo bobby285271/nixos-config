@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-gsettings set org.gnome.desktop.interface gtk-theme "Greybird"
-gsettings set org.gnome.desktop.interface icon-theme "elementary-xfce-hidpi"
+gsettings set org.gnome.desktop.interface gtk-theme "Qogir-Light"
+gsettings set org.gnome.desktop.interface icon-theme "Qogir-Light"
 gsettings set org.gnome.desktop.interface clock-show-date false
 
 if [ $XDG_SESSION_TYPE = "wayland" ]; then
