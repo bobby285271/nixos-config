@@ -85,6 +85,7 @@ in
     thunar.plugins = with pkgs.xfce; [
       thunar-archive-plugin
       thunar-media-tags-plugin
+      thunar-vcs-plugin
       thunar-volman
     ];
     nm-applet = {
