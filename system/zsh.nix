@@ -15,7 +15,7 @@
         ];
       };
     };
-    thefuck.enable = true;
+
     bash.completion.enable = true;
   };
 
