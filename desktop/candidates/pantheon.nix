@@ -14,7 +14,7 @@
     flatpak.enable = true;
   };
 
-  environment.systemPackages = with pkgs; [ pantheon-tweaks ];
+  environment.systemPackages = with pkgs; [ pantheon-tweaks monitor ];
 
   xdg.portal = {
     enable = true;
@@ -26,7 +26,7 @@
     ];
   };
 
-  # services.xserver.desktopManager.pantheon.extraWingpanelIndicators = with pkgs; [ wingpanel-indicator-namarupa ];
+  services.xserver.desktopManager.pantheon.extraWingpanelIndicators = with pkgs; [ monitor ];
 
   systemd.user.services.indicatorapp = {
     description = "indicator-application-gtk3";
