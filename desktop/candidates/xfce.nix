@@ -49,6 +49,7 @@ in
     displayManager.defaultSession = "xfce";
     flatpak.enable = true;
     gnome.gnome-keyring.enable = true;
+    gnome.gcr-ssh-agent.enable = true;
   };
 
   xdg.portal = {
