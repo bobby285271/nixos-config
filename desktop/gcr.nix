@@ -9,12 +9,10 @@
 
   programs.seahorse.enable = true;
 
-  environment = {
-    etc."environment.d/61-gcr-ssh-agent.conf".source = pkgs.writeText "61-gcr-ssh-agent.conf" ''
-      SSH_AUTH_SOCK="''${XDG_RUNTIME_DIR}/gcr/ssh"
-    '';
-    extraInit = ''
-      export SSH_AUTH_SOCK="''${XDG_RUNTIME_DIR}/gcr/ssh"
-    '';
-  };
+  # Set SSH_AUTH_SOCK in session environment since not all DEs/display managers will use environment variables from systemd
+  environment.extraInit = ''
+    if [ -z "$SSH_AUTH_SOCK" ] && [ -n "$XDG_RUNTIME_DIR" ]; then
+      export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
+    fi
+  '';
 }
