@@ -48,8 +48,7 @@ in
     };
     displayManager.defaultSession = "xfce";
     flatpak.enable = true;
-    gnome.gnome-keyring.enable = true;
-    gnome.gcr-ssh-agent.enable = true;
+    
   };
 
   xdg.portal = {
@@ -100,6 +99,7 @@ in
         wayfire-plugins-extra
       ];
     };
+    seahorse.enable = true;
   };
 
   hardware.bluetooth.enable = true;
