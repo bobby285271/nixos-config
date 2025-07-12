@@ -2,10 +2,10 @@
 
 {
   services = {
-    mysql = {
-      enable = true;
-      package = pkgs.mariadb;
-    };
+    # mysql = {
+    #   enable = true;
+    #   package = pkgs.mariadb;
+    # };
     httpd = {
       enable = true;
       adminAddr = "admin@bobby285271.top";
