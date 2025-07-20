@@ -6,5 +6,12 @@
       dockerSocket.enable = true;
     };
     libvirtd.enable = true;
+    containers = {
+      enable = true;
+      policy = {
+        default = [ { type = "insecureAcceptAnything"; } ];
+        transports.docker-daemon."" = [ { type = "insecureAcceptAnything"; } ];
+      };
+    };
   };
 }
