@@ -1,47 +1,60 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
+
+let
+  lightdm-scale-wrapper = pkgs.writeShellScript "lightdm-scale-wrapper" ''
+    export GDK_SCALE=2
+    export GDK_DPI_SCALE=1
+    exec $@
+  '';
+in
 
 {
   services = {
-    greetd = {
-      enable = true;
-      settings = {
-        default_session = {
-          vt = "next";
-          command = ''
-            ${pkgs.greetd.tuigreet}/bin/tuigreet \
-              --remember \
-              --power-shutdown /run/current-system/systemd/bin/systemctl poweroff \
-              --power-reboot /run/current-system/systemd/bin/systemctl reboot
-          '';
-        };
-        initial_session = {
-          # autologin!
-          command = "wayback-session xfce4-session";
-          user = "bobby285271";
-        };
-      };
-    };
     xserver = {
       enable = true;
       xkb.layout = "us";
       desktopManager.xfce = {
         enable = true;
         enableWaylandSession = true;
+        # waylandSessionCompositor = "wayfire";
       };
-      displayManager.startx.enable = true;
+      displayManager = {
+        lightdm = {
+          background = "#202020";
+          extraSeatDefaults = ''
+            greeter-wrapper = ${lightdm-scale-wrapper}
+          '';
+          greeters.gtk = {
+            enable = true;
+            extraConfig = ''
+              user-background = false
+              cursor-theme-size = 48
+            '';
+            theme.name = "Greybird";
+            iconTheme.name = "elementary-xfce-hidpi";
+            indicators = [
+              "~host"
+              "~spacer"
+              "~session"
+              "~language"
+              "~a11y"
+              "~clock"
+              "~power"
+            ];
+            clock-format = "%a, %b %d, %H:%M";
+          };
+        };
+      };
     };
-
     displayManager.defaultSession = "xfce";
     flatpak.enable = true;
+    
   };
 
   xdg.portal = {
     enable = true;
     extraPortals = [
-      (pkgs.xdg-desktop-portal-gtk.override {
-        # Use the upstream default so this won't conflict with the xapp portal.
-        # buildPortalsInGnome = false;
-      })
+      pkgs.xdg-desktop-portal-gtk
       # pkgs.xdg-desktop-portal-xapp
     ];
   };
@@ -55,16 +68,12 @@
 
     systemPackages = with pkgs; [
       networkmanagerapplet
-      greetd.tuigreet
-      # qogir-theme
-      # qogir-icon-theme
       greybird
       elementary-xfce-icon-theme
       xfce.xfce4-clipman-plugin
       xfce.xfce4-pulseaudio-plugin
       xfce.xfce4-whiskermenu-plugin
       mate.engrampa
-      wayback-x11
       # cinnamon.xapp
       # file
       # xfce.xfmpc
@@ -72,38 +81,28 @@
     ];
   };
 
-  services.displayManager.sessionPackages = [
-    (
-      (pkgs.writeTextDir "share/wayland-sessions/xfce-wayback.desktop" ''
-        [Desktop Entry]
-        Version=1.0
-        Name=Xfce Session (Wayback)
-        Comment=Use this session to run Xfce as your desktop environment
-        Exec=wayback-session xfce4-session
-        Icon=
-        Type=Application
-        DesktopNames=XFCE
-        Keywords=xfce;wayland;desktop;environment;session;
-      '').overrideAttrs
-      (_: {
-        passthru.providedSessions = [ "xfce-wayback" ];
-      })
-    )
-  ];
-
-  programs.thunar.plugins = with pkgs.xfce; [
-    thunar-archive-plugin
-    thunar-volman
-  ];
-
-  # environment.pathsToLink = [ "/share" ];
-
-  programs.nm-applet.enable = true;
-  programs.nm-applet.indicator = true;
+  programs = {
+    thunar.plugins = with pkgs.xfce; [
+      thunar-archive-plugin
+      thunar-media-tags-plugin
+      thunar-vcs-plugin
+      thunar-volman
+    ];
+    nm-applet = {
+      enable = true;
+      indicator = true;
+    };
+    wayfire = {
+      enable = true;
+      plugins = with pkgs.wayfirePlugins; [
+        wcm
+        wayfire-plugins-extra
+      ];
+    };
+    seahorse.enable = true;
+  };
 
   hardware.bluetooth.enable = true;
-  # services.blueman.enable = true;
-  services.gnome.gnome-keyring.enable = true;
 
   nixpkgs.overlays = [
     (self: super: {
