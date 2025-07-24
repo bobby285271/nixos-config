@@ -15,7 +15,7 @@
     # kubectl
     # minikube
     nix-update
-    nixfmt-rfc-style
+    nixfmt
     nixpkgs-review
     ntfs3g
     # openjdk
