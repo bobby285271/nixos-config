@@ -44,5 +44,8 @@
         if test -f /var/lib/AccountsService/icons/bobby285271.default; then
           cp -f /var/lib/AccountsService/icons/bobby285271{.default,}
         fi
+
+        # Hmmm?
+        rm -rf /home/bobby285271/.config/autostart/gnome-.desktop
       '';
 }
