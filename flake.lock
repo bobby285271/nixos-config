@@ -2,10 +2,10 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1755525715,
+        "lastModified": 1755525794,
         "narHash": "sha256-20MW0Klbbl4cY5ciUOcY/sQmkJQZdDlu0SpNC+FUad4=",
         "ref": "upd/nemo-wrapper",
-        "rev": "da9a9c40dffedbff96dece3d124ea38204242b55",
+        "rev": "10264cde777928f9a1922089344a90c8cefc739f",
         "revCount": 844475,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
