@@ -24,7 +24,7 @@ in
     type = if preferIbus then "ibus" else "fcitx5";
     fcitx5 = lib.mkIf (!preferIbus) {
       addons = [ pkgs.qt6Packages.fcitx5-chinese-addons ];
-      plasma6Support = true;
+      # plasma6Support = true;
     };
     ibus = lib.mkIf preferIbus {
       engines = [ pkgs.ibus-engines.libpinyin ];
