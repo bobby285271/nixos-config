@@ -14,7 +14,7 @@
   };
 
   programs.wayfire.plugins = with pkgs.wayfirePlugins; [
-    firedecor
+    # firedecor
     wf-shell
   ];
 
