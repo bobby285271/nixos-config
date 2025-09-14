@@ -14,7 +14,10 @@
     flatpak.enable = true;
   };
 
-  environment.systemPackages = with pkgs; [ pantheon-tweaks monitor ];
+  environment.systemPackages = with pkgs; [
+    pantheon-tweaks
+    monitor
+  ];
 
   xdg.portal = {
     enable = true;
@@ -87,13 +90,12 @@
             ];
           });
 
-          # wingpanel = psuper.wingpanel.overrideAttrs (oldAttrs: {
-          #   # I prefer this
-          #   prePatch = ''
-          #     substituteInPlace wingpanel-interface/BackgroundManager.vala \
-          #       --replace "new_state = BackgroundState.TRANSLUCENT_DARK;" "new_state = BackgroundState.TRANSLUCENT_LIGHT;"
-          #   '';
-          # });
+          wingpanel = psuper.wingpanel.overrideAttrs (oldAttrs: {
+            prePatch = ''
+              substituteInPlace src/PanelWindow.vala \
+                --replace-fail "monitor_dimensions.width /= get_scale_factor ();" "//"
+            '';
+          });
         }
       );
     })
