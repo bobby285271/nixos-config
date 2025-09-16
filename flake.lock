@@ -4,7 +4,7 @@
       "locked": {
         "lastModified": 1758029710,
         "narHash": "sha256-JrP5UQxs+B6Oup8vRd9TOyI2kMCbWMwu1JnACSuQtZk=",
-        "ref": "upd/cinnamon",
+        "ref": "48d5f731fa041cc6991940a31905608f7f1b1458",
         "rev": "48d5f731fa041cc6991940a31905608f7f1b1458",
         "revCount": 861039,
         "type": "git",
