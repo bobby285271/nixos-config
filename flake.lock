@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1760241691,
-        "narHash": "sha256-UglRpPmDHF4p+ILV0rGjjGUdRtLul6aHamtd1YjGW1M=",
-        "ref": "upd/wingpanel-indicator-sound",
-        "rev": "53d0efb28bc6e98a108a24e545b375d3e5803cc0",
-        "revCount": 873799,
+        "lastModified": 1760038930,
+        "narHash": "sha256-Oncbh0UmHjSlxO7ErQDM3KM0A5/Znfofj2BSzlHLeVw=",
+        "ref": "nixos-unstable",
+        "rev": "0b4defa2584313f3b781240b29d61f6f9f7e0df3",
+        "revCount": 875086,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
