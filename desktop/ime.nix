@@ -16,7 +16,7 @@
 }:
 
 let
-  preferIbus = config.services.desktopManager.gnome.enable;
+  preferIbus = config.services.desktopManager.gnome.enable || config.services.xserver.desktopManager.cinnamon.enable;
 in
 {
   i18n.inputMethod = {
@@ -31,7 +31,7 @@ in
     };
   };
 
-  environment.variables = lib.mkIf preferIbus {
+  environment.variables = lib.mkIf config.services.desktopManager.gnome.enable {
     GTK_IM_MODULE = lib.mkForce null;
   };
 }
