@@ -55,7 +55,7 @@ in
     enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
-      # pkgs.xdg-desktop-portal-xapp
+      pkgs.xdg-desktop-portal-xapp
     ];
   };
 
@@ -74,7 +74,7 @@ in
       xfce.xfce4-pulseaudio-plugin
       xfce.xfce4-whiskermenu-plugin
       mate.engrampa
-      # cinnamon.xapp
+      # xapp
       # file
       # xfce.xfmpc
       vala-language-server
