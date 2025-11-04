@@ -1,50 +1,20 @@
 { pkgs, ... }:
 
-let
-  lightdm-scale-wrapper = pkgs.writeShellScript "lightdm-scale-wrapper" ''
-    export GDK_SCALE=2
-    export GDK_DPI_SCALE=1
-    exec $@
-  '';
-in
-
 {
   services = {
+    greetd = {
+      enable = true;
+      settings.default_session.command = "${pkgs.cage}/bin/cage -s -- sh -c 'wlr-randr --output eDP-1 --scale 2 && GTK_THEME=Greybird ${pkgs.gtkgreet}/bin/gtkgreet'";
+    };
+
     xserver = {
       enable = true;
       xkb.layout = "us";
       desktopManager.xfce = {
         enable = true;
         enableWaylandSession = true;
-        # waylandSessionCompositor = "wayfire";
       };
-      displayManager = {
-        lightdm = {
-          background = "#202020";
-          extraSeatDefaults = ''
-            greeter-wrapper = ${lightdm-scale-wrapper}
-          '';
-          greeters.gtk = {
-            enable = true;
-            extraConfig = ''
-              user-background = false
-              cursor-theme-size = 48
-            '';
-            theme.name = "Greybird";
-            iconTheme.name = "elementary-xfce-hidpi";
-            indicators = [
-              "~host"
-              "~spacer"
-              "~session"
-              "~language"
-              "~a11y"
-              "~clock"
-              "~power"
-            ];
-            clock-format = "%a, %b %d, %H:%M";
-          };
-        };
-      };
+      displayManager.startx.enable = true;
     };
     displayManager.defaultSession = "xfce";
     flatpak.enable = true;
@@ -66,6 +36,11 @@ in
       # QT_FONT_DPI = "96";
     };
 
+    etc."greetd/environments".text = ''
+      startxfce4
+      startxfce4 --wayland
+    '';
+
     systemPackages = with pkgs; [
       networkmanagerapplet
       greybird
@@ -78,6 +53,7 @@ in
       # file
       # xfce.xfmpc
       vala-language-server
+      wlr-randr
     ];
   };
 
@@ -92,13 +68,13 @@ in
       enable = true;
       indicator = true;
     };
-    wayfire = {
-      enable = true;
-      plugins = with pkgs.wayfirePlugins; [
-        wcm
-        wayfire-plugins-extra
-      ];
-    };
+    # wayfire = {
+    #   enable = true;
+    #   plugins = with pkgs.wayfirePlugins; [
+    #     wcm
+    #     wayfire-plugins-extra
+    #   ];
+    # };
     seahorse.enable = true;
   };
 
