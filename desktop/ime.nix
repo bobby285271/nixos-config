@@ -16,7 +16,9 @@
 }:
 
 let
-  preferIbus = config.services.desktopManager.gnome.enable || config.services.xserver.desktopManager.cinnamon.enable;
+  preferIbus =
+    config.services.desktopManager.gnome.enable
+    || config.services.xserver.desktopManager.cinnamon.enable;
 in
 {
   i18n.inputMethod = {
