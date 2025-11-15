@@ -4,7 +4,7 @@
   services = {
     greetd = {
       enable = true;
-      settings.default_session.command = "${pkgs.cage}/bin/cage -s -- sh -c 'wlr-randr --output eDP-1 --scale 2 && GTK_THEME=Greybird ${pkgs.gtkgreet}/bin/gtkgreet'";
+      settings.default_session.command = "${pkgs.cage}/bin/cage -s -- sh -c 'wlr-randr --output eDP-1 --scale 2 && GTK_THEME=Greybird-dark ${pkgs.gtkgreet}/bin/gtkgreet'";
     };
 
     xserver = {
