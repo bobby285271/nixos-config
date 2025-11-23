@@ -18,7 +18,7 @@
     # pkgs.xdg-desktop-portal-gtk
     # pkgs.pantheon.elementary-files
     # pkgs.pantheon.elementary-settings-daemon
-    pkgs.pantheon.xdg-desktop-portal-pantheon
+    # pkgs.pantheon.xdg-desktop-portal-pantheon
   ];
 
   environment.systemPackages = with pkgs; [
@@ -51,18 +51,21 @@
 
   # system.replaceDependencies.replacements =
   #   let
-  #     glib = pkgs.glib.overrideAttrs (old: {
-  #       mesonFlags = old.mesonFlags ++ [ "-Dglib_debug=disabled" ];
+  #     gtk4_4_20_3 = pkgs.gtk4.overrideAttrs (old: {
+  #       version = "4.20.3";
+  #       src = pkgs.fetchurl {
+  #         url = "mirror://gnome/sources/gtk/4.20/gtk-4.20.3.tar.xz";
+  #         hash = "sha256-KHPykDCIpmxxFz6i7YX/riZqZrlyw6SEK7svbxh+wVM=";
+  #       };
   #     });
   #   in
   #   (
   #     (builtins.map
   #       (output: {
-  #         original = pkgs.glib.${output};
-  #         replacement = glib.${output};
+  #         original = pkgs.gtk4.${output};
+  #         replacement = gtk4_4_20_3.${output};
   #       })
   #       [
-  #         "bin"
   #         "out"
   #         "dev"
   #       ]
