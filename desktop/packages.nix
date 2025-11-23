@@ -6,12 +6,12 @@ in
 # dingtalk = pkgs.callPackage ./pkgs/dingtalk { };
 {
   environment.systemPackages = with pkgs; [
-    chromium
+    # chromium
     # terminate called after throwing an instance of 'std::bad_alloc'
     # dingtalk
-    drawing
+    # drawing
     # firefox
-    gitg
+    # gitg
     gnome-boxes
     libreoffice-fresh
     # slack
