@@ -10,10 +10,10 @@
       desktopManager.budgie = {
         enable = true;
         extraPlugins = [
-          pkgs.budgie-analogue-clock-applet
-          pkgs.budgie-user-indicator-redux
-          pkgs.budgie-media-player-applet
-          pkgs.budgie-systemmonitor-applet
+          # pkgs.budgie-analogue-clock-applet
+          # pkgs.budgie-user-indicator-redux
+          # pkgs.budgie-media-player-applet
+          # pkgs.budgie-systemmonitor-applet
         ];
         extraGSettingsOverrides = ''
           [org.gnome.desktop.interface:Budgie]
@@ -23,7 +23,10 @@
         '';
       };
       displayManager = {
+        sddm.enable = true;
+
         lightdm = {
+          enable = false;
           background = "/var/lib/wallpaper/bobby285271/current.jpg";
           greeters.slick = {
             enable = true;
