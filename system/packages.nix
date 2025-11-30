@@ -16,7 +16,7 @@
     # minikube
     nix-update
     nixfmt
-    nixpkgs-review
+    nixpkgs-reviewFull
     ntfs3g
     # openjdk
     p7zip
