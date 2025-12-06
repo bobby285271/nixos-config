@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1765027558,
-        "narHash": "sha256-8Bl1tZPBsjUrGUK5fOxtnmy/D/qUEiwWw1IWy7puuZ0=",
+        "lastModified": 1765031001,
+        "narHash": "sha256-CutCvbi/JYUg7OOpbj9HVG3o1ALYy0V7fRZXaz9rccs=",
         "ref": "add/switchboard-plug-parental-controls",
-        "rev": "2e812b460e649410646a56278acbdf61228662e9",
-        "revCount": 907003,
+        "rev": "a81a9c70d7c6563a1a359c49c44d37ff539506a0",
+        "revCount": 907004,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
