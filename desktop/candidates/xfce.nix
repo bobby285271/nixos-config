@@ -4,7 +4,7 @@
   services = {
     greetd = {
       enable = true;
-      settings.default_session.command = "${pkgs.cage}/bin/cage -s -- sh -c 'wlr-randr --output eDP-1 --scale 2 && GTK_THEME=Greybird-dark ${pkgs.gtkgreet}/bin/gtkgreet'";
+      settings.default_session.command = "${pkgs.cage}/bin/cage -s -- sh -c 'wlr-randr --output eDP-1 --scale 2 && GTK_THEME=Matcha-dark-sea ${pkgs.gtkgreet}/bin/gtkgreet'";
     };
 
     xserver = {
@@ -65,8 +65,10 @@
 
     systemPackages = with pkgs; [
       networkmanagerapplet
-      greybird
-      elementary-xfce-icon-theme
+      # greybird
+      # elementary-xfce-icon-theme
+      matcha-gtk-theme
+      qogir-icon-theme
       xfce.xfce4-clipman-plugin
       xfce.xfce4-pulseaudio-plugin
       xfce.xfce4-whiskermenu-plugin
