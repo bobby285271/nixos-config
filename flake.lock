@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1766419633,
-        "narHash": "sha256-zG7zodl47hQg1YfeCBrZU4SEjGR2nmyVSOHBX2EuY8c=",
-        "ref": "upd/xfce",
-        "rev": "5e9c852cd820d3d1dae96d6956f7e06d52faed0f",
-        "revCount": 912024,
+        "lastModified": 1766501829,
+        "narHash": "sha256-8O1+0jXnI3QBIyhkyFGmg34ouqAOxdL+e0rdoRfcN04=",
+        "ref": "upd/xfce-by-name",
+        "rev": "ef9581e784b702bbf7aca8b944b4e1aa0a115bbb",
+        "revCount": 912034,
         "type": "git",
         "url": "file:///home/bobby285271/nixpkgs"
       },
