@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-gsettings set org.gnome.desktop.interface gtk-theme "Matcha-light-sea"
-gsettings set org.gnome.desktop.interface icon-theme "Qogir-Manjaro"
+gsettings set org.gnome.desktop.interface gtk-theme "Qogir-Light"
+gsettings set org.gnome.desktop.interface icon-theme "Qogir-Light"
 gsettings set org.gnome.desktop.interface clock-show-date false
 
 if [ $XDG_SESSION_TYPE = "wayland" ]; then
@@ -13,7 +13,7 @@ if [ $XDG_SESSION_TYPE = "wayland" ]; then
   # wlr-randr --output eDP-1 --scale 2
 else
   xfconf-query -c displays -n -t double -p "/Default/eDP-1/Scale" -s 1.0000
-  xfconf-query -c xfwm4 -n -t string -p "/general/theme" -s Matcha-light-sea-xhdpi
+  xfconf-query -c xfwm4 -n -t string -p "/general/theme" -s Qogir-Light-xhdpi
   xfconf-query -c xsettings -n -t int -p "/Gdk/WindowScalingFactor" -s 2
   gsettings set org.gnome.desktop.interface cursor-size 48
   echo 'Xft.dpi:192' | xrdb -merge
