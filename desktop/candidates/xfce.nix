@@ -69,9 +69,9 @@
       # elementary-xfce-icon-theme
       qogir-theme
       qogir-icon-theme
-      xfce.xfce4-clipman-plugin
-      xfce.xfce4-pulseaudio-plugin
-      xfce.xfce4-whiskermenu-plugin
+      xfce4-clipman-plugin
+      xfce4-pulseaudio-plugin
+      xfce4-whiskermenu-plugin
       mate.engrampa
       # xapp
       # file
