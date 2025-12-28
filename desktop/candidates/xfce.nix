@@ -42,7 +42,7 @@
         fi
         systemctl --user start nixos-fake-graphical-session.target
 
-        ${pkgs.runtimeShell} ${pkgs.xfce.xfce4-session.xinitrc} &
+        ${pkgs.runtimeShell} ${pkgs.xfce4-session.xinitrc} &
         waitPID=$!
         wait $waitPID
 
@@ -82,7 +82,7 @@
   };
 
   programs = {
-    thunar.plugins = with pkgs.xfce; [
+    thunar.plugins = with pkgs; [
       thunar-archive-plugin
       thunar-media-tags-plugin
       thunar-vcs-plugin
@@ -106,21 +106,27 @@
 
   nixpkgs.overlays = [
     (self: super: {
-      xfce = super.xfce.overrideScope (
-        pself: psuper: {
-          xfwm4 = psuper.xfwm4.overrideAttrs (oldAttrs: {
-            patches = (oldAttrs.patches or [ ]) ++ [
-              # https://gitlab.xfce.org/xfce/xfwm4/-/merge_requests/27
-              ../patches/xfwm4-title-center.patch
-            ];
-          });
-          # xfce4-screensaver = psuper.xfce4-screensaver.overrideAttrs (oldAttrs: {
-          #   patches = (oldAttrs.patches or [ ]) ++ [
-          #     ../patches/xfce4-screensaver-wallpaper.patch
-          #   ];
-          # });
-        }
-      );
+      # xfce = super.xfce.overrideScope (
+      #   pself: psuper: {
+      #     xfwm4 = psuper.xfwm4.overrideAttrs (oldAttrs: {
+      #       patches = (oldAttrs.patches or [ ]) ++ [
+      #         # https://gitlab.xfce.org/xfce/xfwm4/-/merge_requests/27
+      #         ../patches/xfwm4-title-center.patch
+      #       ];
+      #     });
+      #     # xfce4-screensaver = psuper.xfce4-screensaver.overrideAttrs (oldAttrs: {
+      #     #   patches = (oldAttrs.patches or [ ]) ++ [
+      #     #     ../patches/xfce4-screensaver-wallpaper.patch
+      #     #   ];
+      #     # });
+      #   }
+      # );
+      xfwm4 = super.xfwm4.overrideAttrs (oldAttrs: {
+        patches = (oldAttrs.patches or [ ]) ++ [
+          # https://gitlab.xfce.org/xfce/xfwm4/-/merge_requests/27
+          ../patches/xfwm4-title-center.patch
+        ];
+      });
     })
   ];
 }
