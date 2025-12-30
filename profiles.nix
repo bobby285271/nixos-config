@@ -17,7 +17,7 @@ let
   # https://github.com/NixOS/nixpkgs/blob/23.11/pkgs/os-specific/linux/nixos-rebuild/nixos-rebuild.sh#L359
   oneOfTheDesktopsBobbyUses = [
     ./desktop/candidates/xfce.nix
-    ./desktop/candidates/xfce-lightdm.nix
+    ./desktop/candidates/xfce-greetd.nix
   ];
 in
 {
@@ -45,7 +45,7 @@ in
     inherit system specialArgs;
     modules = [
       ./desktop/candidates/xfce.nix
-      ./desktop/candidates/xfce-lightdm.nix
+      ./desktop/candidates/xfce-greetd.nix
     ]
     ++ laptopSharedModules;
   };

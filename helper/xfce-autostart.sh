@@ -11,6 +11,8 @@ if [ $XDG_SESSION_TYPE = "wayland" ]; then
   echo 'Xft.dpi:96' | xrdb -merge
   systemctl --user import-environment DISPLAY WAYLAND_DISPLAY DBUS_SESSION_BUS_ADDRESS XDG_SESSION_ID
   # wlr-randr --output eDP-1 --scale 2
+  systemctl --user restart xdg-desktop-portal
+  systemctl --user restart xdg-desktop-portal-wlr
 else
   xfconf-query -c displays -n -t double -p "/Default/eDP-1/Scale" -s 1.0000
   xfconf-query -c xfwm4 -n -t string -p "/general/theme" -s Qogir-Light-xhdpi

@@ -20,10 +20,10 @@
         if test -z "$DBUS_SESSION_BUS_ADDRESS"; then
           eval $(dbus-launch --exit-with-session --sh-syntax)
         fi
-        systemctl --user import-environment DISPLAY XAUTHORITY
+        systemctl --user import-environment DISPLAY XAUTHORITY XDG_DATA_DIRS PATH
 
         if command -v dbus-update-activation-environment >/dev/null 2>&1; then
-          dbus-update-activation-environment DISPLAY XAUTHORITY
+          dbus-update-activation-environment DISPLAY XAUTHORITY XDG_DATA_DIRS PATH
         fi
         systemctl --user start nixos-fake-graphical-session.target
 
