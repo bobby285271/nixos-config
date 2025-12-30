@@ -12,7 +12,7 @@ in
   services = {
     xserver.displayManager = {
       lightdm = {
-        background = "#202020";
+        background = "#32343D";
         extraSeatDefaults = ''
           greeter-wrapper = ${lightdm-scale-wrapper}
         '';
@@ -22,8 +22,8 @@ in
             user-background = false
             cursor-theme-size = 48
           '';
-          theme.name = "Greybird";
-          iconTheme.name = "elementary-xfce-hidpi";
+          theme.name = "Qogir-Dark";
+          iconTheme.name = "Qogir-Dark";
           indicators = [
             "~host"
             "~spacer"
@@ -38,6 +38,5 @@ in
       };
     };
     displayManager.defaultSession = "xfce";
-    flatpak.enable = true;
   };
 }
