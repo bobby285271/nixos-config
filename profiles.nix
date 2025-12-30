@@ -15,7 +15,10 @@ let
     ./users/misc
   ];
   # https://github.com/NixOS/nixpkgs/blob/23.11/pkgs/os-specific/linux/nixos-rebuild/nixos-rebuild.sh#L359
-  oneOfTheDesktopsBobbyUses = [ ./desktop/candidates/xfce.nix ];
+  oneOfTheDesktopsBobbyUses = [
+    ./desktop/candidates/xfce.nix
+    ./desktop/candidates/xfce-lightdm.nix
+  ];
 in
 {
   laptop-cinnamon = inputs.nixpkgs.lib.nixosSystem {
@@ -40,7 +43,11 @@ in
   };
   laptop-xfce = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
-    modules = [ ./desktop/candidates/xfce.nix ] ++ laptopSharedModules;
+    modules = [
+      ./desktop/candidates/xfce.nix
+      ./desktop/candidates/xfce-lightdm.nix
+    ]
+    ++ laptopSharedModules;
   };
   laptop-labwc = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;

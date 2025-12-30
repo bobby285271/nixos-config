@@ -12,7 +12,7 @@ in
   services = {
     xserver.displayManager = {
       lightdm = {
-        background = "#32343D";
+        background = "#21232b";
         extraSeatDefaults = ''
           greeter-wrapper = ${lightdm-scale-wrapper}
         '';
