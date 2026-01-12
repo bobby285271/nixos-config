@@ -15,18 +15,18 @@
           # pkgs.budgie-media-player-applet
           # pkgs.budgie-systemmonitor-applet
         ];
-        extraGSettingsOverrides = ''
-          [org.gnome.desktop.interface:Budgie]
-          gtk-theme="Qogir-Light"
-          # icon-theme="Tela"
-          # cursor-theme="Adwaita"
-        '';
+        # extraGSettingsOverrides = ''
+        #   [org.gnome.desktop.interface:Budgie]
+        #   gtk-theme="Qogir"
+        #   # icon-theme="Tela"
+        #   # cursor-theme="Adwaita"
+        # '';
       };
       displayManager = {
-        sddm.enable = true;
+        # sddm.enable = true;
 
         lightdm = {
-          enable = false;
+          enable = true;
           background = "/var/lib/wallpaper/bobby285271/current.jpg";
           greeters.slick = {
             enable = true;
