@@ -54,6 +54,10 @@
   environment = {
     systemPackages = with pkgs; [
       networkmanagerapplet
+      # gtk3.out
+      # gtk3
+      # wayland
+      # glib.out
       # orchis-theme
       # tela-icon-theme
     ];
