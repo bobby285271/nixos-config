@@ -36,7 +36,10 @@
     # ];
   };
 
-  services.xserver.desktopManager.pantheon.extraWingpanelIndicators = with pkgs; [ monitor ];
+  services.xserver.desktopManager.pantheon.extraWingpanelIndicators = with pkgs; [
+    monitor
+    # wingpanel-indicator-ayatana
+  ];
 
   systemd.user.services.indicatorapp = {
     description = "indicator-application-gtk3";
