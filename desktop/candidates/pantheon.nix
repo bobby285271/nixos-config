@@ -98,11 +98,11 @@
           #   separateDebugInfo = true;
           # });
 
-          elementary-terminal = psuper.elementary-terminal.overrideAttrs (oldAttrs: {
-            patches = (oldAttrs.patches or [ ]) ++ [
-              # ../patches/elementary-terminal-ctrl-k.patch
-            ];
-          });
+          # elementary-terminal = psuper.elementary-terminal.overrideAttrs (oldAttrs: {
+          #   patches = (oldAttrs.patches or [ ]) ++ [
+          #     # ../patches/elementary-terminal-ctrl-k.patch
+          #   ];
+          # });
 
           # wingpanel = psuper.wingpanel.overrideAttrs (oldAttrs: {
           #   prePatch = ''
