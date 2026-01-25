@@ -28,12 +28,13 @@
 
   xdg.portal = {
     enable = true;
-    # extraPortals = [
-    #   (pkgs.xdg-desktop-portal-gtk.override {
-    #     # Use the upstream default so this won't conflict with the pantheon portal.
-    #     # buildPortalsInGnome = false;
-    #   })
-    # ];
+    extraPortals = [
+      # (pkgs.xdg-desktop-portal-gtk.override {
+      #   # Use the upstream default so this won't conflict with the pantheon portal.
+      #   # buildPortalsInGnome = false;
+      # })
+      # pkgs.pantheon.xdg-desktop-portal-pantheon
+    ];
   };
 
   services.xserver.desktopManager.pantheon.extraWingpanelIndicators = with pkgs; [
@@ -103,12 +104,12 @@
             ];
           });
 
-          wingpanel = psuper.wingpanel.overrideAttrs (oldAttrs: {
-            prePatch = ''
-              substituteInPlace src/PanelWindow.vala \
-                --replace-fail "monitor_dimensions.width /= get_scale_factor ();" "//"
-            '';
-          });
+          # wingpanel = psuper.wingpanel.overrideAttrs (oldAttrs: {
+          #   prePatch = ''
+          #     substituteInPlace src/PanelWindow.vala \
+          #       --replace-fail "monitor_dimensions.width /= get_scale_factor ();" "//"
+          #   '';
+          # });
         }
       );
     })
