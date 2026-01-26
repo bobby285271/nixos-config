@@ -37,6 +37,5 @@ in
         };
       };
     };
-    displayManager.defaultSession = "xfce";
   };
 }

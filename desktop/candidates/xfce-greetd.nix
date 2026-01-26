@@ -11,7 +11,6 @@
       enable = true;
       displayManager.startx.enable = true;
     };
-    displayManager.defaultSession = "xfce";
   };
 
   environment = {
