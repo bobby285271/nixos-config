@@ -35,11 +35,11 @@
   ];
 
   system.activationScripts.setUserImages.text =
-    if config.services.xserver.desktopManager.cinnamon.enable then
-      ''
-        rm -f /var/lib/AccountsService/icons/bobby285271
-      ''
-    else
+    # if config.services.xserver.desktopManager.cinnamon.enable then
+    #   ''
+    #     rm -f /var/lib/AccountsService/icons/bobby285271
+    #   ''
+    # else
       ''
         if test -f /var/lib/AccountsService/icons/bobby285271.default; then
           cp -f /var/lib/AccountsService/icons/bobby285271{.default,}
