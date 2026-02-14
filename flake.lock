@@ -4,7 +4,7 @@
       "locked": {
         "lastModified": 1770739013,
         "narHash": "sha256-Knua2vXDSd8d9nLccIpj94zFV50vGzNaDpuV0avAnQA=",
-        "ref": "f9d53a87265f",
+        "ref": "upd/mate-toplevel",
         "rev": "f9d53a87265f1728590b546ec106293dd9cc1825",
         "revCount": 942983,
         "type": "git",
