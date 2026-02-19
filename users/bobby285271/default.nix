@@ -19,6 +19,7 @@
       "tty"
       "camera"
       "pipewire"
+      "sambashare"
     ];
   };
 

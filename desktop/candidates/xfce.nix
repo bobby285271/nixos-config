@@ -2,6 +2,34 @@
 
 {
   services = {
+
+    # samba = {
+    #   enable = true;
+    #   nmbd.enable = false;
+    #   package = pkgs.sambaFull;
+    #   openFirewall = true;
+    #   settings = {
+    #     global = {
+    #       "usershare path" = "/public";
+    #       "usershare max shares" = "100";
+    #       "usershare allow guests" = "yes";
+    #       "usershare owner only" = "yes";
+    #       "disable netbios" = "yes";
+    #       "smb ports" = "445";
+    #       "guest account" = "nobody";
+    #       "map to guest" = "Bad User";
+    #     };
+
+    #     # media = {
+    #     #   "path" = "/opt/media";
+    #     #   "read only" = false;
+    #     #   "browseable" = "yes";
+    #     #   "guest ok" = "yes";
+    #     #   "valid users" = "admin";
+    #     #   "force user" = "jellyfin";
+    #     # };
+    #   };
+    # };
     xserver = {
       enable = true;
       xkb.layout = "us";
@@ -54,6 +82,7 @@
       thunar-media-tags-plugin
       thunar-vcs-plugin
       thunar-volman
+      # thunar-shares-plugin
     ];
     nm-applet = {
       enable = true;
