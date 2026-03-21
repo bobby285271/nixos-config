@@ -12,7 +12,7 @@ in
   services = {
     xserver.displayManager = {
       lightdm = {
-        background = "#21232b";
+        background = "#232323";
         extraSeatDefaults = ''
           greeter-wrapper = ${lightdm-scale-wrapper}
         '';
@@ -22,8 +22,8 @@ in
             user-background = false
             cursor-theme-size = 48
           '';
-          theme.name = "Qogir-Dark";
-          iconTheme.name = "Qogir-Dark";
+          theme.name = "Greybird";
+          iconTheme.name = "elementary-xfce-hidpi";
           indicators = [
             "~host"
             "~spacer"

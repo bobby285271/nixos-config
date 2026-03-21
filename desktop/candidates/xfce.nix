@@ -60,14 +60,14 @@
 
     systemPackages = with pkgs; [
       networkmanagerapplet
-      # greybird
-      # elementary-xfce-icon-theme
-      qogir-theme
-      qogir-icon-theme
+      greybird
+      elementary-xfce-icon-theme
+      # qogir-theme
+      # qogir-icon-theme
       xfce4-clipman-plugin
       xfce4-pulseaudio-plugin
       xfce4-whiskermenu-plugin
-      mate.engrampa
+      engrampa
       # xapp
       # file
       # xfce.xfmpc

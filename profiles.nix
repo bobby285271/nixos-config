@@ -14,8 +14,7 @@ let
     ./users/bobby285271
     ./users/misc
   ];
-  # https://github.com/NixOS/nixpkgs/blob/23.11/pkgs/os-specific/linux/nixos-rebuild/nixos-rebuild.sh#L359
-  oneOfTheDesktopsBobbyUses = [
+  xfceModules = [
     ./desktop/candidates/xfce.nix
     ./desktop/candidates/xfce-lightdm.nix
   ];
@@ -43,11 +42,7 @@ in
   };
   laptop-xfce = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
-    modules = [
-      ./desktop/candidates/xfce.nix
-      ./desktop/candidates/xfce-lightdm.nix
-    ]
-    ++ laptopSharedModules;
+    modules = xfceModules ++ laptopSharedModules;
   };
   laptop-labwc = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
@@ -59,10 +54,14 @@ in
   };
   thinkbook = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
-    modules = oneOfTheDesktopsBobbyUses ++ laptopSharedModules;
+    modules = xfceModules ++ laptopSharedModules;
   };
   iso = inputs.nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
-    modules = [ ./machines/iso ] ++ oneOfTheDesktopsBobbyUses ++ sharedModules;
+    modules = [
+      ./machines/iso
+    ]
+    ++ xfceModules
+    ++ sharedModules;
   };
 }
