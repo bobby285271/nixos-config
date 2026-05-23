@@ -5,18 +5,18 @@
     xserver = {
       enable = true;
       xkb.layout = "us";
-      desktopManager.mate.enableWaylandSession = true;
-      displayManager.sddm.enable = true;
+      desktopManager.mate.enable = true;
+      displayManager.lightdm.enable = true;
     };
     flatpak.enable = true;
     accounts-daemon.enable = true;
     udisks2.enable = true;
   };
 
-  programs.wayfire.plugins = with pkgs.wayfirePlugins; [
-    # firedecor
-    wf-shell
-  ];
+  # programs.wayfire.plugins = with pkgs.wayfirePlugins; [
+  #   # firedecor
+  #   wf-shell
+  # ];
 
   nixpkgs.overlays = [
     (self: super: {
