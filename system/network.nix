@@ -6,7 +6,13 @@
       publish.userServices = true;
     };
 
-    v2raya.enable = true;
+    # v2raya.enable = true;
+  };
+
+  programs.clash-verge = {
+    enable = true;
+    serviceMode = true;
+    autoStart = true;
   };
 
   networking = {
