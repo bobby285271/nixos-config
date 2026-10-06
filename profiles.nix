@@ -12,6 +12,7 @@ let
   laptopSharedModules = sharedModules ++ [
     ./machines/laptop
     ./users/bobby285271
+    ./users/test
     ./users/misc
   ];
   xfceModules = [
