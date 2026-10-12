@@ -1,23 +1,23 @@
 {
   symlinkJoin,
   lib,
-  libreoffice-fresh,
-  libreoffice-fresh-unwrapped,
+  libreoffice-stable,
+  libreoffice-stable-unwrapped,
 }:
 
 symlinkJoin {
   name = "libreoffice-icon-fixed";
 
-  paths = [ libreoffice-fresh ];
+  paths = [ libreoffice-stable ];
 
   postBuild = ''
     rm -rf $out/share
 
     TMPDIR=$(mktemp -d)
-    cp -r ${libreoffice-fresh-unwrapped}/. $TMPDIR
+    cp -r ${libreoffice-stable-unwrapped}/. $TMPDIR
     chmod -R +w $TMPDIR
     rm $TMPDIR/share/applications   # symbolic link
-    cp -r ${libreoffice-fresh}/share/applications/ $TMPDIR/share/applications/
+    cp -r ${libreoffice-stable}/share/applications/ $TMPDIR/share/applications/
     chmod -R +w $TMPDIR
 
     pushd $TMPDIR/share/applications

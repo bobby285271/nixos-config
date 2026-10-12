@@ -13,7 +13,7 @@ in
     # firefox
     # gitg
     gnome-boxes
-    libreoffice-fresh
+    libreoffice-stable
     # slack
     thunderbird
     vscode-fhs
